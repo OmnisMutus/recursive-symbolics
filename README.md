@@ -29,7 +29,7 @@ that at this address, this tradition reads this name. That is the Core Axiom's "
 
 ## The record
 
-`LIBER_0.md` is this repository's working journal, in the format founded by `Thoth/solo/LIBER_0.md`: dated
+`LIBER_0.md` is this repository's working journal, in the format the Recursive Symbolics framework uses: dated
 entries with what was attempted, what actually happened, and what is not verified. Corrections are new entries,
 never edits that erase what was believed before. If a claim in the documentation and a claim in the record
 disagree, the record is the one that was written while it happened.

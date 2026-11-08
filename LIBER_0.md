@@ -1,7 +1,8 @@
 # LIBER 0
 
 *A working record, in the tradition of the magical diary. The convention, the One Rule and the entry format are
-inherited from `Thoth/solo/LIBER_0.md`, which founded them; this is the same practice applied to this repository.*
+inherited from the Recursive Symbolics framework, which established them; this is the same practice applied to
+this repository.*
 
 ---
 
@@ -32,8 +33,7 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 **Attempted:** Start the engine for the Recursive Symbolics framework as its own project rather than as a mode of
 void-agent, because the framework is not a vault tool and the vault is one caller among several. Specifically:
 build the address/lens seam that makes the Core Axiom's "syntax, not semantics" true in code rather than in
-prose; enforce `core-ethics.md` as checks instead of intentions; port the correspondence ledger from
-`Thoth/solo` rather than reinvent it; and amend the licence so its ten Articles say in law what they already
+prose; enforce `core-ethics.md` as checks instead of intentions; bring in the framework's own correspondence ledger rather than reinvent it; and amend the licence so its ten Articles say in law what they already
 said in intent.
 
 **Result:** Four commits, 58 tests passing, and one deliberate False.
@@ -51,7 +51,7 @@ every return passes through: a reading without the caveat, without its tradition
 anchors does not leave the engine, and no output may rank a person or command one. `unknown` and `paradox` are
 return types. The two intentional omissions of `hidden-axioms.md` 7.4 are refusals.
 
-Ledger ported (commit `e040a6b`). `correspondence_ledger.py`, its run history and its target-staleness check,
+Ledger inherited (commit `e040a6b`). `correspondence_ledger.py`, its run history and its target-staleness check,
 copied with provenance on every file rather than rewritten, because the substance is the point: validator=None
 means untestable in principle, and an all-UNTESTABLE ledger cannot report success. Also brought over as
 governing documents, not references: `TESTING_STANDARD.md` and `ANTI_ECHO_ISOLATION_POLICY.md`.
@@ -82,7 +82,7 @@ Intelligence, since "any other intelligence" is otherwise one argument away from
    from the lens table rather than guessing a coordinate.
 3. The ported ledger suite failed on arrival: one failure and one error, both from the file's own inert
    fixtures, which fail and raise on purpose so that `from_unittest_methods` can be exercised against a failing
-   test. `unittest discover` collects them; the original repo's runner selects only the `Test*` classes. Fixed
+   test. `unittest discover` collects them; the framework's own runner selects only the `Test*` classes. Fixed
    with a `load_tests` hook that does the same, and the reason is written in the hook.
 
 **Not verified, and not claimed:**
@@ -97,7 +97,7 @@ Intelligence, since "any other intelligence" is otherwise one argument away from
 - The licence has not been reviewed by a lawyer. Its 1.0 header cited 17 U.S.C. § 302(c) and Berne Art. 7(3) as
   "Pseudonymous Author Protection"; both provisions concern the *term* of protection for anonymous and
   pseudonymous works, not the protection of an author's identity. Flagged, not silently rewritten.
-- `recursive_attractor_engine.py` is not ported. It is the natural Register B home for
+- The framework's recursive attractor engine is not brought in yet. It is the natural Register B home for
   `Mathemathical-foundation.md`'s fixed-point formalism, and it needs numpy, which this project does not yet
   depend on. A decision, not an oversight.
 

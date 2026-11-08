@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Ported from Thoth/solo (ledgers/correspondence_ledger_history.py), written for that repo by OmnisMutus.
+# Inherited from the Recursive Symbolics framework (its correspondence ledger, by OmnisMutus).
 # Kept as it is in substance: a claim is pattern + target + meaning with a validator that re-runs an
 # existing adversarially-tested check, validator=None means untestable in principle, and a ledger of
 # nothing but UNTESTABLE rows can never report success.

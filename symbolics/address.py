@@ -196,7 +196,7 @@ def read(address, lens=KABBALISTIC, caveat=None):
 
 def readings(address, lenses=None, caveat=None):
     """Several traditions over one address, each worked out on its own so that no reading can colour another
-    (the isolation of Thoth/solo's ANTI_ECHO_ISOLATION_POLICY, applied inside a single call). A lens that fails
+    (the isolation the framework's anti-echo policy asks for, applied inside a single call). A lens that fails
     carries its own error and the others still stand."""
     out = []
     for key in (lenses or sorted(LENSES)):
