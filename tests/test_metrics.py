@@ -96,9 +96,9 @@ class TestAddressOf(unittest.TestCase):
         self.assertGreater(a.severity_mercy, A.MID)
 
     def test_the_words_it_rests_on_travel_with_it(self):
-        anchor = A.Anchor("09_Yesod/Journal/x.md", "cut the practice short", (22, 24))
+        anchor = A.Anchor("journal/2026-01-02.md", "cut the session short", (22, 24))
         a = M.address_of("I cut the practice short", anchors=[anchor])
-        self.assertEqual(a.anchors[0].quote, "cut the practice short")
+        self.assertEqual(a.anchors[0].quote, "cut the session short")
 
     def test_what_it_produces_can_be_read_and_emitted(self):
         from symbolics import ethics as E

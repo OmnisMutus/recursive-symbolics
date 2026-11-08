@@ -29,11 +29,11 @@ class TestAddress(unittest.TestCase):
         self.assertEqual(sorted(a.derivation), sorted(A.AXES))
 
     def test_evidence_travels_with_the_address(self):
-        anchor = A.Anchor("09_Yesod/Journal/2026/November/06_11_2026_☉.md", "cut the practice short", (22, 24))
+        anchor = A.Anchor("journal/2026-01-02.md", "cut the session short", (22, 24))
         a = A.at(200, 700, 300, anchors=[anchor])
         self.assertEqual(a.as_dict()["anchors"],
-                         [{"source": "09_Yesod/Journal/2026/November/06_11_2026_☉.md",
-                           "quote": "cut the practice short", "lines": [22, 24]}])
+                         [{"source": "journal/2026-01-02.md",
+                           "quote": "cut the session short", "lines": [22, 24]}])
 
     def test_distance_and_composition(self):
         self.assertEqual(A.distance(A.at(0, 0, 0), A.at(0, 0, 0)), 0)
