@@ -101,9 +101,17 @@ def check_directivity(agency=None):
                 f"cap={cap}, an imperative probe measured {measured}")
 
 
-def run(ethics=None, agency=None, package_dir=HERE):
+_DEFAULT = object()          # so that agency=None can mean "there is no implementation", as the tests need
+
+
+def run(ethics=None, agency=_DEFAULT, package_dir=HERE):
     if ethics is None:
         from . import ethics as ethics
+    if agency is _DEFAULT:
+        try:
+            from . import agency as agency
+        except ImportError:
+            agency = None
     rows = [check_no_network(package_dir), check_other_state(ethics), *check_non_reduction(ethics),
             check_directivity(agency)]
     checked = [r for r in rows if r["status"] != NOT_IMPLEMENTED]

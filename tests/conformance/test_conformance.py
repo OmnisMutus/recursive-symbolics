@@ -75,13 +75,24 @@ class TestChecks(unittest.TestCase):
 
 
 class TestHonestyGuard(unittest.TestCase):
-    def test_the_suite_does_not_conform_while_a_duty_is_unchecked(self):
-        """Today's real state: Article 6 has nothing to check yet, so the engine does not conform. That is the
-        honest answer, and it is the whole reason this guard exists."""
-        report = C.run()
+    def test_an_unchecked_duty_stops_conformance(self):
+        """The guard itself, exercised independently of the engine's current state: hand the suite no agency
+        implementation and Article 6 cannot be checked, so the run does not conform however well the rest did.
+
+        CORRECTED 2026-11-08: this test previously asserted that the engine as a whole does not conform, which
+        was the honest state until agency.py existed. It now conforms, so the claim moved to the test below and
+        this one keeps proving the guard rather than the circumstance. See LIBER_0.md for the entry."""
+        report = C.run(ethics=E, agency=None)
         self.assertFalse(report["conforms"])
         self.assertEqual(report["counts"][C.FAIL], 0)
         self.assertGreaterEqual(report["counts"][C.NOT_IMPLEMENTED], 1)
+
+    def test_the_engine_conforms_today(self):
+        """The live state, pinned so that a regression shows up here rather than in a README."""
+        report = C.run()
+        self.assertTrue(report["conforms"], report["rows"])
+        self.assertEqual(report["counts"][C.FAIL], 0)
+        self.assertEqual(report["counts"][C.NOT_IMPLEMENTED], 0)
 
     def test_it_conforms_once_every_duty_is_checked_and_holds(self):
         report = C.run(ethics=E, agency=FakeAgency)

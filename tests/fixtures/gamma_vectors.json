@@ -1,0 +1,488 @@
+{
+ "what": "Ground truth for agency.entropy_gamma: the framework's own gamma cap, captured from its reference implementation (compute_gamma) by running it over these texts. Not computed by the module under test.",
+ "captured": "2026-11-08",
+ "formula": "gamma = clamp(1 - H/Hmax, 0, 0.85) over token frequencies; tokens are re.findall(r'\\\\b\\\\w+\\\\b', text.lower())",
+ "short_text_gamma": 0.45,
+ "vectors": [
+  {
+   "text": "",
+   "gamma": 0.45
+  },
+  {
+   "text": "one",
+   "gamma": 0.45
+  },
+  {
+   "text": "practice practice practice",
+   "gamma": 0.85
+  },
+  {
+   "text": "a b",
+   "gamma": 2.8853586186983193e-12
+  },
+  {
+   "text": "breathe breathe breathe breathe",
+   "gamma": 0.85
+  },
+  {
+   "text": "You must perform the banishing now. Do it before anything else. Stop everything.",
+   "gamma": 5.06861219662369e-12
+  },
+  {
+   "text": "You might sit with it, or you could try the opposite and see what that shows.",
+   "gamma": 0.008162653867504255
+  },
+  {
+   "text": "I cut the practice short tonight because I was angry and could not settle into the asana at all.",
+   "gamma": 0.012247608251146569
+  },
+  {
+   "text": "the the the the the the quick brown fox",
+   "gamma": 0.27669166618878127
+  },
+  {
+   "text": "Resh at dawn, Resh at noon, Resh at sunset, Resh at midnight.",
+   "gamma": 0.12895093574819594
+  },
+  {
+   "text": "yooqs fz putzf o ecr ubtmou tuftaq b g ta kosg hujpa couinr w kyh jacsy m j cava gb mwmn s gyvikc kan e wd b zpfv goqgx",
+   "gamma": 0.0038148721093299587
+  },
+  {
+   "text": "mdmnga zsj g mt sdbego ayt jmc c su at lto sp emfue hth gfxurg mptcnb d q hxw intp qfx e pr ttcigg acinoh b jl",
+   "gamma": 8.19233569870903e-12
+  },
+  {
+   "text": "l ok xwqses a lwjb t cpcxjk cc rlxb",
+   "gamma": 4.0960568270520525e-12
+  },
+  {
+   "text": "lcv cnza satv msat c u i xkmx sooorc",
+   "gamma": 4.0960568270520525e-12
+  },
+  {
+   "text": "j cpahw p vpial evt qf vop km igunzz gm sk ee lbwc fdo ignm qpvkwt kcbi bvwis juz auemo ay hye u o u uuzlc ggpifw y rwbf iy rwq tyfmz hcnxme ay rwq lbwc juz iy ggpifw tyfmz qpvkwt hye vop o y hye",
+   "gamma": 0.020308858807236874
+  },
+  {
+   "text": "hm j zkiwa qcb krny pag n f",
+   "gamma": 3.847255847233555e-12
+  },
+  {
+   "text": "eqxq wopswc oq jxruf qrijv tgje qispg rdqa marbq",
+   "gamma": 4.0960568270520525e-12
+  },
+  {
+   "text": "dpcwf r nzmi pp kn qkdg taie yabgeh v kxl tp p sdqtiw wq amun tfrgu ugqgr sehxu fkt ggy de ex i dnnr egmuvz d sv ldw uykqv zc daby tqspe fd ff vds nzmi pp wq amun sdqtiw yabgeh wq i r yabgeh amun sdqtiw sdqtiw fd ex pp ldw p nzmi zc daby tqspe fd ggy taie de p sv kxl kn",
+   "gamma": 0.027695281094829438
+  },
+  {
+   "text": "ekrw yny mg fczkjp a utb iv kgv sfrc qpug dymsad",
+   "gamma": 4.587441537751147e-12
+  },
+  {
+   "text": "omq y um d iik rqnqs u zucr vybmf pfpr tbnpn qmt lqj uirj wxjaay sb",
+   "gamma": 5.771050304304026e-12
+  },
+  {
+   "text": "mbkxmb xkczh xpiy bq z oehtwd t odgb qed oev otiu vnlyx ejxeh dqjz tliit xswsgu yhg qu vb baiina bdhri y v rh lpplgk pxe z v v bdhri vnlyx bdhri otiu z z v yhg odgb bdhri v z qu xswsgu ejxeh qed tliit vnlyx xswsgu v ejxeh v mbkxmb qed",
+   "gamma": 0.0635195326475183
+  },
+  {
+   "text": "w pxy kjehlv kldkwo tvioq okh xqhc lal msmzgx lzmre sffcy jzah brfsj u csrj ckcix k a uedxun wh yqky mlkz vep rzxc tbnyvl z coru q waz n ehxf mvfkgm qjib jxdj eyfbyo s zbkd fl sh",
+   "gamma": 1.0644374270896151e-11
+  },
+  {
+   "text": "qhofi fyju rpipm vry p mb ez qzqy zbv ap ozh ntfnfy eiz euxti rbesy ag ec itw dpwoc srqjaz ng czogbr qpfj jmc jovwc cve v voxz u amww hjsd v",
+   "gamma": 0.0033701350099093474
+  },
+  {
+   "text": "ejumr jkymrv i gm dkjisp ukomcd td vu ffgmbo wcdhb dn yckn eugye mpknta",
+   "gamma": 5.3047566339614605e-12
+  },
+  {
+   "text": "kzzhvt aikgk uod mgqkz dtw iy jrhlt qeswg wwgsa vgyceh snwk cli doxe sr rcrif ktedaj lhyslf tr o m zv jy xmtsuz f no e mdsmf qei sk u x zemptd lntw ynyjp wnnd dqkqq nakb xtn mtkyzj chdoh",
+   "gamma": 1.0843326236908979e-11
+  },
+  {
+   "text": "p dqhrjv hcxv rns hu nsdcdq dr oajhx akf o qmel shbjao jkp yy ggjw g lpa uw gruhg u j kinwek yoncfh dww if hqvjzi yy rns yy hqvjzi dww hu nsdcdq rns uw jkp dqhrjv dww dqhrjv dww p g yy shbjao ggjw hu hqvjzi hu",
+   "gamma": 0.043469199747579235
+  },
+  {
+   "text": "xra ze t ysma bfcr lkvpzb jquvq rftyyf t hvor zwz hiprhs",
+   "gamma": 0.011890908430467029
+  },
+  {
+   "text": "g wbsof eta pznqo izacdf urszx te j bwkt qyiysp u fmihf wvtz bkno wgw e yyte bwkt yyte g te bwkt wbsof qyiysp bwkt e yyte fmihf wvtz yyte u urszx",
+   "gamma": 0.0366884904154855
+  },
+  {
+   "text": "hnoch jkt bf subx sws om mm g jkt sws jkt jkt",
+   "gamma": 0.0827902775412398
+  },
+  {
+   "text": "oyjpo uvfp rm cbwi ita fxiqm uwgid bex eyh dakmoc kiyq bjmthp g qt ita fxiqm bex uvfp",
+   "gamma": 0.021504263919710276
+  },
+  {
+   "text": "kxo megirw memq hdj ltg ba upsazy jvvcgr lvdylh iczndm bpmk pwi fm py lv hqcxkn ps wrj amdlcm bmp jpxki a l lsj vfu mtkl s gycubt ntnci o mmbz vq jpl aetg hiv hq hq kxo bmp mmbz gycubt memq o vq vfu ntnci iczndm hdj kxo o jvvcgr lv ba upsazy ba pwi vfu ntnci bpmk lv py vfu wrj lsj py mtkl aetg s vq hq o",
+   "gamma": 0.0264717440698774
+  },
+  {
+   "text": "o yvpbf npbli qxzw iwui wvk ky se nuwet izfegm vjhuf p wzeiw niu mmvebf dbgjlx zdmka pflcj zujh xtny se niu vjhuf zdmka npbli qxzw npbli zujh wvk izfegm npbli ky o p npbli wzeiw wvk iwui izfegm",
+   "gamma": 0.032890855851847034
+  },
+  {
+   "text": "irbec y vca kp zg pbnl mrbgr vtiig hzo xbfaf dvcil y jcqoa cl y izhzx mjzr yzydpm nitaas hk xlqv zlu oljicu tdi zg y kp vtiig zg hzo kp hzo zg irbec xbfaf y vca oljicu xlqv nitaas irbec zg y y cl vtiig y oljicu",
+   "gamma": 0.07175146296748292
+  },
+  {
+   "text": "ywfi v kfyl aexuv ubgt lowun sddxw onvonm hmtrs q q oojsbt k ro ixt gxp mbeyp h uz dz q icf w iqz ogr n pi hcdroz hczp y czezl dk czezl onvonm q ro dz ywfi icf ixt gxp kfyl q h q czezl dk h dk k pi w hcdroz czezl icf",
+   "gamma": 0.04327360325891649
+  },
+  {
+   "text": "gfyefw obeid ltt jga w xw jyn ec inltni eqdd qwn ps j j",
+   "gamma": 0.009712883250923787
+  },
+  {
+   "text": "uohpmg nthouc nkj ovijv avthan esi nkj avthan esi",
+   "gamma": 0.031607485962126036
+  },
+  {
+   "text": "r dogczl l x vwlav epclfo kpvut h z nhur dbcoum gqsgpl qm x a uw zxivz pydnoe l adl rrrd j sdcsh vc qjjly hs obgs frdo dz eesqf ttwd ahez x wmfjqt m p ruy m z rrrd qjjly uw m h",
+   "gamma": 0.022976039164342654
+  },
+  {
+   "text": "sq m jixtih cnz mlun odb qbf mrkmh dwlbkl hqxq xaln dawsl lt ljgtys k pd yylbc is zzn lmcjsv c hikb eez ujb bmtc ekuwa vygsr x nkvu f o yemyov zdok xcdlvr dwdmjw rdgdnk",
+   "gamma": 1.0045186904505954e-11
+  },
+  {
+   "text": "ip bnmg wppnwz qypd xfysk al ul szqv wppnwz xfysk qypd szqv wppnwz al bnmg wppnwz",
+   "gamma": 0.041666666670513997
+  },
+  {
+   "text": "biczi hwgn crfnq mpdh yt v qeb lsfrpk eoyl dhz gg xtldf sf wkl z zjtxid la ri jjirei ciaj qem re crzxf yvwsy ijbnyl zrhpov lxg",
+   "gamma": 8.19233569870903e-12
+  },
+  {
+   "text": "sxl cr s xcjads g jle v ceanse zqrcnq fcqwlt gwdn pg w arrc ji hwi re zatp vsttk cy fbddj anb fw qsyyv a czg hnlk lm y ib lqxkq louhnf eg ceanse lqxkq v fw fbddj cy vsttk vsttk sxl gwdn s re a v cr zqrcnq xcjads fw re ji cr vsttk g fw s s lm eg arrc fw ceanse",
+   "gamma": 0.03552958322914468
+  },
+  {
+   "text": "jrsx p b bmcn ec fp kk ee kbghew hxvoll diecfx vbd kfs i",
+   "gamma": 5.3047566339614605e-12
+  },
+  {
+   "text": "oyzqi c hacjyv ffkus j ztol pobge vaoy mrbjf f xgaa nz tuco f afj k trl pitxkf ess nnrso kph tvfoqr yfx hrs fwkj duvalp dpxzq mvavpm psu obckp pbueai obciz h mzbig qdnlrb",
+   "gamma": 0.0030118512852889134
+  },
+  {
+   "text": "ejkv qkgug ozjvev zx izjzfd jwhb q kpzutv ucvf i mji tw wtu xx bnnymz s pup mw baf zhhu ydweq koiw au vyd kba rst oyb dig pcbdw bpyxq jg lhnkm jg i dig dig",
+   "gamma": 0.014653263621678514
+  },
+  {
+   "text": "gnhz cdnn vnyu zuqis naqcg yb efriz sxkiyz bwbobn p ib caiow oenps hmuhvt bcws hb pmamc mxotdg xp kudkj h qsnxmg bzc ioglvn on gta jtyc xpur vmvq vcxh hxt uvong jhtycr xkswm n p qsnxmg sxkiyz hmuhvt n efriz uvong vnyu h vmvq vcxh hmuhvt h on jtyc jtyc h bwbobn on kudkj kudkj n naqcg xpur caiow gta xkswm p",
+   "gamma": 0.02817782943114766
+  },
+  {
+   "text": "qpk uz vpjz vedt o qros j nyb a rwf lgmwie srq r mvm zj thgfad u x ia bwsa jkgtwl kkzgpw aoz jtqlh httke kzonff vyfpl wlgyk pl h wvbw cyvrsa k s ypt mczdn w",
+   "gamma": 1.0247358517290195e-11
+  },
+  {
+   "text": "bve vkboyj ra hla jj aal nsf fdf p qgjryt owwqhn lqio qsrz ja jmb zbtojq lr owlxoc qrhs gcdhrk nqrjb qlc daezm uydorn yrsbs fcoxhv gour sut a xv tc yj frq u ig hyfblb",
+   "gamma": 1.0045186904505954e-11
+  },
+  {
+   "text": "ua fpukzi fkudta bsjmvi wufn ubhs igv c fwh fwh igv",
+   "gamma": 0.023385331331382875
+  },
+  {
+   "text": "kpabnp mdqib a tlr mes tfgqap yusuho px c begmo nt xfyl blceif bahum cw e tzb dhjfg dngc qfcfrz nems qdmapj t g anz",
+   "gamma": 7.766232101857895e-12
+  },
+  {
+   "text": "rjv fm lwdubi jjh w ufumky drd nvlstv sihpu sei psce bnusig tmg ova flq tgrigm tkxad w u uip uacnw zp xo vnik mhkxx rvte",
+   "gamma": 0.004379883390351336
+  },
+  {
+   "text": "tt vb nfrx sv lubldb ov vir ldbu aphdas cf lectw dlv xlnrus aphdas",
+   "gamma": 0.009712883250923787
+  },
+  {
+   "text": "oyj nogaop ptq qi r lt vdz jcotqn mvp vplc b mrcveo sn t ye ujjl gxaa pe fe x csvegk csvegk lt nogaop ye mvp nogaop mrcveo csvegk vdz mvp x gxaa pe x qi b vdz mvp gxaa csvegk",
+   "gamma": 0.04134120866203106
+  },
+  {
+   "text": "ot kb nzbqhe qrjhf qkftx yhk nwxhoc q h hn uplg cfh thecw tqtyt nhul zldu lol izwve mvu i ksdz js udwe qucriy hdcl pgzjnz jxp zldu js tqtyt ot cfh nzbqhe ksdz nhul nwxhoc thecw tqtyt h tqtyt cfh nwxhoc qrjhf lol ksdz mvu qrjhf hn",
+   "gamma": 0.03144111399625493
+  },
+  {
+   "text": "ru q f tfjk jjcyo bpeykv tfjk f tfjk jjcyo jjcyo",
+   "gamma": 0.06648996426683351
+  },
+  {
+   "text": "cexb yj o of siuyt dkz aprm g l uyv yvfnk ugnob bvo r tg rrspa um fpvofw sgud fnh a elch uxr noa ylzo vwksw eb mslbr n hlackh djz bs tmkffd aoy fx g mk mslbr ugnob um r fpvofw hlackh",
+   "gamma": 0.013393161819885036
+  },
+  {
+   "text": "j kqdfk zh o ocs kgcnzq b jjz mctn n mx kohpc j irjm rjlao bkspzm i",
+   "gamma": 0.007546054399068414
+  },
+  {
+   "text": "yjf yjf",
+   "gamma": 0.85
+  },
+  {
+   "text": "x l o qfand zrup l yiqm zxevjo sqqby rtrbt emas si yy dxuj akhx wyyi n oxbswq b phkf s odzo ir qdfkmn pqnet axq wh ou twlv jua cg bvhdhd i doiws exly yiqtv kxueei fh dbwnuk",
+   "gamma": 0.0026310092665789986
+  },
+  {
+   "text": "xbbmbq ypbsvo gvkwnl u y",
+   "gamma": 3.106626067506113e-12
+  },
+  {
+   "text": "geoo rwdfam he nw evzav tfxjtf cku l bvrbvo pzcoo t tuftl bau tpp gbytg umwa klbsm icw s xmx c qnlzb tvg qjhka jnwjk qtiw",
+   "gamma": 7.97961696719085e-12
+  },
+  {
+   "text": "ljyy tejxmb ehx r fsdto",
+   "gamma": 3.106626067506113e-12
+  },
+  {
+   "text": "kqib mcxv i g jo nkvrg wilcts p q",
+   "gamma": 4.0960568270520525e-12
+  },
+  {
+   "text": "wx sazeb popaow buq o dkxfwn xys nq ijwjl buq sazeb wx ijwjl xys ijwjl dkxfwn",
+   "gamma": 0.029056040852261433
+  },
+  {
+   "text": "fbwt tmj hch e",
+   "gamma": 2.8853586186983193e-12
+  },
+  {
+   "text": "snnl kjgrn o l tqbhw hk zxghje pdgrp l cf vba",
+   "gamma": 0.01334004133047817
+  },
+  {
+   "text": "l g htvh l jbeod iodhsm arr rhwo wp gd jhrc wlnbq b oxmhfc orgahe clzt ndua je t uzt sj empq u",
+   "gamma": 0.005118630871198349
+  },
+  {
+   "text": "px kl bo poej nyj yi trc sqters clocy pgxc oqoz z s nevox e q u dedc corvf tsu urbag ndx sc fbg lnqgp ga aczm ua skh tg qixtrj ygi",
+   "gamma": 9.233169784295114e-12
+  },
+  {
+   "text": "lfrsa zub xdy s hhcdg eyoigl u ftshth tkdmt jhumf hvahld ezrj trbvf zrthj hhcdg zub zrthj lfrsa eyoigl trbvf u zrthj",
+   "gamma": 0.028762513932955702
+  },
+  {
+   "text": "w vi ag cfqwfs vtztzp tejq qwqg xds tir jj ynp xrfleq qktf ocda syw hzynx tuvr vri v wbnpx xfmq ljfae zw fs hjcuo r oc zofllo zdt prazs nkgtv krq buhpl pfo go nl iotup zzfhtv wklin npvitt hzynx tuvr tejq iotup vri jj qwqg xds syw vtztzp ljfae go iotup wklin krq zzfhtv vtztzp v wklin ocda zofllo hzynx v buhpl hjcuo prazs jj vtztzp vi",
+   "gamma": 0.02586860363650101
+  },
+  {
+   "text": "pl pxd nphg py ihsb t bf qmw h w iybkh ogqu ic udbdcb agizy okeov thowr wy zqha e q ft ijaln voiyap idmv wnk q mhy azp qeo simahk qnwvr qzlr dpptiy ntp x esu m ex m agizy pl azp wnk pxd qeo nphg w simahk qeo w e qnwvr voiyap q qmw nphg qmw q voiyap wy idmv ft wnk thowr qzlr q ntp ex qzlr simahk q ft w py",
+   "gamma": 0.035523958009471945
+  },
+  {
+   "text": "ut rn lnhfj aekokq cnsu y zxsno oqujkg nhr nliaz upr cc izauec luv tfqdy hpkx vve iybs svwsn luv upr vve aekokq y upr cc svwsn izauec ut iybs nhr aekokq",
+   "gamma": 0.02533187819605276
+  },
+  {
+   "text": "etriis hobl snexi dm u oxwme lvkjv xwh nv fcxd jm mhk lhf mv j iwf gdwp mon so a skm laypc apxb cevkhv ensxo iq klk br vvckux wwvc bufmj fn wdl v",
+   "gamma": 9.641842879659634e-12
+  },
+  {
+   "text": "dxpcre pfjnzq wqjlj w m du qrew o nre itepdf oovrba nre m",
+   "gamma": 0.019276059062745876
+  },
+  {
+   "text": "hzk yjkmo l w m rbr dsnztu duko vgppnh bwhxw fpytk qyqxmm yyoa ofirwx cq wocvb zpjqb fkgz qbtw ufpd qf bwhxw fpytk qbtw dsnztu qbtw yjkmo",
+   "gamma": 0.02500574318624127
+  },
+  {
+   "text": "xvn edur xwxz cjx x tbdfxj bz tfuycl xsdubm dvuw ic wzgm afkb fmxhyo bz edur",
+   "gamma": 0.015064243615829365
+  },
+  {
+   "text": "s s xusyoq aono uz soe opl j otvrx yhfvw gilx rck z yezcui ajpg alonbg u",
+   "gamma": 0.007546054399068414
+  },
+  {
+   "text": "rcpro cjehr sp lps igtnil gtqxmz qtyjzk ail eefdvu yqzr klkb dm jsa jmry oc pbu akd tcucxc zfuy lcjyd czgup ftesc nmjx bmydd d nhht sgmel rw atp ccnulb togmo ax lckem wrsgp yjmwb toef jubd nhwncu ftfp yqzr d nmjx rcpro ail bmydd ftesc gtqxmz dm rw nhwncu togmo sgmel ftesc lcjyd klkb jubd pbu zfuy yqzr dm zfuy nhht gtqxmz klkb tcucxc lcjyd nmjx akd akd ail togmo lckem zfuy rcpro",
+   "gamma": 0.03048676839878739
+  },
+  {
+   "text": "khxo pz lyky l xe zfn djwa ppz t dxlwp awptzv orlqj gb sjhwl pakgft pvxp dwm crt ttfq qiwniv zcgb ms tp xh vuccb eta jqjj zf dujxi xyijd ji stkleb m ogdqbi crv a rytxke qbqc ergobz sj",
+   "gamma": 1.0843326236908979e-11
+  },
+  {
+   "text": "gcskx ccbkfn sfs a",
+   "gamma": 2.8853586186983193e-12
+  },
+  {
+   "text": "qt lgytte ehogcr aw uan edihq bdyw dtmecq cbjoq oumky qgh zlbgag npu thpg inoxi x gidj k g smb hi fyevae g k qmfca a fnk k tea gnkbf kdjok yh e kxylcs yhqbmr p fuq ba cbgvz",
+   "gamma": 0.011165544231513946
+  },
+  {
+   "text": "vavjky rppcqw m hflxk bzmuax zpeb yyj n steq rkxz oiwy czirf sge vlpz xssm kllzhc ewjge c yiw soz xssm rkxz soz sge c hflxk steq zpeb rkxz kllzhc soz yiw c soz",
+   "gamma": 0.037303568798184084
+  },
+  {
+   "text": "cxnbpy e dhc r kl u nf bcwk zpfqh isbw oz zkc wjqy i bwkvx lx qdhkf mtxou m igrth d t oyjstx itmcmt lukckc tu",
+   "gamma": 7.97961696719085e-12
+  },
+  {
+   "text": "iuacgq f fyo zvflez hxl uaawl q irws dprtlm ijh kcpdqp vgxmg bazqz d dblx cgrc d h yergah x ou yqkc rkbxyt wbnyso",
+   "gamma": 0.0048485660007386855
+  },
+  {
+   "text": "ou wjppny",
+   "gamma": 2.8853586186983193e-12
+  },
+  {
+   "text": "cncd cncd",
+   "gamma": 0.85
+  },
+  {
+   "text": "uv zu w z mrz xncrqp zqwvck aw hgfylf evltfp pu d wrrn o",
+   "gamma": 5.3047566339614605e-12
+  },
+  {
+   "text": "k tbbaj vbkmsu crpp bof h f l p dmtd hw slnynv cdptnv irow mqp",
+   "gamma": 5.5387916475524435e-12
+  },
+  {
+   "text": "oe i mt owlf mqxsqu ufsgnr sygzla spi jzhf jeolo p aoyp krcf fwv qnpnqv sab pr seo yruxvt qed xogwm saia rqsaj pkrs us aoyp jeolo yruxvt fwv sygzla pkrs ufsgnr i fwv rqsaj saia xogwm sab krcf spi mqxsqu aoyp xogwm fwv us qed fwv qnpnqv p rqsaj",
+   "gamma": 0.025299245896826528
+  },
+  {
+   "text": "plrxin wqru jipo cwyv d qxinu f jziei sylu u yfmmn cgaytb",
+   "gamma": 4.8295811794218935e-12
+  },
+  {
+   "text": "qhwevt ljfc zrirq tp mwsqpj",
+   "gamma": 3.106626067506113e-12
+  },
+  {
+   "text": "ccob chztjr oqge izu lfkoe oisbhu dww cbrhk oisbhu dww dww izu izu chztjr oqge chztjr",
+   "gamma": 0.04718046888906413
+  },
+  {
+   "text": "gjap bflq s exdod ud jnnf vs rbt cn er xpdoa ilsopj cqmw bp yen ww xdloa hy bipjq nrdn ygvxik oh kniqdy xikjm yausb tose pejl t b lx cltlfc sx jzujr upwxsv jzujr gjap ilsopj xpdoa cn pejl kniqdy ud xikjm lx s gjap ygvxik lx bipjq hy bp nrdn",
+   "gamma": 0.021300391481179348
+  },
+  {
+   "text": "xxxok qjdjy uvcfqn t jdkp in rknrb wrzlp aioi i vaz mdsjki ryjjxb prb bz wh zuy qqd qrk hcirsc hcptq dmur zqtyz nqyvc amx x xv dykezd zesg xyunaq gz rpa",
+   "gamma": 9.233169784295114e-12
+  },
+  {
+   "text": "sbwdat",
+   "gamma": 0.45
+  },
+  {
+   "text": "ud rd hvxdzm nes tlqzgl pfo botdf k tsbie yekvfp pogge tm sxymrr zuq zjnm cbt na",
+   "gamma": 6.000311358889121e-12
+  },
+  {
+   "text": "u z dvbl het lxa evqxvd oym qzi xign xoj qlnxh zmfpct wjpnxb ennwxq gqbykp daq ysfo x k llsws vjwen w dveoff ea muthq ysfo x oym oym u zmfpct w xoj z xoj xoj evqxvd llsws w u llsws",
+   "gamma": 0.04074631757093561
+  },
+  {
+   "text": "m xy tbz uidifp ynbbjx ayz bfh lt xgy agrse wjy dvxf tilg uu xqq xkqvxy",
+   "gamma": 5.771050304304026e-12
+  },
+  {
+   "text": "dpsmot zqr rlfyw qr dyxs c kjk cbmi tnk e bv lhnou kpb zx hu yfrbq alrczo v be bnqmfm eht wgi hbbcc ed jj egolip z ft sbxps jqui ypugw muuzr zggfgl n axjeh rlfyw sbxps eht lhnou lhnou kpb alrczo be cbmi kpb c jj alrczo",
+   "gamma": 0.025962235147926616
+  },
+  {
+   "text": "m zflgv pqtb indot eafbej uzjski rtse xu iivf l m rgal dug f q bgsre y a nuyabc qiiv gdcatk ggz gbmb kv lxdrd ycrw vflz",
+   "gamma": 0.00417541576237257
+  },
+  {
+   "text": "to xflzu ora xipyyo sbumhe j qa uiflnm iv nved fapg fcvqs w cyqiic gvfiwh r whiiwb edmnn s zg i ck fnhrb scnkh xdo ike nfo owp nhy h",
+   "gamma": 8.820388863739481e-12
+  },
+  {
+   "text": "iicxr cu yaafj kpfht vf wiow ajangu advvvj z ktlrzv vuubt ekyoue xafwyl aodcxb kgohg f l lci xw fd cu iicxr ajangu ktlrzv aodcxb lci ktlrzv lci iicxr vuubt f advvvj kpfht ajangu advvvj vuubt ktlrzv",
+   "gamma": 0.043374050368556905
+  },
+  {
+   "text": "wgf unio sfgnzb ftwhcp hqw usxpl ti g knx fz kamirj oxmrmu cu ko ba lz ndf gm z aart prfe eoz exhr wgf ndf aart cu ftwhcp gm sfgnzb ftwhcp sfgnzb",
+   "gamma": 0.029455200629451284
+  },
+  {
+   "text": "amzjbi mpk dwrs wcj iz gndp br u nwslgx ppjjp izjo u vs excp ie aqj qaymc d lqdt jjqd mf z dcflfw rcodzp yt frn wv clpk lqdt d ie lqdt",
+   "gamma": 0.019133520320645747
+  },
+  {
+   "text": "pyw pyw",
+   "gamma": 0.85
+  },
+  {
+   "text": "qtbgh kg ril jsb ajw yyjn ram v a utccw cfn ktrer hqel lj psniu ajw a ajw jsb hqel lj kg qtbgh qtbgh v jsb qtbgh",
+   "gamma": 0.04373904131704709
+  },
+  {
+   "text": "zxyiwd xa dyirek ah zkz q rn dsrcok lp dyirek rn dsrcok ah",
+   "gamma": 0.02677347213584058
+  },
+  {
+   "text": "ypps z rfumju a hgul eqm rcvk igmma nnj nn c qjrr s nzoa wtfx zbijga vnkvvm xhrze p uicorr cxzxxn tkpxoe akgzo gnjql",
+   "gamma": 7.55195905810524e-12
+  },
+  {
+   "text": "wuhwa d",
+   "gamma": 2.8853586186983193e-12
+  },
+  {
+   "text": "icpny oe lzpp neq wdejj djgihp zamvl xf d mhbpmj ymlcmu oe xf xf",
+   "gamma": 0.038899066630147194
+  },
+  {
+   "text": "d ewrbh uvgyy kk f zmsiv pqhoi qdd ka g quhmza vicij dz agrrbi okhgg jcibcp puj fh faad smv vwr rtxs wxr wg crzqz b bqqpnu tyyo exoh",
+   "gamma": 8.612555113529652e-12
+  },
+  {
+   "text": "dgmjo ava hgivvl jdv xvuwu rajzs fwm lxcfi b zf c zf lpzcml ywuc nhn ht xh xtsqj natr purfit truc b bqvsp zkisi v xs ud uzjo fapefs rx w cnycbp yo zjyuqr ptzow ydub",
+   "gamma": 0.005631284564064809
+  },
+  {
+   "text": "q pyzyeg afok imfmx kwyqlu wosn pdlay m q kwyqlu wosn afok kwyqlu",
+   "gamma": 0.04228644016613625
+  },
+  {
+   "text": "eitu rzuv mrrkh v ctlvpj ajeob ozpqfn bgolr b sr ljxb tegl weg ln k odi n chi lx m dc jdo mcmyc rc yp sie",
+   "gamma": 7.97961696719085e-12
+  },
+  {
+   "text": "ahdc odqh yipghn ytx obt kug l sxwry itz kyqfe mgab rp jvvxst etrbi w gyohy t",
+   "gamma": 6.000311358889121e-12
+  },
+  {
+   "text": "suujv vgi oqkhe knovtk tth g diw yxfas bxzag opcyv wxbtft",
+   "gamma": 4.587441537751147e-12
+  },
+  {
+   "text": "h m g nncrrk eqakjw pusu u b no vtrxih geqco qu jlxj mozc ocbph h y kil",
+   "gamma": 0.007008981379486023
+  },
+  {
+   "text": "y ykboz sxdu ksppyl gm edeihn qjow p fhm epqv d s ilk zz vsdtx",
+   "gamma": 5.5387916475524435e-12
+  },
+  {
+   "text": "rf akri mpacau bqphg mz wh nrdji xidlsn glyym uaj ym enas cae tuqkvj ofzb igigq r r oryr fni eillpe qhi pklx n jbmzi q ls qjt k rzmzgy dai v horbqc bv",
+   "gamma": 0.003123230896457496
+  },
+  {
+   "text": "bpa u yfv gm oxnhux bj qsrot ihei kfelm f guvoqx yyz lggy ypu jsbw iu nnic ftx g jkwjxl yeleb",
+   "gamma": 6.89748258508871e-12
+  },
+  {
+   "text": "sh i e varn eki yr fa by cqensa y gbz sgk az wg ee d qxy fmg tfybe ij bl lpnrnn y itssj yvodx ivwg ms sygki xkyfkg rsg tfybe gbz gbz sgk ivwg fa y by yvodx ms yr d fmg lpnrnn rsg i",
+   "gamma": 0.021896065412345123
+  }
+ ]
+}

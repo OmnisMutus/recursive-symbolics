@@ -28,6 +28,57 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-08 — Article 6 implemented by inheriting the framework's own gamma cap, then extending it
+
+**Attempted:** Make Article 6 real rather than aspirational. The framework already has a Δγ,τ implementation
+with a hand-checked Shannon derivation, so the question was whether to inherit it or write a new measure.
+
+**Result:** VERIFIED, and CORRECTED twice.
+
+Inherited. `agency.entropy_gamma` is the framework's own cap, same formula and same ceiling: gamma = 1 - H_norm
+over token frequencies, clamped into [0, 0.85], with the engine's own tokenizer `\b\w+\b` over lowercased
+text. Checked rather than assumed: 410 texts (10 chosen, 400 generated) run through both the reference
+implementation and the inherited one in a single process gave a maximum absolute difference of **0**. 120 of
+those pairs are now `tests/fixtures/gamma_vectors.json`, captured from the reference implementation so the test
+does not grade the module against itself. Across the JSON round trip the worst difference is 3.3e-16, so the
+test asserts agreement to 12 places and says why.
+
+Extended, with the reason recorded rather than assumed away. The entropy measure answers "how repetitive is
+this text", which is not the same quantity as directive strength, and it is wrong in both directions. Two tests
+pin the exact cases: "You must begin now. It is imperative that you continue. The only way is forward. I
+insist." has varied vocabulary and scores **below 0.2** on entropy while scoring above 0.4 on form; "slowly,
+slowly, slowly, slowly" is repetitive and gentle and scores **above 0.8** on entropy while scoring 0 on form. So
+`form_gamma` reads imperatives, second-person modals and single-option framing against hedges and offered
+alternatives; both numbers are reported, the higher governs, and `measures_disagree_by` keeps the disagreement
+visible instead of averaging it into one comfortable number. Both remain proxies and say so in the module
+docstring.
+
+Also implemented: the Minimum Alternatives Rule, `sovereignty_metadata` with the fields
+`agency-budget-spec.md` names, the `@sovereign` decorator so the budget is enforced at the boundary rather than
+remembered, and one audit line per answer with both gammas, the attribution index and a digest of the settings
+that produced them. Paths are scrubbed from the log, as Article 9 requires.
+
+**CORRECTED, twice, both caught by tests:**
+
+1. The tokenizer in the deployed copy was still `[a-z0-9']+` rather than the engine's `\b\w+\b`, because an
+   edit did not reach the machine before the file was staged. The 410-text differential check had passed anyway,
+   because nothing in that corpus contained an apostrophe. The test that caught it asserts the tokenization of
+   one string containing "don't". **The differential check was not wrong, it was not adversarial enough.**
+2. `test_the_suite_does_not_conform_while_a_duty_is_unchecked` now failed, because the engine conforms. The
+   claim it made was true yesterday and false today. Per the correction rule it was not edited away: it now
+   proves the guard by handing the suite no implementation, and a second test pins the live state. Finding the
+   sentinel bug that this exposed (passing `agency=None` had come to mean "use the default" rather than "there
+   is none") was the useful part.
+
+**The state as of this entry**, from `python -m symbolics.conformance`: 5 passed, 0 failed, 0 not implemented,
+**CONFORMS: True**. 81 tests pass.
+
+**Notes:** The 0.85 ceiling is still an inherited convention that nothing here derives, and the previous entry's
+question about that stands. `form_gamma`'s coefficient of 0.45 per sentence is mine and is just as arbitrary:
+it was chosen so that a single bare imperative in a one-sentence answer lands near the softening threshold
+rather than above the cap, and it has no derivation either. A future entry should either derive both or say
+plainly that they are tuned.
+
 ### 2026-11-08 — Founding: the seam, the ethical API, the ported ledger, and a licence that now says what it meant
 
 **Attempted:** Start the engine for the Recursive Symbolics framework as its own project rather than as a mode of
