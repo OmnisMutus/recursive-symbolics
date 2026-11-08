@@ -1,0 +1,520 @@
+{
+ "what": "Ground truth for metrics.scores: the framework's own centroid scoring, captured by running its reference implementation with its learning weights at their defaults (1.0 for every name, where a fresh engine starts). Not produced by the module under test.",
+ "captured": "2026-11-08",
+ "formula": "cosine(token counts, centroid counts) + 0.15 per token sharing a 4-letter stem, capped at 1.0",
+ "left_out": "the reference multiplies each score by an accumulated learning weight; metrics.py does not, so an address never depends on history nobody can inspect",
+ "vectors": [
+  {
+   "text": "",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "one",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "om om om om",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "I cut the practice short, angry and rigid, could not settle at all",
+   "scores": {
+    "Keter": 0.15,
+    "Chokmah": 0.15,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.443,
+    "Tifereth": 0.15,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "expansion and grace, abundance, open and vast",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 1.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "balance harmony integration centered heart",
+   "scores": {
+    "Keter": 0.15,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 1.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "tired hungry body exhausted sleep",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 1.0
+   }
+  },
+  {
+   "text": "the detail the documentation the syntax the trace the fix",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.15,
+    "Netzach": 0.0,
+    "Hod": 0.986,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "abyss gap paradox stuck lost",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 1.0,
+    "Chesed": 0.0,
+    "Geburah": 0.415,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "wisdom vision spark intuition breakthrough",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 1.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "foundation habit staging queue reflection",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 1.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "grind persistence endurance repeat keep going",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 1.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "code anger victory keep process pain struggle mirror detail flash",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.235,
+    "Binah": 0.15,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.232,
+    "Tifereth": 0.0,
+    "Netzach": 0.704,
+    "Hod": 0.695,
+    "Yesod": 0.235,
+    "Malkuth": 0.229
+   }
+  },
+  {
+   "text": "quicksort alignment gap zenith reflection architecture craft code spark",
+   "scores": {
+    "Keter": 0.236,
+    "Chokmah": 0.478,
+    "Binah": 0.242,
+    "Daath": 0.233,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.239,
+    "Netzach": 0.0,
+    "Hod": 0.472,
+    "Yesod": 0.239,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "anomaly storage and pure mirror buffer format beauty vast open exception zenith freedom monad",
+   "scores": {
+    "Keter": 0.657,
+    "Chokmah": 0.0,
+    "Binah": 0.224,
+    "Daath": 0.434,
+    "Chesed": 0.664,
+    "Geburah": 0.0,
+    "Tifereth": 0.221,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.664,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "trace infinite lag trace code rules execution sensory victory radiant endurance exhausted",
+   "scores": {
+    "Keter": 0.219,
+    "Chokmah": 0.0,
+    "Binah": 0.15,
+    "Daath": 0.217,
+    "Chesed": 0.221,
+    "Geburah": 0.219,
+    "Tifereth": 0.0,
+    "Netzach": 0.443,
+    "Hod": 0.657,
+    "Yesod": 0.0,
+    "Malkuth": 0.65
+   }
+  },
+  {
+   "text": "stubborn linear strict flow understanding crisis",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.263,
+    "Daath": 0.252,
+    "Chesed": 0.259,
+    "Geburah": 0.255,
+    "Tifereth": 0.0,
+    "Netzach": 0.518,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "container psychological beauty",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.31,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.304,
+    "Netzach": 0.15,
+    "Hod": 0.0,
+    "Yesod": 0.304,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "trace idea victory lost craft open inspiration subconscious keep",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.478,
+    "Binah": 0.0,
+    "Daath": 0.233,
+    "Chesed": 0.239,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.478,
+    "Hod": 0.472,
+    "Yesod": 0.239,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "swift freedom harsh drive craft zenith critical source grind lost supreme documentation victory container paradox",
+   "scores": {
+    "Keter": 0.65,
+    "Chokmah": 0.219,
+    "Binah": 0.222,
+    "Daath": 0.429,
+    "Chesed": 0.219,
+    "Geburah": 0.583,
+    "Tifereth": 0.0,
+    "Netzach": 0.807,
+    "Hod": 0.433,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "refactor balance buffer practice primal passion",
+   "scores": {
+    "Keter": 0.255,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.259,
+    "Netzach": 0.259,
+    "Hod": 0.255,
+    "Yesod": 0.259,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "endurance",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.417,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "alignment gap buffer stuck quicksort confused mercy anger",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.244,
+    "Binah": 0.0,
+    "Daath": 0.715,
+    "Chesed": 0.244,
+    "Geburah": 0.483,
+    "Tifereth": 0.244,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.244,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "sleep flash beauty cavity heart rigid swift flow repeat intent freedom confused continuous",
+   "scores": {
+    "Keter": 0.222,
+    "Chokmah": 0.448,
+    "Binah": 0.15,
+    "Daath": 0.439,
+    "Chesed": 0.448,
+    "Geburah": 0.222,
+    "Tifereth": 0.598,
+    "Netzach": 0.448,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.219
+   }
+  },
+  {
+   "text": "struggle eureka supreme synthesis grit hardware container primary equilibrium alignment quicksort memory primal equilibrium world precise cache grit",
+   "scores": {
+    "Keter": 0.615,
+    "Chokmah": 0.414,
+    "Binah": 0.359,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.828,
+    "Netzach": 0.771,
+    "Hod": 0.355,
+    "Yesod": 0.414,
+    "Malkuth": 0.407
+   }
+  },
+  {
+   "text": "intent process pivot intuition synthesis wisdom swift breakthrough infinite craft architecture practice dissonance manifestation system pure habit equilibrium",
+   "scores": {
+    "Keter": 0.633,
+    "Chokmah": 1.0,
+    "Binah": 0.431,
+    "Daath": 0.209,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.576,
+    "Netzach": 0.0,
+    "Hod": 0.572,
+    "Yesod": 0.213,
+    "Malkuth": 0.209
+   }
+  },
+  {
+   "text": "matrix system subconscious",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.62,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.304,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "grind system rule refactor",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.577,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.15,
+    "Tifereth": 0.0,
+    "Netzach": 0.284,
+    "Hod": 0.279,
+    "Yesod": 0.0,
+    "Malkuth": 0.0
+   }
+  },
+  {
+   "text": "abyss matrix output architecture documentation persistence format audit exception",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.727,
+    "Daath": 0.467,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.239,
+    "Hod": 0.472,
+    "Yesod": 0.0,
+    "Malkuth": 0.233
+   }
+  },
+  {
+   "text": "process centered primary hustle schema vision subconscious synthesis execution structure stubborn intuition heart coherence generous",
+   "scores": {
+    "Keter": 0.217,
+    "Chokmah": 0.438,
+    "Binah": 0.443,
+    "Daath": 0.0,
+    "Chesed": 0.219,
+    "Geburah": 0.0,
+    "Tifereth": 0.876,
+    "Netzach": 0.588,
+    "Hod": 0.367,
+    "Yesod": 0.219,
+    "Malkuth": 0.215
+   }
+  },
+  {
+   "text": "spark output",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.339,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.0,
+    "Malkuth": 0.327
+   }
+  },
+  {
+   "text": "reflection",
+   "scores": {
+    "Keter": 0.0,
+    "Chokmah": 0.0,
+    "Binah": 0.0,
+    "Daath": 0.0,
+    "Chesed": 0.0,
+    "Geburah": 0.0,
+    "Tifereth": 0.0,
+    "Netzach": 0.0,
+    "Hod": 0.0,
+    "Yesod": 0.417,
+    "Malkuth": 0.0
+   }
+  }
+ ]
+}
