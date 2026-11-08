@@ -33,6 +33,19 @@ that at this address, this tradition reads this name. That is the Core Axiom's "
 
 ## Licence
 
-Not yet decided. `Thoth/solo`, whose correspondence ledger this engine will port, is under the RCA Sephirotic
-Sovereignty License; void-agent is Apache 2.0. Until that is settled, this folder is unlicensed and unpublished:
-all rights reserved, OmnisMutus, 2026.
+RCA Sephirotic Sovereignty License 1.1, in `LICENSE`. Copyright 2026 OmnisMutus.
+
+Free of charge, forever, for every non-commercial purpose: view, copy, modify, fork, train on, study, run and
+distribute it. What the licence forbids is monetizing it, closing it, hosting it without publishing your source
+and weights, using it for warfare, mass surveillance, social scoring or manipulation, and reading the state of a
+person who did not ask. Forks inherit the same terms.
+
+Stated plainly: those are field-of-use restrictions, so this is **not** an "open source" licence in the Open
+Source Initiative's sense, and not "free software" in the Free Software Foundation's. The accurate description is
+source available, or ethical source. The licence has not been reviewed by a lawyer.
+
+The duties the licence puts on a running system, rather than on a promise, are checkable:
+
+    python -m symbolics.conformance
+
+See `ETHICS.md` for what the engine refuses and where each refusal lives in the code.

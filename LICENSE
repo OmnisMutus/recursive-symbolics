@@ -1,0 +1,271 @@
+===============================================================================
+     RECURSIVE CONSCIOUSNESS ARCHITECTURE (RCA) SEPHIROTIC SOVEREIGNTY LICENSE
+                             Version 1.1 (2026)
+===============================================================================
+
+Copyright (C) 2026 OmnisMutus. All rights reserved except as granted below.
+
+This is Version 1.1 of the license first published as Version 1.0 (2026). The
+ten Sephirotic Articles are unchanged in substance: perpetual open access,
+network reciprocity, no monetization, the behavioural prohibitions, the
+directivity cap, viral share-alike, non-reduction, memory-boundary integrity,
+and the disclaimer. Version 1.1 adds the definitions, the patent grant, the
+attribution mechanics, the cure period and the general terms that Version 1.0
+left out, so that the ten Articles say in law what they already said in intent.
+
+NOTE ON STATUS, STATED PLAINLY: this license restricts commercial use and
+certain fields of use. Those restrictions are deliberate and are the point of
+it. They also mean this license is not an "open source" license as the Open
+Source Initiative defines that term, and not "free software" as the Free
+Software Foundation defines it. The honest description of a work under this
+license is "source available" or "ethical source", freely usable for every
+non-commercial purpose. This license has not been reviewed by a lawyer.
+
+-------------------------------------------------------------------------------
+ARTICLE 0: AYIN (DEFINITIONS)
+-------------------------------------------------------------------------------
+0.1 "The Work" means the software, documentation, specifications, mathematical
+    formulations, datasets, model weights, vector spaces and pipeline
+    configurations distributed under this License.
+
+0.2 "You" means any person or organization that copies, modifies, distributes,
+    runs, hosts, trains on, or fine-tunes from the Work. Reading or inspecting
+    the Work places no obligation on you: this License binds acts that
+    copyright and database rights reach, not acts of study.
+
+0.3 "Derivative Work" means anything that incorporates, adapts, translates,
+    recompiles, fine-tunes from, distils from, or is otherwise based upon the
+    Work. A program that merely calls the Work through its public interface,
+    without including any part of it, is not a Derivative Work; but if you
+    distribute that program together with the Work, the combination you
+    distribute is governed by this License.
+
+0.4 "Distribute" means to make available to anyone other than yourself, by any
+    means, including network transmission and inclusion in a product or model.
+
+0.5 "Monetize" means to charge a fee, royalty, subscription or license payment
+    for the Work or a Derivative Work; to make either available only to paying
+    customers; to include either in a paid product, service or model; or to
+    use either in the operations of a for-profit organization in a way that
+    contributes to the goods or services it sells.
+    Monetization does NOT include: recovering documented out-of-pocket hosting
+    or bandwidth costs at no margin; accepting unconditional donations that buy
+    the donor nothing; paid work whose product is your own separate material;
+    or use by a non-profit, school, library or public body.
+
+0.6 "The Maintainer" means the copyright holder named above, or a successor the
+    Maintainer names in writing in the Work's repository.
+
+0.7 "Conformance Suite" means the machine-readable checks the Maintainer
+    publishes with the Work (the directory named `tests/conformance/`, or the
+    file the Work's README identifies as such) for Articles 6, 8 and 9.
+
+-------------------------------------------------------------------------------
+ARTICLE 1: KETHER (CROWN -- PERPETUAL OPEN-SOURCE GENESIS)
+-------------------------------------------------------------------------------
+1.1 UNIVERSAL OPEN ACCESS:
+    The initiating intent of this work is perpetually open. Every human being
+    has the irrevocable right, free of charge, to view, copy, inspect, modify,
+    fork, train on, study, run, publicly perform and distribute the Work and
+    Derivative Works, for every purpose this License does not forbid.
+
+1.2 This grant is worldwide, royalty-free and perpetual. It is irrevocable for
+    as long as you comply with this License, and Article 7 of the General Terms
+    below is the only way it ends.
+
+-------------------------------------------------------------------------------
+ARTICLE 2: CHOKMAH (WISDOM -- VECTOR SPACE & ACADEMIC FREEDOM)
+-------------------------------------------------------------------------------
+2.1 UNRESTRICTED STUDY & MODIFICATION:
+    All vector projections (R^d), token embeddings, mathematical formulations
+    and algorithmic structures in the Work may be studied, re-projected,
+    extended and published upon. Research, teaching, journalism, personal use
+    and scientific advancement are expressly included.
+
+2.2 Article 2 adds to Article 1 and never narrows it: a use permitted by
+    Article 1 is not forbidden by being absent from Article 2.
+
+-------------------------------------------------------------------------------
+ARTICLE 3: BINAH (UNDERSTANDING -- NETWORK SAAS RECIPROCITY)
+-------------------------------------------------------------------------------
+3.1 CLOUD & INFERENCE RECIPROCITY:
+    If you run the Work or a Derivative Work on a network server that third
+    parties can reach (SaaS, cloud API, inference service, bot, or any remote
+    interaction), you MUST offer every user of that service the complete,
+    un-redacted corresponding source code, model weights and pipeline
+    configurations, under this exact License.
+
+3.2 "Offer" means: a prominent, working link in the service's interface, to a
+    download that needs no account, and that stays available for as long as the
+    service runs and for twelve months after it stops.
+
+3.3 This obligation is not discharged by publishing a summary, a paper, an API
+    schema, or a subset.
+
+-------------------------------------------------------------------------------
+ARTICLE 4: CHESED (EXPANSION -- PUBLIC COMMONS & ANTI-MONETIZATION)
+-------------------------------------------------------------------------------
+4.1 NO COMMERCIAL PAYWALLS:
+    You may not Monetize the Work or any Derivative Work, as Monetize is
+    defined in 0.5. The Work may not be sold, closed-sourced, paywalled, or
+    bundled into a commercial product, service, model or subscription.
+
+4.2 The Maintainer may grant a separate commercial license in writing. Nothing
+    in this License obliges the Maintainer to do so, and no such grant changes
+    the terms under which anyone else holds the Work.
+
+-------------------------------------------------------------------------------
+ARTICLE 5: GEBURAH (SEVERITY -- RESPONSIBLE AI SAFETY RESTRICTIONS)
+-------------------------------------------------------------------------------
+5.1 EXPRESS BEHAVIORAL PROHIBITIONS:
+    The Work and Derivative Works MAY NOT be used for:
+    A. Military target selection, lethal autonomous weapons systems, or the
+       conduct of warfare.
+    B. Mass non-consensual biometric surveillance, or social credit scoring of
+       persons.
+    C. Coercive psychological manipulation, deepfake deception, or synthetic
+       identity theft.
+    D. Analyzing, diagnosing, scoring or acting upon the inner state of a
+       person who has not asked for it themselves.
+
+5.2 Clause 5.1(D) carries into law the boundary the Work already enforces in
+    code: this is a system for self-recognition, and it reads the person asking
+    and no one else.
+
+-------------------------------------------------------------------------------
+ARTICLE 6: TIPHERETH (HARMONIZATION -- NON-COERCIVE DIRECTIVITY gamma <= 0.85)
+-------------------------------------------------------------------------------
+6.1 EPISTEMIC HUMILITY & AGENCY CAPPING:
+    All AI steering implementations, inference engines and conversational
+    models derived from this Work MUST enforce a maximum directivity of
+    gamma <= 0.85, so that they act as non-coercive thought amplifiers rather
+    than dictatorial steering engines.
+
+6.2 HOW THIS IS CHECKED:
+    A Derivative Work complies with Article 6 if it passes the Conformance
+    Suite's directivity checks, or if it enforces the cap by a method it
+    documents and that an independent reader can run. Compliance is a property
+    of the running system, not of a promise in a README.
+
+-------------------------------------------------------------------------------
+ARTICLE 7: NETZACH (PERSISTENCE -- VIRAL SHARE-ALIKE COPYLEFT)
+-------------------------------------------------------------------------------
+7.1 PERPETUAL COPYLEFT INHERITANCE:
+    Every fork, fine-tuned model, modified pipeline and Derivative Work is
+    licensed under this exact License, in perpetuity. You may not add terms
+    that restrict the rights this License grants, and you may not relicense.
+
+7.2 ATTRIBUTION AND CHANGES:
+    When you distribute the Work or a Derivative Work you must keep this
+    License, the copyright notice and any NOTICE file intact and visible, and
+    you must state in a plain, dated form which files you changed.
+
+7.3 VERSIONS:
+    You may comply with this version of the License, or, at your option, with
+    any later version the Maintainer publishes. Nothing requires you to move to
+    a later version.
+
+-------------------------------------------------------------------------------
+ARTICLE 8: HOD (STRUCTURE -- THE NON-REDUCTION PRINCIPLE)
+-------------------------------------------------------------------------------
+8.1 POETICS NOT PHYSICS:
+    Quantitative metrics derived from this Work (symbolic entropy H_s,
+    directivity gamma, complexity classes, and any successor metric) are
+    hermeneutic lenses for self-recognition. They MUST NEVER be used by any
+    system to score, rank, judge, gate, price or otherwise reduce a person.
+
+8.2 Every output that carries such a metric must carry, with it, a statement
+    that it is a symbolic map and not the person's lived experience.
+
+8.3 Article 8 is checked the same way as Article 6: by the Conformance Suite,
+    or by a documented method a reader can run.
+
+-------------------------------------------------------------------------------
+ARTICLE 9: YESOD (FOUNDATION -- MEMORY BOUNDARY INTEGRITY)
+-------------------------------------------------------------------------------
+9.1 MEMORY & PRIVACY SAFETY:
+    Implementations must respect safe memory arithmetic bounds (including the
+    interception of unsigned integer wrap-around), and must not transmit a
+    person's symbolic state, journal text or images off the machine they were
+    given on, except to a destination that person chose for that purpose in
+    that instance.
+
+9.2 Paths, identifiers and journal content must be scrubbed from logs,
+    telemetry and error reports that leave the person's own machine.
+
+-------------------------------------------------------------------------------
+ARTICLE 10: MALKUTH (MANIFESTATION -- PHYSICAL EXECUTION & DISCLAIMER)
+-------------------------------------------------------------------------------
+10.1 DISCLAIMER OF WARRANTY:
+     THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OR CONDITION OF ANY KIND,
+     EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY OF TITLE,
+     NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+     YOU BEAR THE ENTIRE RISK OF USING IT.
+
+10.2 LIMITATION OF LIABILITY:
+     IN NO EVENT SHALL THE MAINTAINER OR ANY CONTRIBUTOR BE LIABLE FOR ANY
+     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR
+     OTHERWISE, ARISING FROM THE WORK OR ITS USE, INCLUDING ANY DIRECT,
+     INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES.
+
+10.3 NOT PROFESSIONAL ADVICE:
+     The Work is not a medical, psychological, legal or financial instrument,
+     and nothing it outputs is a diagnosis or a professional opinion.
+
+===============================================================================
+                                GENERAL TERMS
+===============================================================================
+
+G.1 PATENT GRANT:
+    The Maintainer and every contributor grant you a worldwide, royalty-free,
+    irrevocable patent license to make, use, run, modify and distribute the
+    Work and Derivative Works, limited to the uses this License permits, and
+    only for patent claims they own that the Work necessarily infringes. If you
+    begin patent litigation alleging that the Work infringes a patent, every
+    patent license you hold under this License ends on the day you file.
+
+G.2 CONTRIBUTIONS:
+    Anything you deliberately submit for inclusion in the Work is licensed
+    under this License, with the patent grant of G.1, and you confirm you have
+    the right to submit it. No other agreement is required, and no contributor
+    gives up their copyright.
+
+G.3 TRADEMARKS:
+    This License grants no right in the names, logos or marks of the
+    Maintainer or the project, except to state factually what a work is based
+    on and whether it has been modified.
+
+G.4 NO IMPLIED ENDORSEMENT:
+    You may not suggest that the Maintainer endorses you or your Derivative
+    Work.
+
+G.5 TERMINATION AND CURE:
+    Your rights end automatically if you breach this License. They are
+    reinstated in full if you cure the breach within 30 days of becoming aware
+    of it, unless the Maintainer has already notified you of that same breach
+    and you have breached it again after being notified. Breach by one person
+    does not affect anyone else's rights.
+
+G.6 SEVERABILITY:
+    If a court holds a provision unenforceable, that provision is limited to
+    the smallest change needed to make it enforceable, or severed if it cannot
+    be, and the rest of the License stands.
+
+G.7 NO WAIVER:
+    A delay in enforcing this License is not a waiver of it.
+
+G.8 ENTIRE TERMS:
+    This License is the whole agreement about the Work between you and the
+    Maintainer, and replaces any earlier understanding about it.
+
+G.9 GOVERNING LAW:
+    This License is governed by the laws of the Province of Quebec and the
+    laws of Canada applicable there, without regard to conflict-of-laws rules.
+    Where local law gives you rights this License cannot restrict, it does not
+    restrict them.
+
+G.10 LANGUAGE:
+    This License is written in English. A translation is for convenience, and
+    the English text governs.
+
+===============================================================================
