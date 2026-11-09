@@ -11,7 +11,7 @@ of the current test_all_engines.py, which makes that distinction.
 
  [RAN_ONLY] standalone_rca_sandbox.py                  : Symbolic OS V2.0 Engine                 -> exited 0 in 91.8 ms, no correctness test exists
  [VERIFIED] knn_project.py                             : KNN Machine Learning Engine             -> test_knn_project.py passed in 97.1 ms
- [VERIFIED] iitd_mth432_stat_learning.py               : IITD Statistical Learning Engine         -> test_iitd_mth432_stat_learning.py passed in 1092.6 ms
+ [VERIFIED] stat_learning_suite.py               : Statistical Learning Engine         -> test_stat_learning_suite.py passed in 1092.6 ms
  [VERIFIED] doc2vec_cluster_engine.py                  : Doc2Vec NLP Cluster Geometry Engine      -> test_doc2vec_cluster_engine.py passed in 375.2 ms
  [VERIFIED] dht_rca_node.py                            : Kademlia P2P DHT Network Node            -> test_dht_rca_node.py passed (bucket-index float-precision bug found & fixed: math.log2 -> bit_length()-1)
  [RAN_ONLY] grpc_web_bridge.py                         : gRPC-Web Envoy Proxy Translator Bridge   -> exited 0 in 230.2 ms, no correctness test exists
@@ -22,7 +22,7 @@ of the current test_all_engines.py, which makes that distinction.
  [RAN_ONLY] nestjs_vue_cli_simulator.py                : NestJS-Vue CLI Monorepo Generator        -> exited 0 in 263.3 ms, no correctness test exists
  [VERIFIED] hello_world_repo_simulator.py              : Git SHA-1 Commit Graph Simulator         -> test_hello_world_repo_simulator.py passed in 67.9 ms
  [RAN_ONLY] ddpg_quadcopter_rca_engine.py              : DDPG Quadcopter RL Continuous Control    -> exited 0 in 385.8 ms, no correctness test exists
- [VERIFIED] alx_c_low_level_simulator.py              : ALX Low-Level C Functions & Nested Loops -> test_alx_c_low_level_simulator.py passed in 44.3 ms
+ [VERIFIED] c_low_level_simulator.py              : Low-Level C Functions & Nested Loops -> test_c_low_level_simulator.py passed in 44.3 ms
  [RAN_ONLY] computational_kabbalah_honest_benchmark.py : Honest NumPy Performance Benchmark Suite -> exited 0 in 321.2 ms, self-verifying inline only
  [RAN_ONLY] strict_honest_benchmark_suite.py           : Strict Honest CTO Benchmark Suite        -> exited 0 in 349.3 ms, self-verifying inline only
 
@@ -38,4 +38,4 @@ of the current test_all_engines.py, which makes that distinction.
  > Do not cite RAN_ONLY engines as "working" -- only as "present and not crashing."
 ======================================================================
 Timestamp: 2026-07-30 (regenerated; see PHILOSOPHICAL_AND_ENGINEERING_BOUNDARIES.md and TESTING_STANDARD.md)
-License  : The Universal AI & Human Sovereignty Public License v1.0 (Author: OmnisMutus)
+License  : RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)

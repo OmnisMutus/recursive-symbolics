@@ -22,7 +22,7 @@ for _sub in ("engines", "protocols", "ledgers", "tests"):
     _p = str(_REPO_ROOT / _sub)
     if _p not in sys.path:
         sys.path.append(_p)
-import iitd_mth432_stat_learning as eng
+import stat_learning_suite as eng
 
 try:
     import sklearn

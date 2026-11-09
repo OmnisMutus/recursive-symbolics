@@ -12,7 +12,7 @@ HARD CONSTRAINTS ENFORCED:
 6. NO UNVERIFIABLE CLAIMS: Objective technical labels only. No "production-ready" / "enterprise-grade" claims.
 7. LIMITATIONS DISCLOSURE: Explicit "Limitations" section printed at conclusion.
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import sys

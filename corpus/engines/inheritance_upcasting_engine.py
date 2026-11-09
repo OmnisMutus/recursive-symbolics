@@ -19,7 +19,7 @@ Hierarchy (3 levels, matching the execution plan's spec):
         -> Car (mid)
             -> SportsCar (most derived)
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import sys

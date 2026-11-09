@@ -38,7 +38,7 @@ External Package Size     |     UNMEASURED (was a typed string literal, not comp
 RAM Memory Footprint      |     UNMEASURED (was a typed string literal, not computed) |    UNMEASURED (was also never actually profiled)
 Physical Safety Cap       | None (Unbounded thrust)   | gamma <= 0.85 (Geburah)
 Security Immunity         | Reactive bug patches      | CWE-190 (Integer Overflow) checked -- corrected from a misattributed CVE-2010-2543 citation
-License & Sovereignty     | Third-party corporate     | OmnisMutus Public License
+License & Sovereignty     | Third-party corporate     | RCA Sovereignty License 1.1
 ================================================================================
 ```
 
@@ -64,5 +64,5 @@ License & Sovereignty     | Third-party corporate     | OmnisMutus Public Licens
 
 -  **Comparison Script**: [`../reconstructed_frameworks_comparison.py`](../reconstructed_frameworks_comparison.py)
 -  **Documentation Location**: [`reconstructed_frameworks_side_by_side_matrix.md`](reconstructed_frameworks_side_by_side_matrix.md)
--  **Brain Artifact Mirror**: [reconstructed_frameworks_side_by_side_matrix.md](reconstructed_frameworks_side_by_side_matrix.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Artifact Mirror**: `reconstructed_frameworks_side_by_side_matrix.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

@@ -17,7 +17,7 @@ Tests Included:
    classification for the integer-overflow bug class this suite actually checks.)
 5. TestDoc2VecGeometrySuite: FNV-1a hash vectorization, L2 unit norm, cosine symmetry.
 6. TestKademliaDHTSuite: 160-bit XOR distance metric, triangle inequality, k-bucket routing.
-7. TestALXCLowLevelSuite: ISO GNU89 C functions (_islower, _isalpha, _abs, add).
+7. TestCLowLevelSuite: ISO GNU89 C functions (_islower, _isalpha, _abs, add).
 
 Usage:
     python test_production_engine_unit_tests.py
@@ -44,12 +44,12 @@ for _sub in ("engines", "protocols", "ledgers", "tests"):
 
 # Import real engine modules
 import knn_project
-import iitd_mth432_stat_learning
+import stat_learning_suite
 import ddpg_quadcopter_rca_engine
 import safe_memory_boundary_engine
 import doc2vec_cluster_engine
 import dht_rca_node
-import alx_c_low_level_simulator
+import c_low_level_simulator
 
 
 # ==============================================================================
@@ -106,7 +106,7 @@ class TestStatisticalLearningSuite(unittest.TestCase):
         X_design = np.hstack([np.ones((50, 1)), X])
         y = np.dot(X_design, true_w) + np.random.randn(50) * 0.05
         
-        model = iitd_mth432_stat_learning.RidgeRegression(alpha=0.1)
+        model = stat_learning_suite.RidgeRegression(alpha=0.1)
         model.fit(X, y)
         
         # Check coefficients recovered close to ground truth
@@ -121,7 +121,7 @@ class TestStatisticalLearningSuite(unittest.TestCase):
         X = np.vstack([X0, X1])
         y = np.array([0]*20 + [1]*20)
         
-        lda = iitd_mth432_stat_learning.LDAClassifier()
+        lda = stat_learning_suite.LDAClassifier()
         lda.fit(X, y)
         preds = lda.predict(X)
         accuracy = np.mean(preds == y)
@@ -224,68 +224,68 @@ class TestKademliaDHTSuite(unittest.TestCase):
 
 
 # ==============================================================================
-# 7. ALX C LOW-LEVEL SIMULATOR UNIT TESTS
+# 7. C LOW-LEVEL SIMULATOR UNIT TESTS
 # ==============================================================================
-class TestALXCLowLevelSuite(unittest.TestCase):
+class TestCLowLevelSuite(unittest.TestCase):
     def test_islower_edge_cases(self):
         # Normal lower cases
-        self.assertEqual(alx_c_low_level_simulator._islower('a'), 1)
-        self.assertEqual(alx_c_low_level_simulator._islower('z'), 1)
-        self.assertEqual(alx_c_low_level_simulator._islower(ord('b')), 1)
+        self.assertEqual(c_low_level_simulator._islower('a'), 1)
+        self.assertEqual(c_low_level_simulator._islower('z'), 1)
+        self.assertEqual(c_low_level_simulator._islower(ord('b')), 1)
         # Edge cases: Upper, digits, whitespace, empty string, multichar, None
-        self.assertEqual(alx_c_low_level_simulator._islower('A'), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower('Z'), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower('9'), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower(' '), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower(''), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower('ab'), 0)
-        self.assertEqual(alx_c_low_level_simulator._islower(None), 0)
+        self.assertEqual(c_low_level_simulator._islower('A'), 0)
+        self.assertEqual(c_low_level_simulator._islower('Z'), 0)
+        self.assertEqual(c_low_level_simulator._islower('9'), 0)
+        self.assertEqual(c_low_level_simulator._islower(' '), 0)
+        self.assertEqual(c_low_level_simulator._islower(''), 0)
+        self.assertEqual(c_low_level_simulator._islower('ab'), 0)
+        self.assertEqual(c_low_level_simulator._islower(None), 0)
 
     def test_isalpha_edge_cases(self):
         # Normal alpha cases
-        self.assertEqual(alx_c_low_level_simulator._isalpha('a'), 1)
-        self.assertEqual(alx_c_low_level_simulator._isalpha('Z'), 1)
-        self.assertEqual(alx_c_low_level_simulator._isalpha(ord('M')), 1)
+        self.assertEqual(c_low_level_simulator._isalpha('a'), 1)
+        self.assertEqual(c_low_level_simulator._isalpha('Z'), 1)
+        self.assertEqual(c_low_level_simulator._isalpha(ord('M')), 1)
         # Edge cases: Digits, whitespace, empty string, multichar, None
-        self.assertEqual(alx_c_low_level_simulator._isalpha('0'), 0)
-        self.assertEqual(alx_c_low_level_simulator._isalpha(' '), 0)
-        self.assertEqual(alx_c_low_level_simulator._isalpha(''), 0)
-        self.assertEqual(alx_c_low_level_simulator._isalpha('az'), 0)
-        self.assertEqual(alx_c_low_level_simulator._isalpha(None), 0)
+        self.assertEqual(c_low_level_simulator._isalpha('0'), 0)
+        self.assertEqual(c_low_level_simulator._isalpha(' '), 0)
+        self.assertEqual(c_low_level_simulator._isalpha(''), 0)
+        self.assertEqual(c_low_level_simulator._isalpha('az'), 0)
+        self.assertEqual(c_low_level_simulator._isalpha(None), 0)
 
     def test_abs_edge_cases_and_int32_overflow(self):
         # Normal cases
-        self.assertEqual(alx_c_low_level_simulator._abs(-98), 98)
-        self.assertEqual(alx_c_low_level_simulator._abs(98), 98)
-        self.assertEqual(alx_c_low_level_simulator._abs(0), 0)
+        self.assertEqual(c_low_level_simulator._abs(-98), 98)
+        self.assertEqual(c_low_level_simulator._abs(98), 98)
+        self.assertEqual(c_low_level_simulator._abs(0), 0)
         # C Stdlib abs(INT_MIN) gotcha: -(-2147483648) overflows 32-bit signed int
         with self.assertRaises(OverflowError):
-            alx_c_low_level_simulator._abs(-2147483648)
+            c_low_level_simulator._abs(-2147483648)
 
     def test_add_edge_cases_and_int32_overflow(self):
         # Normal cases
-        self.assertEqual(alx_c_low_level_simulator.add(38, 60), 98)
-        self.assertEqual(alx_c_low_level_simulator.add(-10, 5), -5)
+        self.assertEqual(c_low_level_simulator.add(38, 60), 98)
+        self.assertEqual(c_low_level_simulator.add(-10, 5), -5)
         # 32-bit signed integer addition overflow boundaries
         with self.assertRaises(OverflowError):
-            alx_c_low_level_simulator.add(2147483647, 1)
+            c_low_level_simulator.add(2147483647, 1)
         with self.assertRaises(OverflowError):
-            alx_c_low_level_simulator.add(-2147483648, -1)
+            c_low_level_simulator.add(-2147483648, -1)
 
     def test_abs_at_exact_int32_max_boundary(self):
         # INT32_MAX itself must be valid input and output (boundary, not overflow)
-        self.assertEqual(alx_c_low_level_simulator._abs(2147483647), 2147483647)
+        self.assertEqual(c_low_level_simulator._abs(2147483647), 2147483647)
 
     def test_add_at_exact_boundaries_should_not_raise(self):
         # Results landing exactly ON the boundary are valid, not overflow.
-        self.assertEqual(alx_c_low_level_simulator.add(2147483646, 1), 2147483647)
-        self.assertEqual(alx_c_low_level_simulator.add(-2147483647, -1), -2147483648)
+        self.assertEqual(c_low_level_simulator.add(2147483646, 1), 2147483647)
+        self.assertEqual(c_low_level_simulator.add(-2147483647, -1), -2147483648)
 
     def test_islower_rejects_non_ascii_and_type_confusion(self):
         # Non-ASCII letter (e.g. 'é') should not be classified as lowercase
-        self.assertEqual(alx_c_low_level_simulator._islower('é'), 0)
+        self.assertEqual(c_low_level_simulator._islower('é'), 0)
         # Bool is a subclass of int in Python; must not be accepted as ordinal
-        self.assertEqual(alx_c_low_level_simulator._islower(True), 0)
+        self.assertEqual(c_low_level_simulator._islower(True), 0)
 
 
 # ==============================================================================

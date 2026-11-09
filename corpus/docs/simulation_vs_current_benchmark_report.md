@@ -62,5 +62,5 @@ The Ridge L2 row below now reflects an actual scikit-learn run instead.
 
 -  **Benchmark Script**: [`../benchmark_simulation_vs_current.py`](../benchmark_simulation_vs_current.py)
 -  **Documentation Location**: [`simulation_vs_current_benchmark_report.md`](simulation_vs_current_benchmark_report.md)
--  **Brain Artifact Mirror**: [simulation_vs_current_benchmark_report.md](simulation_vs_current_benchmark_report.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Artifact Mirror**: `simulation_vs_current_benchmark_report.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

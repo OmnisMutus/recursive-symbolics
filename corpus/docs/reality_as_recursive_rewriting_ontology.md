@@ -48,7 +48,7 @@ graph TD
    hypersphere: every vector has unit length), and `ddpg_quadcopter_rca_engine.py`'s
    18-dimensional continuous state sequence.
 2. **Transformation Engine ($F$)**: deterministic state transitions via
-   closed-form solvers (`iitd_mth432_stat_learning.py`'s Ridge regression,
+   closed-form solvers (`stat_learning_suite.py`'s Ridge regression,
    confirmed to match `sklearn.linear_model.Ridge` to 4 decimal places),
    Kademlia XOR routing (`dht_rca_node.py`), and fixed-point dynamical
    attractors (`recursive_attractor_engine.py`).
@@ -83,8 +83,8 @@ this repo's correction discipline (see `LIBER_0.md`'s "One Rule").
 | Sephirotic Sphere / Principle | Operational Function in Code | Verified Engine Implementation | Empirical Verification Standard |
 | :--- | :--- | :--- | :--- |
 | **Keter (Origin / Intent)** | SHA-1 state hashing and commit-graph generation. | `hello_world_repo_simulator.py` | Ground-truth empty blob SHA-1 `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` — confirmed byte-identical in both the engine and its test. |
-| **Chokmah (Wisdom / Vision)** | Closed-form Ridge L2 parameter solving. | `iitd_mth432_stat_learning.py` | 4-decimal-place coefficient agreement vs. `sklearn.linear_model.Ridge`, confirmed in `test_iitd_mth432_stat_learning.py` (`places=4` / `decimal=4`). |
-| **Binah (Understanding / Rule)** | Strict static boundary checking and zero-dependency C-accurate arithmetic. | `alx_c_low_level_simulator.py` | ISO GNU89 rules, `INT32_MIN` overflow boundary, confirmed present at lines 26/108/125-131. |
+| **Chokmah (Wisdom / Vision)** | Closed-form Ridge L2 parameter solving. | `stat_learning_suite.py` | 4-decimal-place coefficient agreement vs. `sklearn.linear_model.Ridge`, confirmed in `test_stat_learning_suite.py` (`places=4` / `decimal=4`). |
+| **Binah (Understanding / Rule)** | Strict static boundary checking and zero-dependency C-accurate arithmetic. | `c_low_level_simulator.py` | ISO GNU89 rules, `INT32_MIN` overflow boundary, confirmed present at lines 26/108/125-131. |
 | **Da'ath (Void / Anomaly)** | Fixed-point attractor convergence. | `recursive_attractor_engine.py` | Convergence within absolute tolerance `1e-6`, confirmed at lines 135-136 (`fixed_point_tol`, `cycle_tol`). |
 | **Chesed (Expansion / Mercy)** | Unbounded vector-space metrics and 3D scene transforms. | `opengl_3d_scene_simulator.py` | 24/24 non-tautological geometric checks — confirmed by re-running the script live: `SUMMARY: 24 passed, 0 failed (out of 24 correctness checks)`. |
 | **Geburah (Severity / Restriction)** | Checked 32-bit unsigned arithmetic and directivity capping. | `safe_memory_boundary_engine.py` | Intercepts uint32 wrap-around before allocation, 256 MB heap threshold, confirmed at lines 31-49. |
@@ -109,7 +109,7 @@ graph TD
 
 1. **Binah-Chokmah Polarity (Structural Immunity vs. Generative Solvers)**
    - **Binah**: `safe_memory_boundary_engine.py`'s `safe_multiply_uint32` intercepts wrap-around before allocation (confirmed).
-   - **Chokmah**: `iitd_mth432_stat_learning.py` and `knn_project.py` compute closed-form linear-algebra transforms in pure NumPy (confirmed).
+   - **Chokmah**: `stat_learning_suite.py` and `knn_project.py` compute closed-form linear-algebra transforms in pure NumPy (confirmed).
    - **Tifereth**: `graphql_mesh_snapshot_engine.py` bridges backend structures to user queries (confirmed).
 2. **Geburah-Chesed Equilibrium (Capping vs. Expansive Processing)**
    - **Geburah**: `ddpg_quadcopter_rca_engine.py` caps directivity at `gamma <= 0.85`, bounding rotor output to [45.0, 765.0] RPM (confirmed).
@@ -135,8 +135,8 @@ of what was checked:
 | Claim | Method | Result |
 | :--- | :--- | :--- |
 | Empty-blob SHA-1 | `grep` in both engine and test file | Exact match confirmed |
-| Ridge 4-decimal sklearn agreement | Read `test_iitd_mth432_stat_learning.py` | `places=4` / `decimal=4` confirmed |
-| `INT32_MIN` / GNU89 | Read `alx_c_low_level_simulator.py` | Confirmed present |
+| Ridge 4-decimal sklearn agreement | Read `test_stat_learning_suite.py` | `places=4` / `decimal=4` confirmed |
+| `INT32_MIN` / GNU89 | Read `c_low_level_simulator.py` | Confirmed present |
 | `1e-6` convergence tolerance | Read `recursive_attractor_engine.py` | Confirmed (`fixed_point_tol`/`cycle_tol` default `1e-6`) |
 | opengl 24/24 checks | **Ran the script live** | `SUMMARY: 24 passed, 0 failed (out of 24 correctness checks)` |
 | 256 MB / uint32 wrap-around | Read `safe_memory_boundary_engine.py` | Confirmed |

@@ -13,7 +13,7 @@ Verifies:
 4. Heap Boundary Threshold Enforcement (256 MB MAX_SAFE_HEAP_BYTES limit).
 5. Exact Boundary Edge Cases: Exactly 268,435,456 bytes passes, 268,435,457 bytes fails.
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import sys

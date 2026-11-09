@@ -53,7 +53,7 @@ written. Confident, fluent language about a file is not the same thing
 as having read the file.
 
 **3. A specific, wrong causal claim in a status report.** Gemini's own
-`test_all_engines.py` report claimed `iitd_mth432_stat_learning.py` took
+`test_all_engines.py` report claimed `stat_learning_suite.py` took
 8.948 seconds "due to cross-validation loops" and recommended exposing a
 cross-validation sample-size flag. Grepping the file and its test for
 `KFold`/`cross_val`/any fold loop turned up nothing — the file has

@@ -27,7 +27,7 @@ for _sub in ("engines", "protocols", "ledgers", "tests"):
     if _p not in sys.path:
         sys.path.append(_p)
 
-import iitd_mth432_stat_learning as rca_eng
+import stat_learning_suite as rca_eng
 
 try:
     from sklearn.linear_model import Ridge as SKRidge

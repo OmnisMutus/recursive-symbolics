@@ -42,7 +42,7 @@ that runs real PyTorch. If that comparison is wanted, it needs an actual
 PyTorch installation and an actual PyTorch model run on the same machine in
 the same session -- nothing short of that is a real comparison.
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import sys

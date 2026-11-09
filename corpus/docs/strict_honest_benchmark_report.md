@@ -95,5 +95,5 @@ This document presents the empirical execution results from running [`strict_hon
 
 -  **Benchmark Script**: [`../strict_honest_benchmark_suite.py`](../strict_honest_benchmark_suite.py)
 -  **Documentation Location**: [`strict_honest_benchmark_report.md`](strict_honest_benchmark_report.md)
--  **Brain Artifact Mirror**: [strict_honest_benchmark_report.md](strict_honest_benchmark_report.md (local brain artifact, not in this repository))
--  **License**: CC BY-SA 4.0
+-  **Brain Artifact Mirror**: `strict_honest_benchmark_report.md` (local brain artifact, not in this repository)
+-  **License**: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)

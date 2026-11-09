@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-test_iitd_mth432_stat_learning.py
-Runnable Unit Test Suite for iitd_mth432_stat_learning.py.
+test_stat_learning_suite.py
+Runnable Unit Test Suite for stat_learning_suite.py.
 
 WHAT THIS TESTS:
 1. Ridge L2 Regression Closed-Form Recovery: Verifies beta = (X^T X + alpha I)^-1 X^T y
@@ -27,7 +27,7 @@ for _sub in ("engines", "protocols", "ledgers", "tests"):
     if _p not in sys.path:
         sys.path.append(_p)
 
-import iitd_mth432_stat_learning as stat
+import stat_learning_suite as stat
 
 
 class TestStatisticalLearningSuite(unittest.TestCase):
@@ -118,7 +118,7 @@ class TestStatisticalLearningSuite(unittest.TestCase):
 
 def run_unit_test_suite():
     print("=" * 72)
-    print("  IITD MTH432 STATISTICAL LEARNING ENGINE — UNIT TEST SUITE")
+    print("  STATISTICAL LEARNING ENGINE — UNIT TEST SUITE")
     print("  Executing Closed-Form Ridge & Sklearn Ground-Truth Assertions")
     print("=" * 72 + "\n")
 

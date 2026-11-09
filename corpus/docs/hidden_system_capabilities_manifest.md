@@ -16,7 +16,7 @@ This manifest outlines the verified capabilities of the Solo Engineering Suite l
 
 ## System Capabilities & Verification Log
 
-### 1. Closed-Form Ridge L2 Regression (`iitd_mth432_stat_learning.py`)
+### 1. Closed-Form Ridge L2 Regression (`stat_learning_suite.py`)
 - Capability: Solves regularized linear regression via beta = (X^T X + alpha I)^-1 X^T y with zero external dependencies.
 - Verification: Evaluated directly against `sklearn.linear_model.Ridge` in `real_ridge_benchmark_vs_sklearn.py`. Yields exact 4-decimal place coefficient match and a speedup range of 13.9x to 20.6x across timing iterations.
 

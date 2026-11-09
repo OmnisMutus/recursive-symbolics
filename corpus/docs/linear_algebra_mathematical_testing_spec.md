@@ -36,14 +36,14 @@ graph TD
 ## Detailed Formulations & Actual Verification Matrix
 
 ### 1. Closed-Form Ridge L2 Regression Matrix Inversion
-- **Engine File**: [`../iitd_mth432_stat_learning.py`](../iitd_mth432_stat_learning.py)
+- **Engine File**: [`../stat_learning_suite.py`](../stat_learning_suite.py)
 - **Formulation**:
   $$\boldsymbol{\beta} = \left( \mathbf{X}^T \mathbf{X} + \alpha \mathbf{I} \right)^{-1} \mathbf{X}^T \mathbf{y}$$
-- **Actually Verified** (`test_iitd_mth432_stat_learning.py`): closed-form coefficient recovery on constructed data with known ground truth, and a direct match against real scikit-learn `Ridge` output on the same inputs.
+- **Actually Verified** (`test_stat_learning_suite.py`): closed-form coefficient recovery on constructed data with known ground truth, and a direct match against real scikit-learn `Ridge` output on the same inputs.
 - **NOT verified**: no condition-number ($\kappa$) evaluation exists anywhere in the engine or its tests. Numerical stability is inherited from `np.linalg` and is untested beyond the recovery/match assertions above.
 
 ### 2. Fisher Linear Discriminant Analysis (LDA) — Two-Class Closed Form
-- **Engine File**: [`../iitd_mth432_stat_learning.py`](../iitd_mth432_stat_learning.py)
+- **Engine File**: [`../stat_learning_suite.py`](../stat_learning_suite.py)
 - **Formulation actually implemented** (lines 57–84 of the engine):
   $$\mathbf{S}_W = \mathbf{S}_0 + \mathbf{S}_1, \qquad \mathbf{w} = \mathbf{S}_W^{-1}(\boldsymbol{\mu}_1 - \boldsymbol{\mu}_0)$$
   This is the two-class closed-form solution, computed via `np.linalg.solve(S_W, mu1 - mu0)`. The between-class scatter matrix $\mathbf{S}_B$ is **never constructed**, and no generalized eigenvalue problem ($\mathbf{S}_W^{-1}\mathbf{S}_B\mathbf{w} = \lambda\mathbf{w}$) is solved — for exactly two classes the closed form gives the same direction without the eigen-decomposition, which is why the simpler path is valid, but the doc should not claim machinery the code doesn't contain.
@@ -87,4 +87,4 @@ graph TD
 
 - **Documentation Location**: [`docs/linear_algebra_mathematical_testing_spec.md`](linear_algebra_mathematical_testing_spec.md)
 - **Testing Discipline**: [`../TESTING_STANDARD.md`](../TESTING_STANDARD.md) — the VERIFIED / RAN_ONLY / FAILED distinction every claim above is held to.
-- **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+- **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

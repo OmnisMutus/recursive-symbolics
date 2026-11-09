@@ -28,6 +28,50 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-09 — One licence across the repository, and two engines renamed
+
+**Attempted:** A provenance review of the 41 engine files before the corpus is published, then the fixes Void
+chose from it.
+
+**Result:** VERIFIED for what was changed; OPEN for one question.
+
+*Review.* No engine carries another party's copyright line, an "adapted from" note, or a link to an outside
+repository. Imports are the standard library, NumPy, and in three benchmark files scikit-learn or PyTorch,
+imported to be measured against. This was a read of headers, imports and structure. It was not a diff against
+outside code, and it does not prove absence.
+
+*Licence.* The corpus named three licences: "Universal AI & Human Sovereignty Public License v1.0" (2 engine
+headers, 2 docs; no such text existed in the repository), CC BY-SA 4.0 (9 files), and RCA Sephirotic
+Sovereignty 1.0 (two identical copies in `corpus/`, added earlier the same day), while the repository root is
+RCA 1.1. Void's decision: the RCA licence, one version. Every header and doc now names RCA 1.1 and points at
+the root `LICENSE`. The two 1.0 copies were moved out to `_to_delete/` (untracked). A doc line claiming
+"protections under AGPL-3.0, CC BY-NC-SA 4.0, and OpenRAIL-M" was removed. Seven doc links that pointed at
+`corpus/LICENSE` now point at the root. `AGENTS.md` still mentions Apache 2.0: that is the stated boundary
+with void-agent, not a claim about this repository, and the file is locked.
+
+*Renames.* `alx_c_low_level_simulator.py` is now `c_low_level_simulator.py`, and
+`iitd_mth432_stat_learning.py` is now `stat_learning_suite.py`, with their tests and every reference (120
+lines across 24 files). Each engine keeps one docstring line saying which exercise list or course its scope
+follows, and that there is no affiliation: the name no longer implies one, and the origin is not hidden. The
+originals outside this repository keep their old names. Five doc mentions of `alx_c_functions_nested_loops.c`
+were left alone: that C file is not in this repository, so there is nothing here to rename.
+
+*Also fixed.* Seven doc links left malformed by the earlier path rewrite (a parenthetical inside a link
+target) are now plain text.
+
+Evidence: 0 matches repo-wide for the two retired licence names; corpus totals identical to before the change
+(829 checks, 57 files, 52 clean, 1 failed, 4 unscored); the two renamed suites pass under their new names;
+engine 100 tests.
+
+**Notes:** OPEN: `ddpg_quadcopter_rca_engine.py` says "Exact Specification Parity" without saying with what.
+Void recalls github.com/tudelft/optimal_quad_control_RL as the reference. That repository is GPL-3.0 and its
+root holds a racing environment (`quad_race_env.py`); its source could not be opened from this session, so
+neither a match nor a mismatch is established. The engine's numbers (18-value state, rotors 0 to 900, an L1
+distance reward) resemble a widely forked course project instead, from recollection and not from a diff. No
+credit line was added, because a credit to an unverified source would be an invented attribution. If the
+engine was written with GPL-3.0 code open as a model, that matters and should be settled before relying on
+the RCA licence for this one file.
+
 ### 2026-11-09 — Five local commits squashed into one before a push, to keep a local path out of public history
 
 **Attempted:** A pre-publish review of the five commits ahead of `origin/main`, then publishing them.

@@ -462,7 +462,7 @@ def handle_slash_command(cmd: str):
           Week 1: OOP & Clean Code Design
                   Target File: inheritance_upcasting_engine.py
           Week 2: Machine Learning & Data Science
-                  Target File: knn_project.py & iitd_mth432_stat_learning.py
+                  Target File: knn_project.py & stat_learning_suite.py
           Week 3: Networks & Distributed Systems
                   Target File: dht_rca_node.py & grpc_web_bridge.py
           Week 4: 3D Graphics & Security Engineering

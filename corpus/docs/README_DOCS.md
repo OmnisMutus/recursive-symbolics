@@ -18,9 +18,8 @@ Welcome to the **Formal System Technical Documentation Hub**. This directory con
 - **Glyph Correspondence Codex**: [`glyph_correspondence_codex.md`](glyph_correspondence_codex.md) — Liber 777-style Four Scales for the elements and planets, plus a 100-emotion codex with gradient and esoteric color mappings. Reference material from the pre-existing Recursive Symbolics framework. The Planet table is now wired into `standalone_rca_sandbox.py` as a display-only color layer, and the 100-emotion table has a data-fidelity layer (`glyph_emotion_codex.py`) cross-checked against this document's own text — see section 8 below for both ledgers. Emotion *detection* and the qualia-vector mapping remain unbuilt and Register A, on purpose (see the doc's own closing note).
 - **Major Implications for AI Development**: [`major_implications_for_ai_development.md`](major_implications_for_ai_development.md) — engine-suite performance findings (Ridge closed-form vs. sklearn, zero-dependency architecture, non-tautological testing) plus three broader findings meant to generalize past this codebase: the correspondence ledger's honesty guard against vacuous-truth reporting, the real DDPG actor-critic dead-network gap this project caught in its own code, and this project's own repeated history of catching (and, once, confirming) confident-sounding technical claims under direct verification.
 
-### 2. Legal Open-Source Licensing
-- **Main License File**: [`../LICENSE`](../LICENSE) (**The Universal AI & Human Sovereignty Public License v1.0**, Author: **OmnisMutus**).
-- **Licensing Manifest**: Legal protections under AGPL-3.0, CC BY-NC-SA 4.0, and OpenRAIL-M.
+### 2. Licensing
+- **License File**: [`LICENSE`](../../LICENSE) at the repository root (**RCA Sephirotic Sovereignty License 1.1**, Copyright 2026 **OmnisMutus**). It covers the whole repository, this corpus included.
 
 ### 3. Continuous Reinforcement Learning & AI Control
 - **DDPG Quadcopter Engine**: [`../engines/ddpg_quadcopter_rca_engine.py`](../engines/ddpg_quadcopter_rca_engine.py)

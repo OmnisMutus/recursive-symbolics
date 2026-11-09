@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-alx_c_low_level_simulator.py
-ALX Low-Level Programming 0x02: C - Functions, Nested Loops Simulator.
+c_low_level_simulator.py
+Low-Level C Functions & Nested Loops Simulator.
+The function set follows the ALX low-level programming exercise list (0x02).
+Independent Python implementation; no affiliation with ALX.
 ISO GNU89 C-Accurate 32-Bit Signed Integer & Char Boundary Engine.
 
 Copyright (C) 2026 OmnisMutus (RCA Sovereign Maintainer).
-Licensed under The Universal AI & Human Sovereignty Public License v1.0.
+Licensed under the RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root).
 
 Features & C Gotchas Enforced:
 1. _putchar(c): Character buffer stream writer.
@@ -143,10 +145,10 @@ def print_to_98(n):
     sys.stdout.write(", ".join(nums) + "\n")
 
 
-def run_alx_c_suite():
+def run_c_suite():
     start = time.perf_counter()
     print("=" * 66)
-    print("  ALX LOW-LEVEL PROGRAMMING: 0x02 C FUNCTIONS & NESTED LOOPS")
+    print("  LOW-LEVEL C: FUNCTIONS & NESTED LOOPS")
     print("  ISO GNU89 C-Accurate Execution & Boundary Validation")
     print("=" * 66)
 
@@ -168,4 +170,4 @@ def run_alx_c_suite():
 
 
 if __name__ == "__main__":
-    run_alx_c_suite()
+    run_c_suite()

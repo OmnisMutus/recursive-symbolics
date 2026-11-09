@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-iitd_mth432_stat_learning.py
-Master Statistical Learning Suite (MTH432: IIT Delhi Course Reference).
+stat_learning_suite.py
+Master Statistical Learning Suite.
+The topic list follows the MTH432 course at IIT Delhi as a reference.
+Independent implementation; no affiliation with IIT Delhi.
 Pure Python & NumPy Implementation (Zero External Dependencies).
 
 Algorithms Implemented:
@@ -11,7 +13,7 @@ Algorithms Implemented:
 4. K-Nearest Neighbors (KNN) Integration.
 
 Usage:
-    python iitd_mth432_stat_learning.py
+    python stat_learning_suite.py
 """
 
 import sys
@@ -128,7 +130,7 @@ class KMeansClustering:
 def main():
     print("""
     ================================================================
-           IIT DELHI MTH432 STATISTICAL LEARNING MASTER SUITE
+           STATISTICAL LEARNING MASTER SUITE
           Ridge L2, Fisher LDA, & K-Means Unsupervised Clustering
     ================================================================
     """)
@@ -168,7 +170,7 @@ def main():
     print(f"   Assigned Cluster Labels           : {cluster_labels}")
     
     print("\n" + "="*70)
-    print(" IITD MTH432 Statistical Learning Suite Verified!")
+    print(" Statistical Learning Suite Verified!")
     print("="*70)
 
 if __name__ == "__main__":

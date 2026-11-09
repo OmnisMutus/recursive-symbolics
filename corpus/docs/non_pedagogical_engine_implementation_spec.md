@@ -26,7 +26,7 @@ graph TD
 | Engine File | Domain | Pedagogical / Toy Approach (Avoided) | Non-Pedagogical Production Implementation |
 | :--- | :--- | :--- | :--- |
 | [`knn_project.py`](../knn_project.py) | Machine Learning | Calling `sklearn.neighbors.KNeighborsClassifier` | **Scratch Vector Math**: Custom Euclidean distance matrix calculation, $k$-nearest sorting, and continuous target regression built from raw NumPy. |
-| [`iitd_mth432_stat_learning.py`](../iitd_mth432_stat_learning.py) | Statistical Learning | Calling `scipy.linalg` or high-level regression wrappers | **Pure Linear Algebra**: Closed-form Ridge L2 $(X^T X + \alpha I)^{-1} X^T y$, Fisher LDA Within/Between Scatter matrices ($S_W, S_B$), and $K$-Means Expectation-Maximization. |
+| [`stat_learning_suite.py`](../stat_learning_suite.py) | Statistical Learning | Calling `scipy.linalg` or high-level regression wrappers | **Pure Linear Algebra**: Closed-form Ridge L2 $(X^T X + \alpha I)^{-1} X^T y$, Fisher LDA Within/Between Scatter matrices ($S_W, S_B$), and $K$-Means Expectation-Maximization. |
 | [`ddpg_quadcopter_rca_engine.py`](../ddpg_quadcopter_rca_engine.py) | Continuous RL | Importing `torch.nn`, PyTorch `Adam`, and `gym` | **Scratch Neural Engine**: 18D state sequence processing, custom LayerNorm, scratch Actor-Critic forward/backward passes, Ornstein-Uhlenbeck noise, and **Geburah Directivity Cap ($\gamma \le 0.85$)**. |
 | [`doc2vec_cluster_engine.py`](../doc2vec_cluster_engine.py) | NLP Vector Space | Importing `gensim.models.doc2vec` | **PureDoc2Vec Hash Vectorization**: FNV-1a token hashing into $d$-dimensional space ($\mathbb{R}^d$), L2 unit sphere normalization, and $N \times N$ pairwise cosine distance matrix calculation. |
 | [`dht_rca_node.py`](../dht_rca_node.py) | P2P Networks | Simulated in-memory dictionary lookup | **Full Kademlia P2P Protocol**: Bitwise XOR distance metrics ($\text{distance} = \text{node\_id}_A \oplus \text{node\_id}_B$), 160-bit k-buckets, and async UDP socket RPC handling. |
@@ -50,5 +50,5 @@ graph TD
 ##  Key Document Links
 
 -  **Documentation Location**: [`non_pedagogical_engine_implementation_spec.md`](non_pedagogical_engine_implementation_spec.md)
--  **Brain Artifact Mirror**: [non_pedagogical_engine_implementation_spec.md](non_pedagogical_engine_implementation_spec.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Artifact Mirror**: `non_pedagogical_engine_implementation_spec.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

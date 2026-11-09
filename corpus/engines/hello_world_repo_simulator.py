@@ -29,7 +29,7 @@ hash (40 hex chars) but is NOT what real Git would produce -- a bug that
 completely wrong. This is exactly the failure mode the correctness test
 for this module checks against.
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import sys

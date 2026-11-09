@@ -51,7 +51,7 @@ graph TD
 
 - **Total Execution Time (All 14 Engines Combined)**: **$3.407\text{ Seconds}$**
 - **Average Engine Latency**: **$243\text{ Milliseconds}$**
-- **Fastest Engine Latency ([`alx_c_low_level_simulator.py`](../alx_c_low_level_simulator.py))**: **$41.88\text{ Milliseconds}$**
+- **Fastest Engine Latency ([`c_low_level_simulator.py`](../c_low_level_simulator.py))**: **$41.88\text{ Milliseconds}$**
 - **Native C-Accelerator ([`ctypes_math_accelerator.py`](../ctypes_math_accelerator.py))**: **$3.58\text{ Milliseconds}$ for 2,500 ops ($1.43\text{ microseconds/op}$)**
 
 ---
@@ -59,5 +59,5 @@ graph TD
 ##  Key Document Links
 
 -  **Documentation Location**: [`performance_speed_benchmark_analysis.md`](performance_speed_benchmark_analysis.md)
--  **Brain Artifact Mirror**: [performance_speed_benchmark_analysis.md](performance_speed_benchmark_analysis.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Artifact Mirror**: `performance_speed_benchmark_analysis.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

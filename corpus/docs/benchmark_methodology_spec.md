@@ -68,5 +68,5 @@ graph TD
 
 -  **Benchmark Script**: [`../benchmark_simulation_vs_current.py`](../benchmark_simulation_vs_current.py)
 -  **Documentation Location**: [`benchmark_methodology_spec.md`](benchmark_methodology_spec.md)
--  **Brain Artifact Mirror**: [benchmark_methodology_spec.md](benchmark_methodology_spec.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Artifact Mirror**: `benchmark_methodology_spec.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

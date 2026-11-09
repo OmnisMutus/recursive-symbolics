@@ -208,7 +208,7 @@ one method's output specifically.
 ---
 
 ## Module 2 (Week 2): ML & Statistical Math
-**Files**: `knn_project.py`, `iitd_mth432_stat_learning.py`
+**Files**: `knn_project.py`, `stat_learning_suite.py`
 
 **2.1 — Hand-compute a distance.**
 By hand, before looking below: what's the Euclidean distance between
@@ -236,7 +236,7 @@ slope/intercept as ordinary least squares (no regularization pulling
 coefficients toward zero). Try it:
 ```python
 import numpy as np
-from iitd_mth432_stat_learning import RidgeRegression
+from stat_learning_suite import RidgeRegression
 X = np.array([[1.0],[2.0],[3.0],[4.0]])
 y = np.array([2.0, 4.0, 6.0, 8.0])  # perfect y = 2x
 r = RidgeRegression(alpha=0.0)
@@ -253,7 +253,7 @@ Predictions for class 0 and class 1 should now flip. This is the same
 "sign-flip bug" category as the real one I found and fixed in the OpenGL
 renderer's reflection formula — worth noticing how a single swapped term
 inverts a whole classifier.
-Revert (`git restore iitd_mth432_stat_learning.py` or Discard Changes in VS).
+Revert (`git restore stat_learning_suite.py` or Discard Changes in VS).
 
 ** Stretch 2.5 — Push alpha much higher.**
 Reuse 2.3's dataset with `alpha=1000`. *Predict*: should the recovered slope
@@ -613,7 +613,7 @@ it's the most specific), and independently re-verify it yourself, the
 exact way it was originally caught: `grep` the real engine and its test
 file for the relevant term.
 ```powershell
-grep -rn "cond\|kappa\|condition" iitd_mth432_stat_learning.py test_iitd_mth432_stat_learning.py
+grep -rn "cond\|kappa\|condition" stat_learning_suite.py test_stat_learning_suite.py
 ```
 Predict what you'll find *before* running the grep.
 <details><summary>Reveal</summary>

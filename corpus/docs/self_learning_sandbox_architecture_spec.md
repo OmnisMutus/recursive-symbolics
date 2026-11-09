@@ -91,5 +91,5 @@ python standalone_rca_sandbox.py "/eval Building high-performance AI engines"
 -  **Sandbox Kernel**: [`../standalone_rca_sandbox.py`](../standalone_rca_sandbox.py)
 -  **Persistent Memory**: [`../rca_memory.json`](../rca_memory.json)
 -  **Specification**: [`self_learning_sandbox_architecture_spec.md`](self_learning_sandbox_architecture_spec.md)
--  **Brain Mirror**: [self_learning_sandbox_architecture_spec.md](self_learning_sandbox_architecture_spec.md (local brain artifact, not in this repository))
--  **License**: [`../LICENSE`](../LICENSE) (**OmnisMutus**)
+-  **Brain Mirror**: `self_learning_sandbox_architecture_spec.md` (local brain artifact, not in this repository)
+-  **License**: [`LICENSE`](../../LICENSE) (**OmnisMutus**)

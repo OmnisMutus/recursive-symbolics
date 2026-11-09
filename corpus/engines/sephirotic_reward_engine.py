@@ -27,7 +27,7 @@ like a restriction term (increases with instability, independent of the
 Chesed term), and that Tifereth is genuinely their reconciliation (moves
 toward whichever term dominates, not a fixed blend that ignores both).
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 import numpy as np

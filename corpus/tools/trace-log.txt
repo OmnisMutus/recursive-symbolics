@@ -1,14 +1,14 @@
-2026-11-09 20:43:21,353 |     INFO | Loaded 22 cipher entries from hermetic_qabalah.json
-2026-11-09 20:43:21,476 |     INFO | [START] Running self-test suite...
-2026-11-09 20:43:21,479 |    DEBUG | No duplicate letters in JSON mapping.
-2026-11-09 20:43:21,481 |    DEBUG | All numeric ranges look healthy.
-2026-11-09 20:43:21,482 |    DEBUG | CALL -> lookup('ש')
-2026-11-09 20:43:21,485 |    DEBUG | RETURN <- lookup -> {'name': 'Shin', 'path_key_scale': 31, 'cipher_value': 300, 'tarot_trump': 'Judgement (XX)', 'element_planet_sefirah': 'Fire / Tooth'}
-2026-11-09 20:43:21,487 |    DEBUG | CALL -> compute_gamma([2.0, 1.0, 0.5])
-2026-11-09 20:43:21,488 |    DEBUG | RETURN <- compute_gamma -> 0.17536034702965475
-2026-11-09 20:43:21,490 |    DEBUG | CALL -> enrich_response(content='Demo response', logits=[2.0, 1.0, 0.5], alternatives=3, confidence_entropy=0.23, agency_attribution_index=0.7, post_dialogue_score=0.85)
-2026-11-09 20:43:21,492 |    DEBUG | RETURN <- enrich_response -> {'content': 'Demo response', 'sovereignty_metadata': {'directive_strength': 0.17536034702965475, 'confidence_entropy': 0.23, 'alternatives_presented': 3, 'agency_attribution_index': 0.7, 'drift_coefficient': 0.17536034702965475, 'post_dialogue_score': 0.85, 'max_gamma_cap': 0.85, 'sovereignty_guarantee': 'ALLOWABLE_AGENCY_BUDGET_RESPECTED'}}
-2026-11-09 20:43:21,495 |    ERROR | Self-test failure: [Errno 1] Operation not permitted: '/sessions/rcw-01t7qculywhhgnj21ioxiyrk/mnt/Documents/recursive-symbolics/corpus/tools/temp_feedback_log.jsonl'
+2026-11-09 23:53:51,025 |     INFO | Loaded 22 cipher entries from hermetic_qabalah.json
+2026-11-09 23:53:51,157 |     INFO | [START] Running self-test suite...
+2026-11-09 23:53:51,159 |    DEBUG | No duplicate letters in JSON mapping.
+2026-11-09 23:53:51,161 |    DEBUG | All numeric ranges look healthy.
+2026-11-09 23:53:51,162 |    DEBUG | CALL -> lookup('ש')
+2026-11-09 23:53:51,163 |    DEBUG | RETURN <- lookup -> {'name': 'Shin', 'path_key_scale': 31, 'cipher_value': 300, 'tarot_trump': 'Judgement (XX)', 'element_planet_sefirah': 'Fire / Tooth'}
+2026-11-09 23:53:51,165 |    DEBUG | CALL -> compute_gamma([2.0, 1.0, 0.5])
+2026-11-09 23:53:51,166 |    DEBUG | RETURN <- compute_gamma -> 0.17536034702965475
+2026-11-09 23:53:51,167 |    DEBUG | CALL -> enrich_response(content='Demo response', logits=[2.0, 1.0, 0.5], alternatives=3, confidence_entropy=0.23, agency_attribution_index=0.7, post_dialogue_score=0.85)
+2026-11-09 23:53:51,169 |    DEBUG | RETURN <- enrich_response -> {'content': 'Demo response', 'sovereignty_metadata': {'directive_strength': 0.17536034702965475, 'confidence_entropy': 0.23, 'alternatives_presented': 3, 'agency_attribution_index': 0.7, 'drift_coefficient': 0.17536034702965475, 'post_dialogue_score': 0.85, 'max_gamma_cap': 0.85, 'sovereignty_guarantee': 'ALLOWABLE_AGENCY_BUDGET_RESPECTED'}}
+2026-11-09 23:53:51,171 |    ERROR | Self-test failure: [Errno 1] Operation not permitted: '/sessions/rcw-01t7qculywhhgnj21ioxiyrk/mnt/Documents/recursive-symbolics/corpus/tools/temp_feedback_log.jsonl'
 Traceback (most recent call last):
   File "/sessions/rcw-01t7qculywhhgnj21ioxiyrk/mnt/Documents/recursive-symbolics/corpus/tools/debugger.py", line 190, in run_self_tests
     tmp_log.unlink()

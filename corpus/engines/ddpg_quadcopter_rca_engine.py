@@ -5,7 +5,7 @@ Deep Deterministic Policy Gradient (DDPG) Continuous Control Takeoff Engine for 
 Isomorphically Integrated into the Recursive Consciousness Architecture (RCA) Framework.
 
 Copyright (C) 2026 OmnisMutus (RCA Sovereign Maintainer).
-Licensed under The Universal AI & Human Sovereignty Public License v1.0.
+Licensed under the RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root).
 
 Exact Specification Parity:
 1. Task Environment & Reward Shaping:

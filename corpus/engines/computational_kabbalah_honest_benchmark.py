@@ -4,7 +4,7 @@ Computational Kabbalah: Honest Performance Benchmark Suite
 Real NumPy-based computational validation (no simulated delays, no unfair comparisons)
 
 LICENSING:
-This benchmark is provided as-is under CC BY-SA 4.0.
+This benchmark is provided as-is under the RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root).
 All measurements are genuine, reproducible, and documented.
 
 Author: Recursive Symbolics Observatory

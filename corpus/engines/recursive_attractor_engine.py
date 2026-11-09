@@ -48,7 +48,7 @@ bifurcation regimes). Whether that formalism is a good model of anything
 beyond itself is explicitly out of scope -- see core-axiom.md's own
 "Cartographer's Choice" principle.
 
-License: CC BY-SA 4.0
+License: RCA Sephirotic Sovereignty License 1.1 (see LICENSE at the repository root)
 """
 
 from __future__ import annotations

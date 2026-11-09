@@ -109,7 +109,7 @@ answer against, not just "go read this file."
 
 ```mermaid
 graph LR
-    M1["Module 1: OOP<br/>inheritance_upcasting_engine.py"] --> M2["Module 2: ML & Math<br/>knn_project.py, iitd_mth432_stat_learning.py"]
+    M1["Module 1: OOP<br/>inheritance_upcasting_engine.py"] --> M2["Module 2: ML & Math<br/>knn_project.py, stat_learning_suite.py"]
     M2 --> M3["Module 3: P2P Networks<br/>dht_rca_node.py, grpc_web_bridge.py"]
     M3 --> M4["Module 4: Graphics & Security<br/>opengl_3d_scene_simulator.py, safe_memory_boundary_engine.py"]
     M4 --> M5["Module 5: Continuous Control & C<br/>ddpg_quadcopter_rca_engine.py, alx_c_functions_nested_loops.c"]
@@ -123,9 +123,9 @@ graph LR
 - **Exercises**: [EXERCISES.md § Module 1](EXERCISES.md#module-1-week-1-oop--dynamic-dispatch)
 
 ### Module 2: Machine Learning & Statistical Mathematics
-- **Study**: `../knn_project.py`, `../iitd_mth432_stat_learning.py`
-- **Run**: `python knn_project.py` / `python iitd_mth432_stat_learning.py`
-- **Verify**: `python test_knn_project.py` / `python test_iitd_mth432_stat_learning.py`
+- **Study**: `../knn_project.py`, `../stat_learning_suite.py`
+- **Run**: `python knn_project.py` / `python stat_learning_suite.py`
+- **Verify**: `python test_knn_project.py` / `python test_stat_learning_suite.py`
 - **Exercises**: [EXERCISES.md § Module 2](EXERCISES.md#module-2-week-2-ml--statistical-math)
 
 ### Module 3: Distributed P2P Networks
