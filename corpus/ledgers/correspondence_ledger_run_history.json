@@ -1,0 +1,37 @@
+{
+  "attractor_correspondence_ledger.py": {
+    "failed": 0,
+    "last_run_utc": "2026-11-09T18:35:22.613864+00:00",
+    "total": 7,
+    "untestable": 1,
+    "verified": 6
+  },
+  "ddpg_correspondence_ledger.py": {
+    "failed": 0,
+    "last_run_utc": "2026-11-09T18:35:22.613864+00:00",
+    "total": 3,
+    "untestable": 1,
+    "verified": 2
+  },
+  "glyph_emotion_correspondence_ledger.py": {
+    "failed": 0,
+    "last_run_utc": "2026-11-09T18:35:22.613864+00:00",
+    "total": 4,
+    "untestable": 2,
+    "verified": 2
+  },
+  "rca_sandbox_gamma_correspondence_ledger.py": {
+    "failed": 0,
+    "last_run_utc": "2026-11-09T18:35:22.613864+00:00",
+    "total": 3,
+    "untestable": 1,
+    "verified": 2
+  },
+  "sephirotic_correspondence_ledger.py": {
+    "failed": 0,
+    "last_run_utc": "2026-11-09T18:35:22.613864+00:00",
+    "total": 5,
+    "untestable": 1,
+    "verified": 4
+  }
+}

@@ -28,6 +28,168 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-09 — Five local commits squashed into one before a push, to keep a local path out of public history
+
+**Attempted:** A pre-publish review of the five commits ahead of `origin/main`, then publishing them.
+
+**Result:** CORRECTED, twice.
+
+1. **The remote.** Void was told this repository had no remote and was handed a `gh repo create --private`
+   command. Wrong on both counts: `origin` already existed, was public, and had been pushed earlier the same
+   day. The claim was carried forward from a session summary and not checked against `git remote -v`. The
+   command would have failed.
+2. **The history.** The review cleaned the working tree (32 files carrying absolute local paths that included
+   a Windows username, rewritten to repository-relative links) and committed the fix as a fifth commit on top.
+   That left the paths readable in the history: the first of the five commits added them, the last removed
+   them, and a push publishes both. The already-pushed history was checked and contained none.
+
+Void chose to squash. The five local commits (local tip `2d9e13f`, never pushed) were folded into a single commit
+with `git reset --soft origin/main`, so no published commit ever contains the paths. This is the one
+sanctioned exception to the standing rule against rewriting history: explicitly approved, and limited to
+commits that existed on one machine only. The five original messages are preserved in the body of the squashed
+commit, with the one line that quoted the path itself redacted.
+
+Evidence after the squash: 0 matches for the username in the tree, in the commit message, and in
+`origin/main..HEAD`; corpus 829 checks, 52 files clean, 1 failure, 4 unscored; engine 100 tests.
+
+**Notes:** A clean working tree is not a clean push. The check that matters before publishing is over
+`origin/main..HEAD` (every commit that will travel, and its message), not over the files on disk. And a fact
+about repository state from a summary is a claim, not an observation: `git remote -v` costs one line.
+
+### 2026-11-09 — Three "findings" the corpus had already recorded, in its own test docstrings
+
+**Attempted:** Nothing. This entry is a correction to the three entries above it.
+
+**Result:** CORRECTED. Each of the following was reported to Void during this session as something found, and
+each was already documented in the corpus, in the docstring of the test covering that file:
+
+1. **The kaph cipher value.** `tools/test_lookup.py` states it exactly: cross-checking all 22 letters against
+   an independently transcribed standard table turned up one mismatch, kaph stored as 21 where the standard is
+   20, and "21 is also Kaf's OWN path_key_scale in the same JSON row -- consistent with a copy-paste slip when
+   the row was authored." It carries `KNOWN_DATA_DISCREPANCIES = {"Kaf"}` and a stated policy of not silently
+   correcting uploaded reference data. The same diagnosis was re-derived here independently, which corroborates
+   it, but it was presented as new.
+2. **`balancing_rules` mapping Geburah to itself.** `tools/test_symbolic_debugger.py` tests it as a fact about
+   the data and says so: "a real, existing property of symbolic_api.json, tested here as a fact about the
+   data, with no claim made about whether it is esoterically correct (Register A, out of scope for this test
+   file)." It was known and deliberately scoped out, not missed.
+3. **The debugger's three failures being the environment.** `tools/test_debugger.py` has a section headed "A
+   NOTE ON A FALSE ALARM" describing the identical PermissionError from `tmp_log.unlink()`, identifying it as
+   a sandbox mount restriction rather than a code regression, and ending: "Recorded here so a future reader
+   who sees this exact failure mode again knows to check the environment first, not assume the code
+   regressed." That note was written for exactly the reader this session was, and it was not read.
+
+**What was actually new**, stated narrowly so the distinction survives: that `tools/test_rca_llm_sandbox.py`'s
+cross-file checks had never executed in either layout, which is different from the discrepancy they check and
+which its docstring documents; the ledger baseline asserting 15 where the ledgers now report 16; and the
+corpus total being 829 checks rather than 463.
+
+**Also found by the corpus and not by this session:** the "earth" keyword collides between Binah and Malkuth
+in `symbolic_api.json`, and because `keyword_map` is built by plain dict assignment in JSON order, Malkuth
+wins and Binah's "earth" is unreachable through `detect_counts()`. And `transcompiler.save_schema(path=None)`
+writes to the module-level default rather than the file the instance was loaded from, caught when the test's
+own first draft overwrote the real `symbolic_schema.json`.
+
+**Notes:** The lesson is narrower than "read more carefully". These test files are the project's findings log,
+not only its verification: the discoveries live in the docstrings, above the code. Reading a suite's results
+while skipping its docstrings is the same error as reading a wrapper's summary while skipping the suite, which
+this session also made twice. A reader that wants to know what is wrong with this corpus should read the test
+docstrings first and run the tests second.
+
+### 2026-11-09 — A cross-file check that had never run, and a failure that was the environment
+
+**Attempted:** Resolve the two things the consolidated corpus reported as not-clean, rather than leaving them
+located but undiagnosed as the previous entry did.
+
+**Result:** VERIFIED. The corpus now reads 829 checks across 57 files, 52 files unambiguously clean, **1
+failure**, 4 unscored on absent dependencies.
+
+**`tools/test_rca_llm_sandbox.py` had never executed its cross-file checks, in either location.** It guards
+them on `_SOLO_DIR = Path(__file__).parent.parent.parent / "solo"`. In the original layout that directory
+exists, so the guard passed and `import standalone_rca_sandbox` then failed, because the module is in
+`solo/engines/` and the path was wrong by one level: the whole file errored. In the consolidated copy the
+directory does not exist, so the guard failed and both checks **skipped silently**, which is the worse of the
+two failures because nothing looks wrong. Repointed in the copy to `../engines`, where the module actually
+is. The file now runs 17 tests with nothing skipped, and both cross-checks hold: `sanitize_paths` is
+identical across the two implementations, and `apply_epistemic_humility` genuinely differs, with
+`standalone_rca_sandbox` having no rule for "This is the correct interpretation". That discrepancy was
+documented by hand in the test's own docstring and is now verified by a running test for the first time.
+
+**`tools/test_debugger.py`'s three failures were this environment, not the code.** `run_self_tests` calls
+`Path.unlink()` on its own temporary file, and the mount this ran in denies deletion. The same files in a
+writable directory pass. `run_corpus.py` now treats a refused operation as UNCLEAR rather than RED, matching
+the rule already in void-agent's `suitecheck`, so the two readers agree.
+
+**Not verified, and not claimed:**
+
+- The remaining failure is the ledger baseline: the ledgers report 16 verified claims and
+  `test_real_ledgers_match_current_known_baseline` asserts 15. A claim was added and the baseline was never
+  updated. The ledgers themselves pass. A hardcoded count is a number that goes stale the moment the thing it
+  describes improves, so the fix is to derive it or assert a floor, and that is not done.
+- Only the consolidated copy was repointed. The desktop original keeps its broken path, deliberately: it is
+  reference material and not mine to edit.
+- `apply_epistemic_humility` having five patterns in one file and four in the other is now a proved
+  difference, not a decided one. Which count is correct is a question for Void.
+
+**Notes:** This is the consolidation earning itself. The cross-file check was written to compare two
+implementations that lived in different repositories, and it could not work from either. Putting them in one
+tree is what made it runnable, and what it found on its first run was that the human-written docstring was
+right all along.
+
+### 2026-11-09 — The corpus consolidated here, and a count that had been wrong all along
+
+**Attempted:** Bring the framework's prior implementation into this repository as one body of work, instead of
+a new engine beside an older one on a desktop. Void chose the full corpus rather than a framework-relevant
+subset, on the ground that the CS-to-Kabbalah mapping is the thesis and the ML and systems engines are its
+evidence rather than exercises.
+
+**Result:** VERIFIED, with a correction to a number this record would otherwise have inherited.
+
+Copied, never moved: 42 engine files, 10 ledgers, 8 protocols, 48 tools, 7 architecture tools, 41 test files,
+45 docs, 5 studies and 2 data files, into `corpus/`. The originals on the desktop are untouched and were
+re-counted afterwards to prove it.
+
+`corpus/run_corpus.py` replaces reading `test_all_engines.py` or `test_all_tools.py` as the suite's result.
+Those are per-component rollups: `test_all_engines.py` covers 24 engines out of 57 test files, and it scores a
+missing-dependency skip as a correctness failure, so a real failure elsewhere never reaches its summary. Both
+of those misreadings happened in this session, in that order, before the tests were run directly.
+
+**CORRECTED:** the corpus is **829 checks across 57 files**, not the 463 reported earlier the same day. The
+463 counted only files that print unittest's "Ran N tests" line. Seven files are hand-rolled scripts that
+print their own "SUMMARY: N passed, M failed" instead, and a reader that knows one format silently omits the
+other. That is an omission rather than a misread, and it is the more dangerous of the two, because nothing
+looks wrong.
+
+Current state: 51 files unambiguously clean, 2 failed, 4 did not say enough to score. The two failures are a
+stale baseline in `test_run_all_correspondence_ledgers.py` (the ledgers report 16 verified claims; the test
+asserts 15) and three failures in `tools/test_debugger.py` around `run_self_tests` not cleaning up its own
+temporary file. The four unscored are all absent dependencies: scikit-learn and PyTorch.
+
+**Not verified, and not claimed:**
+
+- The two failures are not diagnosed, only located. The debugger one in particular loads
+  `hermetic_qabalah.json` and I have not established whether its self-test fails on the data or on the temp
+  file.
+- A verdict of GREEN here means a file's own runner said so and nothing was skipped. It does not mean the
+  tests are good ones. The break-it registry is what would say that, and the corpus does not have one yet:
+  its discipline lives in prose and in each test's own assertions.
+- `symbolic_api.json`'s `balancing_rules` was copied as it stands, unaltered. Void states that Chesed and
+  Geburah balance in the middle pillar at the corresponding level, which makes all eight of its entries wrong
+  in relation rather than in value: the block maps side-pillar pairs to each other instead of to the apex of
+  their triad. The port does not silently fix doctrine, so the data is here as it was and the correction is
+  recorded as pending.
+- `data/hermetic_qabalah.json` carries the kaph error: `cipher_value: 21` beside `path_key_scale: 21`, where
+  kaph is 20. It is the same error corrected in the vault note this morning, and it is still live in the data
+  that `tools/lookup.py` reads. Copied unaltered for the same reason.
+
+**Notes:** The three triads are doctrine, not geometry. Deriving them from the path graph was tried and fails:
+16 triangles have a middle-pillar vertex, and narrowing to the three horizontal paths still leaves Chokmah and
+Binah connected to both Kether and Tiphareth, and Netzach and Hod to Yesod, Malkuth and Tiphareth, with Yesod
+and Tiphareth tying exactly on distance. So the balance pairs must be stored with a source and checked against
+the graph, which is what hidden-axioms 7.2 asks for anyway. Worth a future entry: whether the corpus gets a
+break-it registry of its own, since 829 passing checks with no planted-bug proof is precisely the state this
+project's standard was written to distrust.
+
 ### 2026-11-08 — Article 6 implemented by inheriting the framework's own gamma cap, then extending it
 
 **Attempted:** Make Article 6 real rather than aspirational. The framework already has a Δγ,τ implementation

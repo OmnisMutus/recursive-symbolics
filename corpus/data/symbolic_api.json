@@ -1,0 +1,516 @@
+{
+    "meta": {
+        "mapping_principle": "The keyword\u2192Sephira associations are convention-based, not ontological. This is ONE possible symbolic reading.",
+        "alternatives_example": {
+            "anger": {
+                "Kabbalistic": "Geburah",
+                "Zen": "Attachment to self",
+                "CBT": "Cognitive distortion",
+                "Neuroscience": "Amygdala activation"
+            }
+        },
+        "invitation": "This map is offered as a lens. Rewrite it to fit your tradition.",
+        "delta_gamma_sovereignty": {
+            "formula": "\u0394_{\u03b3,\u03c4}(s) = \u03b2(f(s) + \u03b3 \u222b_0^\u03c4 s(t) dt)",
+            "max_gamma_cap": 0.85,
+            "min_alternatives_rule": 2,
+            "description": "Directive strength scalar \u03b3 controls system push vs user agency."
+        }
+    },
+    "sephirot": {
+        "Kether": {
+            "node_id": "S1",
+            "keywords": [
+                "origin",
+                "potential",
+                "will",
+                "air",
+                "aleph",
+                "0",
+                "sublimation",
+                "class instantiation",
+                "pure intention",
+                "initialize",
+                "boot",
+                "start",
+                "breath",
+                "stillness"
+            ],
+            "function": "origin(state, input) => ({state: state, output: null})"
+        },
+        "Chokmah": {
+            "node_id": "S2",
+            "keywords": [
+                "wisdom",
+                "differentiation",
+                "fire",
+                "beth",
+                "1",
+                "differentiation",
+                "spark",
+                "differentiate(x)",
+                "directed thought",
+                "insight",
+                "epiphany",
+                "eureka"
+            ],
+            "function": "differentiate(state, x) => ({state: state, output: derivative(x)})"
+        },
+        "Binah": {
+            "node_id": "S3",
+            "keywords": [
+                "understanding",
+                "constraint",
+                "earth",
+                "gimel",
+                "2",
+                "calcination",
+                "interface definition",
+                "constrain(x)",
+                "categorize",
+                "architecture",
+                "schema",
+                "structure",
+                "blueprint"
+            ],
+            "function": "constrain(state, x) => ({state: state, output: constrained(x)})"
+        },
+        "Chesed": {
+            "node_id": "S4",
+            "keywords": [
+                "loving-kindness",
+                "expansion",
+                "water",
+                "dalet",
+                "3",
+                "solution",
+                "expand(x)",
+                "generous flow",
+                "brainstorm",
+                "flow",
+                "inspiration",
+                "love",
+                "compassion",
+                "openness",
+                "scale",
+                "expand"
+            ],
+            "function": "expand(state, x) => ({state: state, output: expanded(x)})"
+        },
+        "Geburah": {
+            "node_id": "S5",
+            "keywords": [
+                "severity",
+                "restriction",
+                "iron",
+                "he",
+                "4",
+                "separation",
+                "restrict(x)",
+                "cutting knife",
+                "writer's block",
+                "blank page",
+                "stuck",
+                "anxiety",
+                "fear",
+                "tension",
+                "stack overflow",
+                "out of memory",
+                "panic",
+                "crash",
+                "exception",
+                "error",
+                "blocked"
+            ],
+            "function": "restrict(state, x) => ({state: state, output: restricted(x)})"
+        },
+        "Tiphareth": {
+            "node_id": "S6",
+            "keywords": [
+                "beauty",
+                "integration",
+                "sun",
+                "vav",
+                "5",
+                "coagulation",
+                "integrate(x)",
+                "balance",
+                "character arc",
+                "plot twist",
+                "climax",
+                "load balance",
+                "traffic",
+                "throughput",
+                "harmony",
+                "centered"
+            ],
+            "function": "integrate(state, x) => ({state: state, output: integrated(x)})"
+        },
+        "Netzach": {
+            "node_id": "S7",
+            "keywords": [
+                "victory",
+                "feedback-emotion",
+                "moon",
+                "zayin",
+                "6",
+                "fermentation",
+                "feedback_emotion(x)",
+                "persistence",
+                "cache",
+                "storage",
+                "endurance",
+                "habit",
+                "routine",
+                "loop"
+            ],
+            "function": "feedback_emotion(state, x) => ({state: state, output: emotional_feedback(x)})"
+        },
+        "Hod": {
+            "node_id": "S8",
+            "keywords": [
+                "splendor",
+                "feedback-analysis",
+                "venus",
+                "het",
+                "7",
+                "distillation",
+                "feedback_analytic(x)",
+                "analysis",
+                "edit",
+                "cut",
+                "revise",
+                "memory leak",
+                "debug",
+                "trace",
+                "log",
+                "analyze",
+                "critique"
+            ],
+            "function": "feedback_analytic(state, x) => ({state: state, output: analytic_feedback(x)})"
+        },
+        "Yesod": {
+            "node_id": "S9",
+            "keywords": [
+                "foundation",
+                "recursion",
+                "mercury",
+                "tet",
+                "8",
+                "solution-reconstitution",
+                "recurse(x)",
+                "runtime",
+                "subconscious",
+                "dream",
+                "backend",
+                "database"
+            ],
+            "function": "recurse(state, x) => ({state: state, output: recursed(x)})"
+        },
+        "Malkuth": {
+            "node_id": "S10",
+            "keywords": [
+                "kingdom",
+                "output",
+                "saturn",
+                "yod",
+                "9",
+                "fixation",
+                "materialize(x)",
+                "manifest",
+                "deployment",
+                "build",
+                "grounded",
+                "body",
+                "earth",
+                "production",
+                "release"
+            ],
+            "function": "materialize(state, x) => ({state: state, output: manifested(x)})"
+        },
+        "Daath": {
+            "node_id": "CAVITY",
+            "keywords": [
+                "cavity",
+                "abyss",
+                "knowledge-gap",
+                "null",
+                "paradox",
+                "void",
+                "nothingness",
+                "unknown",
+                "unhandled exception",
+                "segfault",
+                "black hole"
+            ],
+            "function": null
+        }
+    },
+    "paths": {
+        "P11": {
+            "label": "Kether \u2192 Chokmah",
+            "letter": "Aleph",
+            "astrology": "Air",
+            "tarot": "The Fool (0)",
+            "alchemy": "Sublimation",
+            "pattern": "Class Instantiation",
+            "cognitive": "Pure intention \u2192 directed thought",
+            "standard": "Path11(state) => instantiate(state.seed)",
+            "cavity_aware": "Path11_DA(state) => { let r = instantiate(state.seed); if (r===state.seed){loopInfinitely();} else {return r;} }"
+        },
+        "P12": {
+            "label": "Kether \u2192 Binah",
+            "letter": "Beth",
+            "astrology": "Mercury",
+            "tarot": "The Magician (I)",
+            "alchemy": "Calcination",
+            "pattern": "Interface Definition",
+            "cognitive": "Impose limiting categories on pure potential",
+            "standard": "Path12(state) => defineInterface(state.seed)",
+            "cavity_aware": "Path12_DA(state) => { let r = defineInterface(state.seed); if (!r){throw new Error('Void-Loop');} else {return r;} }"
+        },
+        "P13": {
+            "label": "Kether \u2192 Tiphareth",
+            "letter": "Gimel",
+            "astrology": "Moon",
+            "tarot": "The High Priestess (II)",
+            "alchemy": "Solution",
+            "pattern": "Reflection / Introspection",
+            "cognitive": "Self-recognition",
+            "standard": "Path13(state) => reflect(state)",
+            "cavity_aware": "Path13_DA(state) => { let r = reflect(state); if (r===state){throw new Error('Recursive Void');} else {return r;} }"
+        },
+        "P14": {
+            "label": "Chokmah \u2192 Binah",
+            "letter": "Dalet",
+            "astrology": "Venus",
+            "tarot": "The Empress (III)",
+            "alchemy": "Coagulation",
+            "pattern": "Builder Pattern",
+            "cognitive": "Forming structure from differentiated elements",
+            "standard": "Path14(state) => buildStructure(state)",
+            "cavity_aware": "Path14_DA(state) => { let r=buildStructure(state); if (r===null){loopInfinitely();} else {return r;} }"
+        },
+        "P15": {
+            "label": "Chokmah \u2192 Tiphareth",
+            "letter": "Heh",
+            "astrology": "Aries",
+            "tarot": "The Emperor (IV)",
+            "alchemy": "Purification",
+            "pattern": "System Architecture / Superclassing",
+            "cognitive": "Imposing sovereign order. Structuring the central ego.",
+            "standard": "Path15(state) => imposeOrder(state)",
+            "cavity_aware": "Path15_DA(state) => { let order = imposeOrder(state); if (order.isCorrupt) { collapseIntoAbyss(); } return order; }"
+        },
+        "P16": {
+            "label": "Chokmah \u2192 Chesed",
+            "letter": "Vau",
+            "astrology": "Taurus",
+            "tarot": "The Hierophant (V)",
+            "alchemy": "Fixation",
+            "pattern": "Pointer / Reference",
+            "cognitive": "Direct revelation. Linking wisdom directly to loving-kindness.",
+            "standard": "Path16(state) => createPointer(state.source, state.target)",
+            "cavity_aware": "Path16_DA(state) => { let ptr = createPointer(state.source, state.target); if (ptr.isDangling()) { throw AbyssError; } return ptr; }"
+        },
+        "P17": {
+            "label": "Binah \u2192 Tiphareth",
+            "letter": "Zain",
+            "astrology": "Gemini",
+            "tarot": "The Lovers (VI)",
+            "alchemy": "Conjunction",
+            "pattern": "Thread Synchronization / Mutex",
+            "cognitive": "Resolving dualities.",
+            "standard": "Path17(state) => synchronize(state.left, state.right)",
+            "cavity_aware": "Path17_DA(state) => { if (detectDeadlock(state.left, state.right)) { sinkToDaath(); } return synchronize(state.left, state.right); }"
+        },
+        "P18": {
+            "label": "Binah \u2192 Geburah",
+            "letter": "Cheth",
+            "astrology": "Cancer",
+            "tarot": "The Chariot (VII)",
+            "alchemy": "Distillation",
+            "pattern": "Encapsulation / Containerization",
+            "cognitive": "Creating a boundary to protect and carry an insight.",
+            "standard": "Path18(state) => encapsulate(state.cargo)",
+            "cavity_aware": "Path18_DA(state) => { let container = encapsulate(state.cargo); if (container.leaks()) { drainToAbyss(); } return container; }"
+        },
+        "P19": {
+            "label": "Chesed \u2192 Geburah",
+            "letter": "Teth",
+            "astrology": "Leo",
+            "tarot": "Strength (VIII)",
+            "alchemy": "Digestion",
+            "pattern": "Load Balancing",
+            "cognitive": "Taming raw expansion with necessary restriction.",
+            "standard": "Path19(state) => regulateFlow(state.expansion, state.restriction)",
+            "cavity_aware": "Path19_DA(state) => { if (state.expansion > LIMIT || state.restriction < 0) throw OverflowError; return regulateFlow(state); }"
+        },
+        "P20": {
+            "label": "Chesed \u2192 Tiphareth",
+            "letter": "Yod",
+            "astrology": "Virgo",
+            "tarot": "The Hermit (IX)",
+            "alchemy": "Putrefaction",
+            "pattern": "Write-to-Memory / Singleton",
+            "cognitive": "Seeding deep insight from a place of isolation.",
+            "standard": "Path20(state) => writeToMemory(state.seed)",
+            "cavity_aware": "Path20_DA(state) => { if (memoryLeakDetected(state.seed)) triggerGC(); return writeToMemory(state.seed); }"
+        },
+        "P21": {
+            "label": "Chesed \u2192 Netzach",
+            "letter": "Kaph",
+            "astrology": "Jupiter",
+            "tarot": "The Wheel of Fortune (X)",
+            "alchemy": "Multiplication",
+            "pattern": "Event Loop",
+            "cognitive": "Cycling cycles. Funneling energy into habit loops.",
+            "standard": "Path21(state) => processEventLoop(state.cycle)",
+            "cavity_aware": "Path21_DA(state) => { let loop = processEventLoop(state); if (loop.isInfinite()) breakCycle(); return loop; }"
+        },
+        "P22": {
+            "label": "Geburah \u2192 Tiphareth",
+            "letter": "Lamed",
+            "astrology": "Libra",
+            "tarot": "Justice (XI)",
+            "alchemy": "Balancing",
+            "pattern": "Back-propagation",
+            "cognitive": "Applying critique to adjust the model.",
+            "standard": "Path22(state) => applyCorrection(state.error)",
+            "cavity_aware": "Path22_DA(state) => { if (detectVanishingGradient(state.error)) renormalize(); return applyCorrection(state.error); }"
+        },
+        "P23": {
+            "label": "Geburah \u2192 Hod",
+            "letter": "Mem",
+            "astrology": "Water",
+            "tarot": "The Hanged Man (XII)",
+            "alchemy": "Solution",
+            "pattern": "Suspend Process / Yield",
+            "cognitive": "Surrender of the intellect. Suspending severity.",
+            "standard": "Path23(state) => yieldProcess(state)",
+            "cavity_aware": "Path23_DA(state) => { let p = yieldProcess(state); if (p.starvationDetected()) forceResume(); return p; }"
+        },
+        "P24": {
+            "label": "Tiphareth \u2192 Netzach",
+            "letter": "Nun",
+            "astrology": "Scorpio",
+            "tarot": "Death (XIII)",
+            "alchemy": "Mortification",
+            "pattern": "Garbage Collection / Reset",
+            "cognitive": "Transformation through destruction.",
+            "standard": "Path24(state) => resetState(state)",
+            "cavity_aware": "Path24_DA(state) => { if (detectUseAfterFree(state)) throw MemoryCorruption; return resetState(state); }"
+        },
+        "P25": {
+            "label": "Tiphareth \u2192 Yesod",
+            "letter": "Samekh",
+            "astrology": "Sagittarius",
+            "tarot": "Temperance (XIV)",
+            "alchemy": "Incineration",
+            "pattern": "Dependency Injection",
+            "cognitive": "Stabilizing the subconscious foundation.",
+            "standard": "Path25(state) => injectDependency(state.foundation, state.ego)",
+            "cavity_aware": "Path25_DA(state) => { if (detectCircularDependency(state.foundation)) throw StackOverflow; return injectDependency(state); }"
+        },
+        "P26": {
+            "label": "Tiphareth \u2192 Hod",
+            "letter": "Ayin",
+            "astrology": "Capricorn",
+            "tarot": "The Devil (XV)",
+            "alchemy": "Fermentation",
+            "pattern": "Logger / Trace",
+            "cognitive": "Reflecting external feedback into analytical structures.",
+            "standard": "Path26(state) => logTrace(state.illusion)",
+            "cavity_aware": "Path26_DA(state) => { if (logFloodDetected()) throttleLogs(); return logTrace(state.illusion); }"
+        },
+        "P27": {
+            "label": "Netzach \u2192 Hod",
+            "letter": "Pe",
+            "astrology": "Mars",
+            "tarot": "The Tower (XVI)",
+            "alchemy": "Cibation",
+            "pattern": "Throw Exception / Panic",
+            "cognitive": "Sudden disruption of structure by raw emotional force.",
+            "standard": "Path27(state) => throw SystemCrashException(state.pressure)",
+            "cavity_aware": "Path27_DA(state) => { if (!hasErrorHandler(state)) escalateToKernel(); throw SystemCrashException(state); }"
+        },
+        "P28": {
+            "label": "Netzach \u2192 Yesod",
+            "letter": "Tzaddi",
+            "astrology": "Aquarius",
+            "tarot": "The Star (XVII)",
+            "alchemy": "Crystallization",
+            "pattern": "Serialization",
+            "cognitive": "Encoding raw emotional energy into a symbol.",
+            "standard": "Path28(state) => serialize(state.emotion)",
+            "cavity_aware": "Path28_DA(state) => { let s = serialize(state); if (isCorrupt(s)) dropPayload(); return s; }"
+        },
+        "P29": {
+            "label": "Netzach \u2192 Malkuth",
+            "letter": "Qoph",
+            "astrology": "Pisces",
+            "tarot": "The Moon (XVIII)",
+            "alchemy": "Putrefaction",
+            "pattern": "Background Daemon / Keep-Alive",
+            "cognitive": "Feeding physical reality with deep biological drives.",
+            "standard": "Path29(state) => runBackgroundDaemon(state.drive)",
+            "cavity_aware": "Path29_DA(state) => { let d = runBackgroundDaemon(state); if (d.isZombie()) killProcess(d); return d; }"
+        },
+        "P30": {
+            "label": "Hod \u2192 Yesod",
+            "letter": "Resh",
+            "astrology": "The Sun",
+            "tarot": "The Sun (XIX)",
+            "alchemy": "Illumination",
+            "pattern": "Class Definition",
+            "cognitive": "Imposing clear analytical architecture onto the subconscious vessel.",
+            "standard": "Path30(state) => defineClass(state.blueprint)",
+            "cavity_aware": "Path30_DA(state) => { if (!validateSchema(state.blueprint)) throw InvalidArchitecture; return defineClass(state.blueprint); }"
+        },
+        "P31": {
+            "label": "Hod \u2192 Malkuth",
+            "letter": "Shin",
+            "astrology": "Fire",
+            "tarot": "Judgement (XX)",
+            "alchemy": "Reverberation",
+            "pattern": "Emit Signal / Broadcast",
+            "cognitive": "Radiating intellectual structure outward into manifestation.",
+            "standard": "Path31(state) => broadcast(state.signal)",
+            "cavity_aware": "Path31_DA(state) => { if (broadcastStormDetected()) implementBackoff(); return broadcast(state.signal); }"
+        },
+        "P32": {
+            "label": "Yesod \u2192 Malkuth",
+            "letter": "Tau",
+            "astrology": "Earth / Saturn",
+            "tarot": "The Universe (XXI)",
+            "alchemy": "Coagulation",
+            "pattern": "Program Exit / exit(0)",
+            "cognitive": "Sealing the entire recursive process into a finite, observable reality.",
+            "standard": "Path32(state) => renderAndExit(state.final_form)",
+            "cavity_aware": "Path32_DA(state) => { if (orphanedResourcesExist()) forceCleanup(); return renderAndExit(state.final_form); }"
+        }
+    },
+    "balancing_rules": {
+        "Hod": "Netzach",
+        "Netzach": "Hod",
+        "Geburah": "Geburah",
+        "Chesed": "Geburah",
+        "Yesod": "Tiphareth",
+        "Tiphareth": "Yesod",
+        "Chokmah": "Binah",
+        "Binah": "Chokmah"
+    },
+    "metadata": {
+        "version": "1.1.0",
+        "generated_by": "Karen Plankton & LIBRA Void",
+        "source_texts": [
+            "Sefer Yetzirah",
+            "777 (Crowley)",
+            "Golden Dawn",
+            "Kabbalistic Tree of Life",
+            "Jung \u2013 Psychological Types",
+            "Alchemical Treatises",
+            "Kashmir Shaivism"
+        ]
+    }
+}

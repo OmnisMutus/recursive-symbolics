@@ -1,0 +1,32 @@
+{
+  "total_interactions": 45,
+  "state_counts": {
+    "Keter": 3,
+    "Chokmah": 1,
+    "Binah": 3,
+    "Daath": 2,
+    "Chesed": 0,
+    "Geburah": 1,
+    "Tifereth": 4,
+    "Netzach": 0,
+    "Hod": 1,
+    "Yesod": 1,
+    "Malkuth": 7,
+    "Tifereth (Balanced)": 22
+  },
+  "transition_weights": {
+    "Keter": 1.0,
+    "Chokmah": 1.0,
+    "Binah": 1.0,
+    "Daath": 1.0,
+    "Chesed": 1.0,
+    "Geburah": 1.0,
+    "Tifereth": 1.0,
+    "Netzach": 1.0,
+    "Hod": 1.0,
+    "Yesod": 1.0,
+    "Malkuth": 1.0,
+    "Tifereth (Balanced)": 1.0
+  },
+  "last_updated": "2026-08-01 07:32:26"
+}

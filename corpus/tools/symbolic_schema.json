@@ -1,0 +1,83 @@
+{
+  "schema_name": "symbolic_schema",
+  "version": "1.0",
+  "purpose": "Tradition-agnostic keyword mapping layer. This is the Rosetta Stone layer: one row, many translations.",
+
+  "meta": {
+    "mapping_principle": "Every entry below is a set of PARALLEL readings, not a hierarchy of correctness. No column is privileged over another. The 'Kabbalah' column is not more true than the 'Neuroscience' column — it is differently useful.",
+    "invitation": "Add your own column. The schema is designed to be extended, not completed.",
+    "warning": "If any single column starts being treated as ground truth, the Transcompiler has failed at its one job."
+  },
+
+  "traditions_registered": [
+    "Kabbalah",
+    "Zen",
+    "CBT",
+    "Neuroscience",
+    "Recursive_Symbolics",
+    "Stoic",
+    "User_Defined"
+  ],
+
+  "abstract_mapping": {
+    "anger": {
+      "Kabbalah": "Geburah (severity, discrimination, the cutting force)",
+      "Zen": "Attachment to a self that feels threatened",
+      "CBT": "Cognitive distortion — often catastrophizing or should-statements",
+      "Neuroscience": "Amygdala activation, cortisol/adrenaline response",
+      "Stoic": "Judgment that an external event is a harm, when it is only an impression",
+      "Recursive_Symbolics": "Operator: Decision(x) where x = perceived_injustice; high-gain, low-latency operator",
+      "User_Defined": null
+    },
+    "focus": {
+      "Kabbalah": "Hod (precision, analytical structuring)",
+      "Zen": "One-pointed mind (samadhi in miniature)",
+      "CBT": "Attentional control / selective attention",
+      "Neuroscience": "Prefrontal cortex engagement, reduced default-mode network activity",
+      "Stoic": "Attention restricted to what is 'up to us'",
+      "Recursive_Symbolics": "Operator: Narrow(x) — reduces state-space dimensionality",
+      "User_Defined": null
+    },
+    "expansion": {
+      "Kabbalah": "Chesed (mercy, generosity, outward flow)",
+      "Zen": "Metta / boundless loving-kindness",
+      "CBT": "Behavioral activation, approach orientation",
+      "Neuroscience": "Vagal tone increase, oxytocin association",
+      "Stoic": "Oikeiosis — the widening circle of concern",
+      "Recursive_Symbolics": "Operator: Broadcast(x) — increases connection edges in the state graph",
+      "User_Defined": null
+    },
+    "integration": {
+      "Kabbalah": "Tifereth (harmony, the balancing center)",
+      "Zen": "Middle Way",
+      "CBT": "Cognitive reframe achieving coherence",
+      "Neuroscience": "Increased functional connectivity across networks",
+      "Stoic": "Living according to nature/reason (eudaimonia)",
+      "Recursive_Symbolics": "Operator: Converge(x) — minimizes Hₛ locally without collapsing variety to zero",
+      "User_Defined": null
+    },
+    "groundedness": {
+      "Kabbalah": "Malkuth (the kingdom, embodiment, manifestation)",
+      "Zen": "Just this / ordinary mind",
+      "CBT": "Behavioral grounding techniques, 5-4-3-2-1 sensory anchoring",
+      "Neuroscience": "Interoceptive accuracy, insular cortex activity",
+      "Stoic": "The present moment as the only place action occurs",
+      "Recursive_Symbolics": "Operator: Instantiate(x) — collapses abstraction to a concrete state",
+      "User_Defined": null
+    },
+    "confusion": {
+      "Kabbalah": "Da'ath (the abyss of ungrounded knowledge)",
+      "Zen": "Don't-know mind (can be generative OR distressing depending on context)",
+      "CBT": "Cognitive overload / rumination without resolution",
+      "Neuroscience": "Reduced signal-to-noise ratio in relevant neural circuits",
+      "Stoic": "Assent withheld from all impressions — epoché without return",
+      "Recursive_Symbolics": "Operator: Diverge(x) — Hₛ trending toward 1 with no attractor",
+      "User_Defined": null
+    }
+  },
+
+  "extension_instructions": {
+    "how_to_add_a_tradition": "Add the tradition name to 'traditions_registered', then add a matching key to every entry in 'abstract_mapping'. Entries may be null if untranslated yet — null is honest; a forced mapping is not.",
+    "how_to_add_a_concept": "Add a new top-level key under 'abstract_mapping' with one sub-key per registered tradition."
+  }
+}

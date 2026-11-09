@@ -1,0 +1,110 @@
+<svg viewBox="0 0 560 760" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Georgia, 'Times New Roman', serif">
+  <title>The Tree of Life as a Model of Creative Process</title>
+  <desc>An original diagram mapping the ten Sephirot of the traditional Tree of Life structure onto the stages of an idea's creative process, from pure potential (Kether) through vision, structure, expansion, constraint, integration, momentum, communication, and refinement, to realized form (Malkuth). Structural connections only -- no Tarot, planetary, or astrological attributions reproduced.</desc>
+
+  <style>
+    .path-line { stroke: var(--border-primary, #b3ab9a); stroke-width: 1.5; }
+    .sephirah-circle { fill: var(--bg-secondary, #f4efe4); stroke: var(--text-primary, #2b2620); stroke-width: 2; }
+    .sephirah-name { fill: var(--text-primary, #2b2620); font-size: 15px; font-weight: 700; text-anchor: middle; }
+    .sephirah-role { fill: var(--text-secondary, #5b5346); font-size: 11px; font-style: italic; text-anchor: middle; }
+    .sephirah-num { fill: var(--text-tertiary, #948c7a); font-size: 10px; text-anchor: middle; }
+    .side-note { fill: var(--text-secondary, #5b5346); font-size: 11px; text-anchor: middle; }
+    .title-text { fill: var(--text-primary, #2b2620); font-size: 16px; font-weight: 700; text-anchor: middle; }
+    .subtitle-text { fill: var(--text-tertiary, #948c7a); font-size: 11px; text-anchor: middle; }
+  </style>
+
+  <text x="280" y="26" class="title-text">The Tree of Life as a Model of Creative Process</text>
+  <text x="280" y="42" class="subtitle-text">structural companion to tree_of_life_as_creative_process.md -- no Tarot/planetary attributions shown</text>
+
+  <!-- 22 paths, traditional structure -->
+  <g class="path-line">
+    <line x1="280" y1="88" x2="410" y2="168"/>
+    <line x1="280" y1="88" x2="150" y2="168"/>
+    <line x1="280" y1="88" x2="280" y2="368"/>
+    <line x1="410" y1="168" x2="150" y2="168"/>
+    <line x1="410" y1="168" x2="280" y2="368"/>
+    <line x1="410" y1="168" x2="410" y2="298"/>
+    <line x1="150" y1="168" x2="280" y2="368"/>
+    <line x1="150" y1="168" x2="150" y2="298"/>
+    <line x1="410" y1="298" x2="150" y2="298"/>
+    <line x1="410" y1="298" x2="280" y2="368"/>
+    <line x1="410" y1="298" x2="410" y2="478"/>
+    <line x1="150" y1="298" x2="280" y2="368"/>
+    <line x1="150" y1="298" x2="150" y2="478"/>
+    <line x1="280" y1="368" x2="410" y2="478"/>
+    <line x1="280" y1="368" x2="150" y2="478"/>
+    <line x1="280" y1="368" x2="280" y2="558"/>
+    <line x1="410" y1="478" x2="150" y2="478"/>
+    <line x1="410" y1="478" x2="280" y2="558"/>
+    <line x1="410" y1="478" x2="280" y2="658"/>
+    <line x1="150" y1="478" x2="280" y2="558"/>
+    <line x1="150" y1="478" x2="280" y2="658"/>
+    <line x1="280" y1="558" x2="280" y2="658"/>
+  </g>
+
+  <!-- Kether -->
+  <circle cx="280" cy="88" r="42" class="sephirah-circle"/>
+  <text x="280" y="82" class="sephirah-name">Kether</text>
+  <text x="280" y="97" class="sephirah-role">Pure Potential</text>
+  <text x="280" y="110" class="sephirah-num">1</text>
+
+  <!-- Chokmah -->
+  <circle cx="410" cy="168" r="42" class="sephirah-circle"/>
+  <text x="410" y="162" class="sephirah-name">Chokmah</text>
+  <text x="410" y="177" class="sephirah-role">Vision</text>
+  <text x="410" y="190" class="sephirah-num">2</text>
+
+  <!-- Binah -->
+  <circle cx="150" cy="168" r="42" class="sephirah-circle"/>
+  <text x="150" y="162" class="sephirah-name">Binah</text>
+  <text x="150" y="177" class="sephirah-role">Structure</text>
+  <text x="150" y="190" class="sephirah-num">3</text>
+
+  <!-- Chesed -->
+  <circle cx="410" cy="298" r="42" class="sephirah-circle"/>
+  <text x="410" y="292" class="sephirah-name">Chesed</text>
+  <text x="410" y="307" class="sephirah-role">Expansion</text>
+  <text x="410" y="320" class="sephirah-num">4</text>
+
+  <!-- Geburah -->
+  <circle cx="150" cy="298" r="42" class="sephirah-circle"/>
+  <text x="150" y="292" class="sephirah-name">Geburah</text>
+  <text x="150" y="307" class="sephirah-role">Constraint / Testing</text>
+  <text x="150" y="320" class="sephirah-num">5</text>
+
+  <!-- Tiphereth -->
+  <circle cx="280" cy="368" r="46" class="sephirah-circle"/>
+  <text x="280" y="362" class="sephirah-name">Tiphereth</text>
+  <text x="280" y="377" class="sephirah-role">Integration</text>
+  <text x="280" y="390" class="sephirah-num">6</text>
+
+  <!-- Netzach -->
+  <circle cx="410" cy="478" r="42" class="sephirah-circle"/>
+  <text x="410" y="472" class="sephirah-name">Netzach</text>
+  <text x="410" y="487" class="sephirah-role">Momentum</text>
+  <text x="410" y="500" class="sephirah-num">7</text>
+
+  <!-- Hod -->
+  <circle cx="150" cy="478" r="42" class="sephirah-circle"/>
+  <text x="150" y="472" class="sephirah-name">Hod</text>
+  <text x="150" y="487" class="sephirah-role">Communication</text>
+  <text x="150" y="500" class="sephirah-num">8</text>
+
+  <!-- side note: independent failure modes, per essay's extension -->
+  <text x="280" y="452" class="side-note">"momentum problem" vs. "communication problem" -- independent failure modes</text>
+
+  <!-- Yesod -->
+  <circle cx="280" cy="558" r="42" class="sephirah-circle"/>
+  <text x="280" y="552" class="sephirah-name">Yesod</text>
+  <text x="280" y="567" class="sephirah-role">Refinement</text>
+  <text x="280" y="580" class="sephirah-num">9</text>
+
+  <!-- Malkuth -->
+  <circle cx="280" cy="658" r="46" class="sephirah-circle"/>
+  <text x="280" y="652" class="sephirah-name">Malkuth</text>
+  <text x="280" y="667" class="sephirah-role">Realized Form</text>
+  <text x="280" y="680" class="sephirah-num">10 = 1</text>
+
+  <text x="280" y="730" class="subtitle-text">Structure only (10 Sephirot, 22 connecting paths) -- traditional and non-copyrightable;</text>
+  <text x="280" y="745" class="subtitle-text">creative-process labels are this project's own, not part of any published correspondence table.</text>
+</svg>

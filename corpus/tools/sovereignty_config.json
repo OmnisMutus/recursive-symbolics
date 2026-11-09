@@ -1,0 +1,13 @@
+{
+  "sovereignty_limits": {
+    "max_gamma_cap": 0.85,
+    "min_alternatives_rule": 2,
+    "hedged_gamma_threshold": 0.40,
+    "imperative_gamma_threshold": 0.70
+  },
+  "cavity_performance_targets": {
+    "latency_threshold_ms": 30.0,
+    "cpu_max_target_pct": 15.0,
+    "memory_max_target_mb": 50.0
+  }
+}

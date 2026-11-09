@@ -1,0 +1,84 @@
+{  
+  "cross_tradition_mappings": {  
+    "Kabbalah": {  
+      "structure_type": "hierarchical_tree",  
+      "node_count": 10,  
+      "edge_count": 22,  
+      "dimensionality": "4_worlds",  
+      "structural_pattern": "hierarchical_emanation",  
+      "recursive_interpretation": "Letters as recursive operators (ϕ, ψ, χ, ω)",  
+      "corresponding_operators": ["ϕ", "ψ", "χ", "ω"],  
+      "core_concept": "Tikkun = debugging a recursive function"  
+    },  
+    "Scientific Illuminism (Crowley)": {  
+      "structure_type": "experimental_method",  
+      "structural_pattern": "design-execute-verify loop",  
+      "recursive_interpretation": "Will = unique ψ-meta-function within ω-constraints",  
+      "corresponding_operators": ["ψ", "ω"],  
+      "core_concept": "Experimentation Guide & Verification Standards"  
+    },  
+    "Kashmir Shaivism": {  
+      "structure_type": "non_dual_process",  
+      "structural_pattern": "spanda = feedback (F) on state space S",  
+      "recursive_interpretation": "Consciousness = mutable state S; manifestation = recursive generation of symbols",  
+      "corresponding_operators": ["F", "I"],  
+      "core_concept": "Fixed-point (I) = heart of the self-referential loop"  
+    },  
+    "Semiotics (Peirce / Saussure)": {  
+      "structure_type": "sign_system",  
+      "structural_pattern": "signifier → signified → interpretant",  
+      "recursive_interpretation": "Meaning = emergent E from ϕ-application to a sign in state S",  
+      "corresponding_operators": ["ϕ", "E"],  
+      "core_concept": "Interpretant = output of ϕ in context"  
+    },  
+    "Cybernetics": {  
+      "structure_type": "feedback_loop",  
+      "structural_pattern": "high-order feedback (F) on symbolic constructs",  
+      "recursive_interpretation": "Consciousness = high-order F within a symbolic system",  
+      "corresponding_operators": ["F"],  
+      "core_concept": "Map ≠ territory because both are recursively updated symbols"  
+    },  
+    "Dynamical Systems / Chaos Theory": {  
+      "structure_type": "iterative_attractor",  
+      "structural_pattern": "simple rule → iteration → attractor basin",  
+      "recursive_interpretation": "Thought/identity = dynamical symbolic system; pathology = stable undesired attractor",  
+      "corresponding_operators": ["T", "F"],  
+      "core_concept": "Therapy = perturbation toward a new attractor"  
+    },  
+    "Alchemy": {  
+      "structure_type": "stage_process",  
+      "structural_pattern": "nigredo → albedo → rubedo → citrinitas",  
+      "recursive_interpretation": "Alchemical stages = symbolic algorithm for state S transformation",  
+      "corresponding_operators": ["O", "D", "R", "F", "I"],  
+      "core_concept": "Philosopher’s Stone = integrated I state"  
+    },  
+    "Analytical Psychology (Jung)": {  
+      "structure_type": "integration_loop",  
+      "structural_pattern": "archetype activation → individuation → integration",  
+      "recursive_interpretation": "Archetypes = high-level symbolic functions; individuation = I-operator execution",  
+      "corresponding_operators": ["I"],  
+      "core_concept": "Red Book = debug log of the integration algorithm"  
+    },  
+    "Post-Structuralism (Deleuze / Guattari)": {  
+      "structure_type": "rhizomatic_network",  
+      "structural_pattern": "non-hierarchical connections, productive desire",  
+      "recursive_interpretation": "Desire = ϕ-function of a desiring-machine; becoming = T-operator",  
+      "corresponding_operators": ["ϕ", "T"],  
+      "core_concept": "Framework itself is a rhizomatic map of operators"  
+    },  
+    "Computer Science / Programming": {  
+      "structure_type": "algorithmic_transformation",  
+      "structural_pattern": "data → algorithm → output",  
+      "recursive_interpretation": "Consciousness = process on wetware; self = mutable persistent state",  
+      "corresponding_operators": ["ϕ", "ψ", "χ", "ω", "I"],  
+      "core_concept": "Refactoring = personal growth"  
+    },  
+    "Quietism / Mystical Traditions": {  
+      "structure_type": "negation_process",  
+      "structural_pattern": "cessation of ϕ (ϕ=0) → origin (O) potential state",  
+      "recursive_interpretation": "Void = state S when all operators halt; ineffability = ω-constraint",  
+      "corresponding_operators": ["O", "ω"],  
+      "core_concept": "Goal = awareness of the generating process itself"  
+    }  
+  }  
+}

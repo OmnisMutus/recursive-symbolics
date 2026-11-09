@@ -1,0 +1,158 @@
+{  
+  "hermetic_qabalah_cipher": {  
+    "א": {  
+      "name": "Aleph",  
+      "path_key_scale": 11,  
+      "cipher_value": 1,  
+      "tarot_trump": "The Fool (0)",  
+      "element_planet_sefirah": "Air / Ox / Keter"  
+    },  
+    "ב": {  
+      "name": "Bet",  
+      "path_key_scale": 12,  
+      "cipher_value": 2,  
+      "tarot_trump": "Magician (I)",  
+      "element_planet_sefirah": "Mercury / House"  
+    },  
+    "ג": {  
+      "name": "Gimel",  
+      "path_key_scale": 13,  
+      "cipher_value": 3,  
+      "tarot_trump": "High Priestess (II)",  
+      "element_planet_sefirah": "Moon / Camel"  
+    },  
+    "ד": {  
+      "name": "Dalet",  
+      "path_key_scale": 14,  
+      "cipher_value": 4,  
+      "tarot_trump": "Empress (III)",  
+      "element_planet_sefirah": "Venus / Door"  
+    },  
+    "ה": {  
+      "name": "Heh",  
+      "path_key_scale": 15,  
+      "cipher_value": 5,  
+      "tarot_trump": "Emperor (IV)",  
+      "element_planet_sefirah": "Aries / Window"  
+    },  
+    "ו": {  
+      "name": "Vav",  
+      "path_key_scale": 16,  
+      "cipher_value": 6,  
+      "tarot_trump": "Hierophant (V)",  
+      "element_planet_sefirah": "Taurus / Nail"  
+    },  
+    "ז": {  
+      "name": "Zayin",  
+      "path_key_scale": 17,  
+      "cipher_value": 7,  
+      "tarot_trump": "Lovers (VI)",  
+      "element_planet_sefirah": "Gemini / Sword"  
+    },  
+    "ח": {  
+      "name": "Chet",  
+      "path_key_scale": 18,  
+      "cipher_value": 8,  
+      "tarot_trump": "Chariot (VII)",  
+      "element_planet_sefirah": "Cancer / Fence"  
+    },  
+    "ט": {  
+      "name": "Tet",  
+      "path_key_scale": 19,  
+      "cipher_value": 9,  
+      "tarot_trump": "Strength (XI)",  
+      "element_planet_sefirah": "Leo / Serpent"  
+    },  
+    "י": {  
+      "name": "Yod",  
+      "path_key_scale": 20,  
+      "cipher_value": 10,  
+      "tarot_trump": "Hermit (IX)",  
+      "element_planet_sefirah": "Virgo / Hand"  
+    },  
+    "כ": {  
+      "name": "Kaf",  
+      "path_key_scale": 21,  
+      "cipher_value": 21,  
+      "tarot_trump": "Wheel of Fortune (X)",  
+      "element_planet_sefirah": "Jupiter / Palm"  
+    },  
+    "ל": {  
+      "name": "Lamed",  
+      "path_key_scale": 22,  
+      "cipher_value": 30,  
+      "tarot_trump": "Justice (VIII)",  
+      "element_planet_sefirah": "Libra / Ox Goad"  
+    },  
+    "מ": {  
+      "name": "Mem",  
+      "path_key_scale": 23,  
+      "cipher_value": 40,  
+      "tarot_trump": "Hanged Man (XII)",  
+      "element_planet_sefirah": "Water / Water"  
+    },  
+    "נ": {  
+      "name": "Nun",  
+      "path_key_scale": 24,  
+      "cipher_value": 50,  
+      "tarot_trump": "Death (XIII)",  
+      "element_planet_sefirah": "Scorpio / Fish"  
+    },  
+    "ס": {  
+      "name": "Samekh",  
+      "path_key_scale": 25,  
+      "cipher_value": 60,  
+      "tarot_trump": "Temperance (XIV)",  
+      "element_planet_sefirah": "Sagittarius / Prop"  
+    },  
+    "ע": {  
+      "name": "Ayin",  
+      "path_key_scale": 26,  
+      "cipher_value": 70,  
+      "tarot_trump": "Devil (XV)",  
+      "element_planet_sefirah": "Capricorn / Eye"  
+    },  
+    "פ": {  
+      "name": "Peh",  
+      "path_key_scale": 27,  
+      "cipher_value": 80,  
+      "tarot_trump": "Tower (XVI)",  
+      "element_planet_sefirah": "Mars / Mouth"  
+    },  
+    "צ": {  
+      "name": "Tzaddi",  
+      "path_key_scale": 28,  
+      "cipher_value": 90,  
+      "tarot_trump": "Star (XVII)",  
+      "element_planet_sefirah": "Aquarius / Fish Hook"  
+    },  
+    "ק": {  
+      "name": "Qof",  
+      "path_key_scale": 29,  
+      "cipher_value": 100,  
+      "tarot_trump": "Moon (XVIII)",  
+      "element_planet_sefirah": "Pisces / Back of Head"  
+    },  
+    "ר": {  
+      "name": "Resh",  
+      "path_key_scale": 30,  
+      "cipher_value": 200,  
+      "tarot_trump": "Sun (XIX)",  
+      "element_planet_sefirah": "Sun / Head"  
+    },  
+    "ש": {  
+      "name": "Shin",  
+      "path_key_scale": 31,  
+      "cipher_value": 300,  
+      "tarot_trump": "Judgement (XX)",  
+      "element_planet_sefirah": "Fire / Tooth"  
+    },  
+    "ת": {  
+      "name": "Tav",  
+      "path_key_scale": 32,  
+      "cipher_value": 400,  
+      "tarot_trump": "World (XXI)",  
+      "element_planet_sefirah": "Saturn / Cross"  
+    }  
+  }  
+}

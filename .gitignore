@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 logs/
+
+# the corpus keeps its own caches
+corpus/**/__pycache__/
