@@ -162,10 +162,22 @@
           "repo": "void-agent",
           "path": "LIBER_0.md",
           "what": "The same record for void-agent."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/breaches.py",
+          "what": "Immune memory, checked: every breach recorded in LIBER_0 must name the test that now guards against it, or say why none can.",
+          "evidence": "tests/test_breaches.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/outgoing.py",
+          "what": "Reads every commit a push would send, patches and messages, for a path into someone's home folder.",
+          "evidence": "tests/test_outgoing.py"
         }
       ],
       "gaps": [
-        "Breaches are recorded as prose entries, not as structured rows. Nothing counts them or groups them by kind."
+        "Guarded means the named test exists, not that it is the right test: that judgement stays with a person. void-agent's and the vault's records are not checked this way yet."
       ]
     },
     {
@@ -220,8 +232,7 @@
         }
       ],
       "gaps": [
-        "No continuous integration. Every check above runs when someone runs it.",
-        "void-agent's NOT_ESTABLISHED, UNCLEAR and RAN_ONLY apply the correspondence ledger's rule, and its source does not say so."
+        "No continuous integration. Every check above runs when someone runs it."
       ]
     },
     {

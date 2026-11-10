@@ -1,0 +1,35 @@
+{
+  "about": "Guards for LIBER_0 entries that were written before guards were recorded. Entries are never edited, so an old breach gets its guard here, keyed by its heading exactly as written. New entries carry a **Guard:** line of their own instead. Checked by: python -m symbolics.breaches",
+  "guards": [
+    {
+      "entry": "2026-11-09 — The meta layer named, its stale baseline updated, and two missing pieces ported",
+      "guards": [
+        "corpus/tests/test_run_all_correspondence_ledgers.py::test_real_ledgers_match_current_known_baseline",
+        "corpus/tests/test_run_all_correspondence_ledgers.py::test_real_ledger_totals_are_internally_consistent",
+        "architecture/layers.json"
+      ],
+      "why": "The stale baseline is pinned again and its arithmetic is checked separately. The layer that went unnamed is now a row in the architecture index, which is itself checked."
+    },
+    {
+      "entry": "2026-11-09 — Five local commits squashed into one before a push, to keep a local path out of public history",
+      "guards": [
+        "tests/test_outgoing.py::test_a_path_added_then_removed_is_still_found_in_history",
+        "symbolics/outgoing.py"
+      ],
+      "why": "The breach was checking the files and not the commits. The guard scans every outgoing patch and message, and its test builds exactly the add-then-remove history that slipped through."
+    },
+    {
+      "entry": "2026-11-09 — Three \"findings\" the corpus had already recorded, in its own test docstrings",
+      "waived": "A reading failure: three things were reported as new that the test docstrings already documented. No test can check that an agent read a docstring before speaking. What remains is the entry itself and the standing rule in AGENTS.md to check a claim against source first."
+    },
+    {
+      "entry": "2026-11-08 — Article 6 implemented by inheriting the framework's own gamma cap, then extending it",
+      "guards": [
+        "tests/test_agency.py::test_the_tokenizer_is_the_one_the_measure_was_written_for",
+        "tests/conformance/test_conformance.py::test_an_unchecked_duty_stops_conformance",
+        "tests/conformance/test_conformance.py::test_the_engine_conforms_today"
+      ],
+      "why": "Both corrections in that entry were caught by tests, named in the entry. The second test has since been renamed; these are its present names."
+    }
+  ]
+}

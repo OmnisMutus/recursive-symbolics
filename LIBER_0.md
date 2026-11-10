@@ -28,6 +28,61 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-09 — Immune memory made checkable: every breach names its guard, and outgoing commits are read
+
+**Attempted:** Turn the maxim of the Principle of Recursive Validation ("security is ... the immune memory of
+every perturbation the system has successfully integrated") into something the repository can verify about
+itself. Until now a breach became an entry here and nothing tied the entry to what would catch it again.
+
+**Result:** VERIFIED, and CORRECTED once.
+
+`symbolics/breaches.py` reads this file. An entry whose Result line carries CORRECTED or FAILED is a breach,
+and must name a guard (`path::test_name`) or a waiver with a reason. GUARDED, WAIVED, UNGUARDED, BROKEN; the
+last two fail. Entries are never edited, so the four breaches already here have their guards beside the
+record, in `architecture/guards.json`: three guarded, one waived (reporting as new what the corpus's own
+docstrings already said: no test can check that a docstring was read, and the waiver says so).
+
+One of those four had no guard to name. The squash entry below records a push that would have published a
+local path through history although the files were clean. `symbolics/outgoing.py` is the guard that did not
+exist: it reads every commit a push would send, patches and messages, for a path into a home folder, and
+skips placeholder names so this repository's own fixtures do not trip it.
+
+Evidence: `tests/test_breaches.py` 23 tests, `tests/test_outgoing.py` 11 tests, including a real git
+repository built in a temporary folder with the add-then-remove history. 18 break-its planted across the two
+modules. 17 were caught by the test named in advance.
+
+CORRECTED: the eighteenth was not caught. Limiting the scan to the newest commit still passed every test,
+because the commit that removes a line shows that line, so the newest patch still held the path. The test
+proved less than its name claimed. A three-commit history with an unrelated commit on top now fails under
+that bug. Suite: 154 tests, OK. `python -m symbolics.breaches`: MEMORY OK True. `python -m symbolics.outgoing`
+on the seven commits waiting here: clean. CONFORMS: True.
+
+**Guard:** tests/test_outgoing.py::test_every_outgoing_commit_is_read_not_only_the_newest
+
+**Notes:** What this does not establish. GUARDED means the named test exists in the named file. It does not
+mean the test passes (the suite answers that) or that it is the right test (a person answers that). The
+assignment of guards to the four old entries is mine: rank 2, falsified by any of them failing to catch a
+replay of its breach. The rule is not written into the Entry Format at the top of this file or into
+`AGENTS.md`, both of which are the Maintainer's; it lives in the README and in the module. Void also settled
+a gap recorded in the index: the ledger is his own work, so void-agent applying its rule needs no credit
+line. The gap was removed.
+
+Correction, added the same hour, two things. (1) The counts above are wrong by one: `tests/test_breaches.py`
+runs 22 tests, not 23 (a `def test_real` inside a fixture string was counted), so the two files hold 33, and
+the commit message's "34" is wrong the same way. Counted this time from the runner's own "Ran N tests" line.
+(2) Run on its own commit, `symbolics/outgoing.py` reported one hit: an invented name written as a literal
+path inside `tests/test_outgoing.py`. A false alarm about a person, and a true statement about the file: the
+scanner's own test tripped the scanner. The test now builds that path from a variable. The line remains in
+the history of the commit before this one, so the check stays red until these commits are pushed or folded
+together, and folding is the Maintainer's decision, not taken here.
+
+Folded, the same evening, at Void's instruction. The two commits this entry was written across (local
+`937745d` and `e939cdd`, neither pushed) are now one. The literal path is therefore in no commit, the message
+that said "34" no longer exists, and `python -m symbolics.outgoing` reads clean on what is waiting. The second
+sanctioned exception to the rule against rewriting history, on the same terms as the first: explicitly
+approved, and limited to commits that existed on one machine only. The two paragraphs above are left as
+written; they describe the state before the fold.
+
 ### 2026-11-09 — An index of where the architecture already exists, and a draft intent made only of quotations
 
 **Attempted:** Void brought a vault note, `Sovereign Recursive Engine Architecture`, and asked whether the whole

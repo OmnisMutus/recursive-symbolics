@@ -48,6 +48,20 @@ as missing, fails if a quotation has drifted from its source, and does not pass 
 The layer names are a way of organising the work, a provisional metaphor. Nothing claims a sephirah is a
 software layer.
 
+## Immune memory, and what is about to be published
+
+    python -m symbolics.breaches
+    python -m symbolics.outgoing
+
+The first reads `LIBER_0.md`. Every entry whose Result carries CORRECTED or FAILED is a breach, and each one
+must name the test that now guards against it, on a `**Guard:** path/to/test.py::test_name` line of its own
+(or `**Guard:** none: <reason>` when no test can). Entries written before this rule have their guards in
+`architecture/guards.json`, because an entry is never edited after it is written. A breach that names nothing,
+or names a test that is not there, fails. It checks that the guard exists, not that it is the right one.
+
+The second reads every commit a push would send, removed lines and messages included, and fails on a path
+into someone's home folder. Run it before `git push`: a clean working tree is not a clean history.
+
 ## Running the tests
 
     python -m unittest discover -s tests -q
