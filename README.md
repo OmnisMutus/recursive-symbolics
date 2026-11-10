@@ -34,6 +34,20 @@ entries with what was attempted, what actually happened, and what is not verifie
 never edits that erase what was believed before. If a claim in the documentation and a claim in the record
 disagree, the record is the one that was written while it happened.
 
+## Where the architecture already exists
+
+`architecture/layers.json` maps each layer of the Sovereign Recursive Engine Architecture (a note in the vault)
+to the files that already implement it, here and in the sibling repositories, with each layer's known gaps.
+`architecture/intent.json` is this repository's intent as data: every statement in it is quoted from a document
+the Maintainer wrote, and it is a DRAFT until he ratifies it.
+
+    python -m symbolics.layers
+
+That looks for every listed file, reports a sibling repository that is not on the machine as unknown and not
+as missing, fails if a quotation has drifted from its source, and does not pass if nothing could be checked.
+The layer names are a way of organising the work, a provisional metaphor. Nothing claims a sephirah is a
+software layer.
+
 ## Running the tests
 
     python -m unittest discover -s tests -q

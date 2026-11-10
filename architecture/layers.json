@@ -1,0 +1,342 @@
+{
+  "about": "Where each layer of the Sovereign Recursive Engine Architecture already exists. An index, not a design: every component listed is a file on disk, and python -m symbolics.layers checks that it is. The layer names are a PROVISIONAL METAPHOR for organising the work. Nothing here claims a sephirah is a software layer.",
+  "source_note": "VoidVault: 00_Ayin/Framework/Sovereign Recursive Engine Architecture.md",
+  "stage": {
+    "current": 1,
+    "name": "Collaborative Foundation",
+    "meaning": "Every change is approved by the Maintainer. Taken from the source note; a proposal until he confirms it."
+  },
+  "layers": [
+    {
+      "layer": "Kether",
+      "role": "Intent",
+      "purpose": "Declare the system's True Will.",
+      "components": [
+        {
+          "repo": "recursive-symbolics",
+          "path": "architecture/intent.json",
+          "what": "Machine-readable intent, every statement quoted from a document the Maintainer wrote. DRAFT until ratified.",
+          "evidence": "tests/test_layers.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "AGENTS.md",
+          "what": "The binding rules for any agent in this repository."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "ETHICS.md",
+          "what": "What the engine refuses, and where each refusal lives in the code."
+        },
+        {
+          "repo": "VoidVault",
+          "path": "AGENTS.md",
+          "what": "The vault's rules and hard locks."
+        },
+        {
+          "repo": "void-agent",
+          "path": "LIBER_0.md",
+          "what": "void-agent's working record and stated purpose."
+        }
+      ],
+      "gaps": [
+        "architecture/intent.json is a draft assembled from existing text. It is not ratified: the Maintainer has not yet said these are the statements, or added his own.",
+        "No machine-readable intent exists for void-agent or the vault."
+      ]
+    },
+    {
+      "layer": "Chokmah / Binah",
+      "role": "Design",
+      "purpose": "Translate intent into structure and rules.",
+      "components": [
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/data/symbolic_api.json",
+          "what": "The one operator vocabulary that code executes."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "docs/TESTING_STANDARD.md",
+          "what": "What VERIFIED, RAN_ONLY, FAILED and MISSING mean."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "docs/PHILOSOPHICAL_AND_ENGINEERING_BOUNDARIES.md",
+          "what": "The three-register boundary."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/README.md",
+          "what": "The corpus described: three layers and a map."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/docs/eli5_architecture_guide.md",
+          "what": "The plain-language architecture, with a diagram."
+        },
+        {
+          "repo": "void-agent",
+          "path": "tests/registry.json",
+          "what": "Every component with its file, tests, ground truth and break-its.",
+          "evidence": "voidagent/verify.py"
+        }
+      ],
+      "gaps": [
+        "The source note treats Chokmah and Binah as one layer. Whether they are one or two here is the Maintainer's call."
+      ]
+    },
+    {
+      "layer": "Chesed",
+      "role": "Expansion",
+      "purpose": "Add capabilities safely.",
+      "components": [
+        {
+          "repo": "void-agent",
+          "path": "voidagent/newtest.py",
+          "what": "Scaffolds a new component so that it starts as RAN_ONLY and has to earn VERIFIED.",
+          "evidence": "tests/test_std_newtest.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/profiles.py",
+          "what": "Named model profiles, switched without changing code.",
+          "evidence": "tests/test_std_profiles.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/FUTURE_WORK.md",
+          "what": "Ideas written down on purpose and not built yet."
+        }
+      ],
+      "gaps": [
+        "No feature-flag service. Judged unnecessary for a single maintainer: RAN_ONLY already marks what is present and unproven."
+      ]
+    },
+    {
+      "layer": "Geburah",
+      "role": "Boundary",
+      "purpose": "Enforce constraints and record violations.",
+      "components": [
+        {
+          "repo": "void-agent",
+          "path": "voidagent/outbound.py",
+          "what": "The outbound gate: shows what is about to leave and to whom, and waits for a yes.",
+          "evidence": "tests/test_std_mcp.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/governance.py",
+          "what": "The epistemic governance framework as code, gamma capped at 0.85.",
+          "evidence": "tests/test_std_governance.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/guard.py",
+          "what": "Write guards on the vault's locked paths.",
+          "evidence": "tests/test_std_guard.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/project.py",
+          "what": "Refuses a project that is, is inside, or contains a reference root.",
+          "evidence": "tests/test_std_project.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/ethics.py",
+          "what": "The emit() gate: no reading leaves without caveat, tradition, source and anchors.",
+          "evidence": "tests/test_address_and_ethics.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/conformance.py",
+          "what": "The licence's duties as runnable checks.",
+          "evidence": "tests/conformance/test_conformance.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "LIBER_0.md",
+          "what": "The breach record: what failed, the evidence, how it was caught."
+        },
+        {
+          "repo": "void-agent",
+          "path": "LIBER_0.md",
+          "what": "The same record for void-agent."
+        }
+      ],
+      "gaps": [
+        "Breaches are recorded as prose entries, not as structured rows. Nothing counts them or groups them by kind."
+      ]
+    },
+    {
+      "layer": "Tiphareth",
+      "role": "Integration",
+      "purpose": "Synthesize opposites and validate coherence.",
+      "components": [
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/ledgers/correspondence_ledger.py",
+          "what": "The meta layer: sorts a claim from either layer into VERIFIED, FAILED or UNTESTABLE.",
+          "evidence": "corpus/tests/test_correspondence_ledger.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/run_all_correspondence_ledgers.py",
+          "what": "Runs all five ledgers in one command.",
+          "evidence": "corpus/tests/test_run_all_correspondence_ledgers.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/ledger.py",
+          "what": "The same ledger, inside the engine.",
+          "evidence": "tests/test_ledger.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/test_all_engines.py",
+          "what": "The scoreboard for the 24 engines."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/run_corpus.py",
+          "what": "Runs every corpus test file and refuses to call an unscored file a pass."
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/verify.py",
+          "what": "Runs the registry, and with --breakit plants each bug and requires the named test to catch it."
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/suitecheck.py",
+          "what": "GREEN, RED or UNCLEAR for a test suite, where a skip is never green.",
+          "evidence": "tests/test_std_suitecheck.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/integrity.py",
+          "what": "Fact-checks the claims inside vault notes.",
+          "evidence": "tests/test_std_integrity.py"
+        }
+      ],
+      "gaps": [
+        "No continuous integration. Every check above runs when someone runs it.",
+        "void-agent's NOT_ESTABLISHED, UNCLEAR and RAN_ONLY apply the correspondence ledger's rule, and its source does not say so."
+      ]
+    },
+    {
+      "layer": "Da'ath",
+      "role": "Cavity",
+      "purpose": "Hold the unknown revealed by breaches.",
+      "components": [
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/ledgers/correspondence_ledger.py",
+          "what": "UNTESTABLE is a first-class result, with the reason stated, and a ledger of nothing else cannot pass.",
+          "evidence": "corpus/tests/test_correspondence_ledger.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/docs/correspondence_ledger_meta_tool_spec.md",
+          "what": "The current list of what is UNTESTABLE and why."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "architecture/layers.json",
+          "what": "This file's own gaps lists: what each layer does not have.",
+          "evidence": "tests/test_layers.py"
+        }
+      ],
+      "gaps": [
+        "Unknowns found in conversation and never written into a ledger or a gaps list are held nowhere."
+      ]
+    },
+    {
+      "layer": "Netzach",
+      "role": "UNASSIGNED",
+      "purpose": "",
+      "components": [],
+      "gaps": [
+        "The source note names eight layers and this is not one of them. With Hod it forms the third balance triad, resolving in Yesod. What it holds in this architecture is the Maintainer's to assign."
+      ]
+    },
+    {
+      "layer": "Hod",
+      "role": "UNASSIGNED",
+      "purpose": "",
+      "components": [],
+      "gaps": [
+        "As Netzach: absent from the source note, and not assigned here by guesswork."
+      ]
+    },
+    {
+      "layer": "Yesod",
+      "role": "Foundation",
+      "purpose": "Provide the runtime substrate, schemas, contracts.",
+      "components": [
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/address.py",
+          "what": "The address: three numbers that no tradition owns.",
+          "evidence": "tests/test_address_and_ethics.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/metrics.py",
+          "what": "The measurement layer.",
+          "evidence": "tests/test_metrics.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/agency.py",
+          "what": "The agency budget.",
+          "evidence": "tests/test_agency.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/mcp.py",
+          "what": "The MCP client: how the agent reaches outside tools.",
+          "evidence": "tests/test_std_mcp.py"
+        },
+        {
+          "repo": "void-agent",
+          "path": "voidagent/config.py",
+          "what": "Configuration, with keys read from the environment only."
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "layer": "Malkuth",
+      "role": "Mirror",
+      "purpose": "Reflect observable state and decision lineage.",
+      "components": [
+        {
+          "repo": "VoidVault",
+          "path": "AGENT_LOG.md",
+          "what": "Append-only log of every change an agent made to the vault."
+        },
+        {
+          "repo": "VoidVault",
+          "path": "00_Ayin/Where Things Stand.md",
+          "what": "The current state of all four projects, in one note."
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "symbolics/layers.py",
+          "what": "This index, checked: python -m symbolics.layers",
+          "evidence": "tests/test_layers.py"
+        },
+        {
+          "repo": "recursive-symbolics",
+          "path": "corpus/ledgers/correspondence_ledger_history.py",
+          "what": "When each ledger was last run, and whether its target changed since.",
+          "evidence": "corpus/tests/test_correspondence_ledger_history.py"
+        }
+      ],
+      "gaps": [
+        "No served status endpoint. Judged unnecessary: the mirror is files a person reads and commands a person runs."
+      ]
+    }
+  ]
+}

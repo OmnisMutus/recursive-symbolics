@@ -28,6 +28,45 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-09 — An index of where the architecture already exists, and a draft intent made only of quotations
+
+**Attempted:** Void brought a vault note, `Sovereign Recursive Engine Architecture`, and asked whether the whole
+project could be consolidated into it; then a second document proposing eight new files to fill its layers;
+then asked for whatever is necessary to be built and left for his review.
+
+**Result:** VERIFIED for the code; the content is a proposal awaiting review.
+
+*What was not built, and why.* The second document listed `intent.yml` and CI as existing; neither does, in
+the vault or any of the three repositories (searched). It listed a component-level test registry as missing;
+void-agent's `tests/registry.json` is one, with 42 components. Six of its eight proposed files duplicate
+something that exists, and none came with a test. Its sample intent was invented text. None of that was built.
+
+*What was built.* Two data files and one checker.
+`architecture/layers.json`: ten rows (the note's eight layers, plus Netzach and Hod, which the note omits and
+which are recorded as UNASSIGNED rather than given a meaning by guesswork). 42 components across this
+repository, void-agent and the vault, each a real path, and each layer's gaps written out. The meta layer is
+in it this time, under Tiphareth and Da'ath.
+`architecture/intent.json`: nine statements, each quoted from `README.md` or `AGENTS.md` with its source.
+Status DRAFT, `ratified: false`. No sentence in it was written for it.
+`symbolics/layers.py`: looks for every listed file; a sibling repository absent from the machine is NOT_HERE
+(unknown), not MISSING; a quotation no longer in its source is drift and fails; a run that checked nothing
+does not pass; a draft is never reported as ratified.
+
+Evidence: on its first run the checker reported four layers BROKEN, correctly: four evidence paths in the
+index I had just written pointed at `corpus/ledgers/` for tests that live in `corpus/tests/`. Fixed in the
+index, not in the checker. `tests/test_layers.py`, 21 tests against toy repositories built in a temporary
+folder. Eight break-its planted in `layers.py`, each caught by the test named in advance, source restored.
+Suite: 121 tests, OK. `python -m symbolics.layers`: 42 components looked for, INDEX OK True, INTENT OK True,
+state DRAFT. `python -m symbolics.conformance`: CONFORMS True, so the new module imports no network library.
+
+**Notes:** Three things are Void's and were left open on purpose. (1) The intent: the nine quotations are a
+selection, and selecting is an act of interpretation even when every word is his; rank 2, falsified the
+moment he says a statement does not belong or one is missing. (2) Netzach and Hod. (3) Whether Chokmah and
+Binah are one layer or two. The break-its were run by hand from a script and are not yet in a registry, so
+they will not re-run by themselves: this repository has no `verify --breakit` of its own.
+`AGENTS.md` says the Conformance Suite "reports `CONFORMS: False` today"; it reports True. That file is the
+Maintainer's and was not edited.
+
 ### 2026-11-09 — The meta layer named, its stale baseline updated, and two missing pieces ported
 
 **Attempted:** Void asked why the meta layer had not been mentioned once in this session, pointing at

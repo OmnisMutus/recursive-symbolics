@@ -1,0 +1,54 @@
+{
+  "about": "The intent of this repository, as data. Every statement below is quoted from a document the Maintainer wrote, and tests/test_layers.py fails if a quote stops matching its source. Nothing here was composed for this file.",
+  "status": "DRAFT",
+  "ratified": false,
+  "ratified_by": null,
+  "ratified_on": null,
+  "how_to_ratify": "Edit the statements until they are yours, then set ratified to true, ratified_by to your name and ratified_on to the date. Only the Maintainer does this. An agent may propose a statement in a message and must not set these three fields.",
+  "name": "recursive-symbolics",
+  "purpose": {
+    "text": "It takes a symbolic state from any caller and returns typed records",
+    "source": "README.md"
+  },
+  "principles": [
+    {
+      "text": "A lens can never write back into an address",
+      "source": "README.md"
+    },
+    {
+      "text": "Every reading carries its caveat, names the tradition and the source it read from, and points at the words it came from.",
+      "source": "README.md"
+    },
+    {
+      "text": "No output may rank a person, and none may command: it offers.",
+      "source": "README.md"
+    },
+    {
+      "text": "Nothing is forced to a verdict.",
+      "source": "README.md"
+    },
+    {
+      "text": "This engine reads the person asking, and no one else.",
+      "source": "README.md"
+    },
+    {
+      "text": "Nothing reaches the network.",
+      "source": "AGENTS.md"
+    },
+    {
+      "text": "The Conformance Suite is the answer about compliance, not your judgement of it.",
+      "source": "AGENTS.md"
+    },
+    {
+      "text": "Corrections are new entries, never edits that erase what was believed before.",
+      "source": "README.md"
+    }
+  ],
+  "ratification": {
+    "required_for": [
+      "intent_change",
+      "stage_transition"
+    ],
+    "approver": "the Maintainer"
+  }
+}
