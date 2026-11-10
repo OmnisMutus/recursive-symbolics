@@ -231,6 +231,11 @@
       "components": [
         {
           "repo": "recursive-symbolics",
+          "path": "corpus/docs/recursive_symbolics_foundation_reference.md",
+          "what": "Section 10, the Principle of Recursive Validation: a challenge becomes a permanent, dated record and a clearer structure, not a deflected attack. The principle this layer and the ledger practise."
+        },
+        {
+          "repo": "recursive-symbolics",
           "path": "corpus/ledgers/correspondence_ledger.py",
           "what": "UNTESTABLE is a first-class result, with the reason stated, and a ledger of nothing else cannot pass.",
           "evidence": "corpus/tests/test_correspondence_ledger.py"
