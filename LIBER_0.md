@@ -73,6 +73,9 @@ engine's file was not compared against any outside source in this session.
 (`ledgers/correspondence_ledger_run_history.json`, `tools/trace-log.txt`). Both were restored from HEAD
 after the runs above. Worth knowing before a `git add -A`.
 
+Correction, added the same hour: "Three runners" in the note above is a miscount. Two tracked files were
+observed changing, the two named; which runs changed them was not isolated.
+
 ### 2026-11-09 — One licence across the repository, and two engines renamed
 
 **Attempted:** A provenance review of the 41 engine files before the corpus is published, then the fixes Void
