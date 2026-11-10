@@ -451,3 +451,8 @@ was never updated). Confirmed, via a clean clone of the commit before the
 2026-08-02 `engines/`/`protocols`/`ledgers`/`tests` reorg, that this exact
 mismatch already existed before that reorg — not a regression from it,
 and out of scope for this document's fix to resolve quietly.
+
+**Resolved 2026-11-09**: that baseline is now 16/0/6, updated deliberately with a
+dated SECOND CORRECTION in the test's own docstring, which names the
+correspondence that moved (the glyph ledger's qualia-vector mapping). The
+note above is kept as written.

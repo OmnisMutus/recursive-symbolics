@@ -16,7 +16,8 @@ ledger's worked-example tests. Ground truth here is split two ways:
    anything from the real engines.
 2. One integration test against the 5 REAL ledgers in this repo,
    asserting the current known-good baseline (22 total correspondences,
-   15 VERIFIED, 0 FAILED, 7 UNTESTABLE, ok == True). This is a regression
+   16 VERIFIED, 0 FAILED, 6 UNTESTABLE, ok == True; see the SECOND
+   CORRECTION below for the 15/0/7 it replaced). This is a regression
    snapshot on the aggregation glue code, not a re-test of any individual
    engine -- if a ledger is legitimately extended later, this specific
    test's numbers need a deliberate, conscious update, not a silent one.
@@ -30,6 +31,22 @@ KNOWN_EXPECTED_FAILURES is now empty.
 test_ddpg_actor_critic_gap_is_the_one_known_failure below was updated to
 match (now asserts the gap is VERIFIED, not FAILED) rather than deleted,
 so the change in behavior stays visible in this file's own history.
+
+SECOND CORRECTION (2026-11-09, see the repository's LIBER_0.md): the
+baseline moved again, from 15/0/7 to 16/0/6, and this file was not
+updated when it did. glyph_emotion_correspondence_ledger.py's "Qualia
+Vector to Discrete Emotion Mapping" entry went from UNTESTABLE to
+VERIFIED when qualia_emotion_classifier.py was written (that ledger's
+own dated UPDATE note says so). The mismatch was already on record in
+docs/correspondence_ledger_meta_tool_spec.md, which found it predates
+the 2026-08-02 reorg and left it "out of scope ... to resolve quietly".
+This is the deliberate, conscious update the paragraph above asks for:
+the snapshot below is still hardcoded ON PURPOSE (a count derived from
+the ledgers could never disagree with them, so it would catch nothing).
+What CAN be derived is the arithmetic, and
+test_real_ledger_totals_are_internally_consistent now checks that
+separately: the three bins sum to the total, and the per-ledger rows
+sum to the aggregate.
 """
 
 import sys
@@ -145,12 +162,31 @@ class TestRealLedgerIntegration(unittest.TestCase):
         result = run_ledgers(LEDGERS, KNOWN_EXPECTED_FAILURES)
         self.assertEqual(len(result.ledger_results), 5)
         self.assertEqual(result.total, 22)
-        self.assertEqual(result.total_verified, 15)
+        self.assertEqual(result.total_verified, 16)
         self.assertEqual(result.total_failed, 0)
-        self.assertEqual(result.total_untestable, 7)
+        self.assertEqual(result.total_untestable, 6)
         self.assertEqual(result.unexpected_failures, [])
         self.assertEqual(result.resolved_known_failures, [])
         self.assertTrue(result.ok)
+
+    def test_real_ledger_totals_are_internally_consistent(self):
+        """The derivable half of the baseline. The snapshot above pins
+        WHAT the counts are; this pins that they add up, whatever they
+        are: every correspondence lands in exactly one bin, and the
+        aggregate is the sum of the per-ledger rows. Independent of the
+        snapshot, so it keeps holding when a ledger is extended."""
+        result = run_ledgers(LEDGERS, KNOWN_EXPECTED_FAILURES)
+        self.assertEqual(
+            result.total_verified + result.total_failed + result.total_untestable,
+            result.total)
+        rows = result.ledger_results
+        for lr in rows:
+            self.assertEqual(lr.verified + lr.failed + lr.untestable, lr.total,
+                             f"{lr.filename}: bins do not sum to its total")
+        self.assertEqual(sum(lr.total for lr in rows), result.total)
+        self.assertEqual(sum(lr.verified for lr in rows), result.total_verified)
+        self.assertEqual(sum(lr.failed for lr in rows), result.total_failed)
+        self.assertEqual(sum(lr.untestable for lr in rows), result.total_untestable)
 
     def test_ddpg_actor_critic_gap_is_the_one_known_failure(self):
         """CORRECTION (dated, see LIBER_0.md): this test's name is now a

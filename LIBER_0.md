@@ -28,6 +28,51 @@ evidence (test count, exact error, commit hash), not just a summary judgment.
 
 ## Entries
 
+### 2026-11-09 — The meta layer named, its stale baseline updated, and two missing pieces ported
+
+**Attempted:** Void asked why the meta layer had not been mentioned once in this session, pointing at
+`corpus/docs/eli5_architecture_guide.md`.
+
+**Result:** CORRECTED, then VERIFIED.
+
+*The omission.* The meta layer (the correspondence ledgers: every claim sorted into VERIFIED, FAILED or
+UNTESTABLE, and a ledger of nothing but UNTESTABLE refusing to pass) was in the repository and working the
+whole time. It had been counted as "10 ledgers" in a folder inventory and never named as a layer. It was left
+out of a mapping of the project's architecture drawn the same evening, where it is the central piece, and its
+one failing test had been listed as a loose end. `symbolics/ledger.py` credits the ledger as its source;
+void-agent's NOT_ESTABLISHED, UNCLEAR and RAN_ONLY statuses apply the same rule and credit nothing.
+
+*The baseline.* `test_real_ledgers_match_current_known_baseline` asserted 15 VERIFIED / 7 UNTESTABLE; the
+ledgers report 16 / 6. The cause was already written down twice in the corpus: the glyph ledger's own dated
+UPDATE (its qualia-vector mapping became testable when `qualia_emotion_classifier.py` was written), and
+`correspondence_ledger_meta_tool_spec.md`, which found the mismatch predates the 2026-08-02 reorg and left it
+unresolved on purpose. A fourth finding the corpus had recorded before this session reported it.
+The plan agreed with Void was to derive the count instead of hardcoding it. Reading the test changed that:
+its docstring says the snapshot is hardcoded deliberately and must be updated consciously, and a count
+derived from the ledgers could never disagree with them. So the snapshot was updated to 16/0/6 with a dated
+SECOND CORRECTION in the test's docstring, and the derivable half was added as a separate test
+(`test_real_ledger_totals_are_internally_consistent`: bins sum to the total, rows sum to the aggregate).
+12 tests, all pass. Corpus: 830 checks, 57 files, 53 clean, 0 failed, 4 unscored. Engine: 100 tests.
+
+*The ports.* The guide's diagram names `FUTURE_WORK.md` and links a README; neither had been carried over.
+`corpus/FUTURE_WORK.md` is a verbatim copy. `corpus/README.md` is the original README adapted to this layout,
+and says so in its first paragraph; it names the meta layer as a layer, and ends with a list of what the
+original mentions that is not here. The largest item on that list: the original working journal. Thirty-four
+corpus files say "see LIBER_0.md" and mean that journal, not this file.
+
+*The renamed hand-written test.* `test_c_low_level_simulator.py` holds Void's own test cases. A diff against
+the pre-rename file shows the module name, the class name and one banner string changed, and no assertion or
+value. To show it still bites under the new name: the `abs(INT_MIN)` guard in the engine was shifted off by
+one, `test_abs_edge_cases_and_int32_overflow` failed, the engine was restored byte for byte, 7 of 7 pass.
+
+*The quadcopter question, closed.* The OPEN note in the entry below is answered by Void: no GPL code was
+used. That is the author's statement about how the engine was written and it is recorded as such. The
+engine's file was not compared against any outside source in this session.
+
+**Notes:** Three runners in the corpus write to tracked files as a side effect of being run
+(`ledgers/correspondence_ledger_run_history.json`, `tools/trace-log.txt`). Both were restored from HEAD
+after the runs above. Worth knowing before a `git add -A`.
+
 ### 2026-11-09 — One licence across the repository, and two engines renamed
 
 **Attempted:** A provenance review of the 41 engine files before the corpus is published, then the fixes Void
