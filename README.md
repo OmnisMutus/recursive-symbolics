@@ -36,6 +36,12 @@ such as a key or a private path, and the removal is itself recorded as an entry.
 checks this against the file's history. If a claim in the documentation and a claim in the record
 disagree, the record is the one that was written while it happened.
 
+A breach that names no guard has left no memory. `python -m symbolics.breaches` reads `LIBER_0.md` and fails
+when an entry marked CORRECTED or FAILED names no guard and gives no reason it cannot be guarded, or names a
+test that does not exist. A breach that cannot be guarded says so, with a reason, and is counted, never
+hidden. The check confirms the guard exists, not that it is the right one: that judgement is the writer's.
+Entries written before this rule are never edited; their guards are recorded in `architecture/guards.json`.
+
 ## Where the architecture already exists
 
 `architecture/layers.json` maps each layer of the Sovereign Recursive Engine Architecture (a note in the vault)
