@@ -31,5 +31,15 @@
       ],
       "why": "Both corrections in that entry were caught by tests, named in the entry. The second test has since been renamed; these are its present names."
     }
-  ]
+  ],
+  "record_edits": {
+    "about": "In-place edits of LIBER_0.md from before this was checked (python -m symbolics.record). The record is never edited; a historical edit is named here, beside the record, not inside it. There should be no new ones.",
+    "accepted": [
+      {
+        "commit": "fc60f51",
+        "what": "2026-11-08: six lines of earlier entries reworded in place, reframing the ledger and its runner as inherited from the framework rather than ported from Thoth/solo.",
+        "why": "A pre-rule edit, found 2026-11-10. The original words remain in the commit parent. Named here rather than reverted, since the record is not rewritten to fix it either."
+      }
+    ]
+  }
 }

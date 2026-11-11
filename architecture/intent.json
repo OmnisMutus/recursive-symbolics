@@ -40,7 +40,7 @@
       "source": "AGENTS.md"
     },
     {
-      "text": "Corrections are new entries, never edits that erase what was believed before.",
+      "text": "Corrections to the record are new entries, never edits that erase what was believed before. The one exception is removing what must not be kept, such as a key or a private path, and the removal is itself recorded as an entry.",
       "source": "README.md"
     }
   ],
