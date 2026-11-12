@@ -4,3 +4,10 @@ logs/
 
 # the corpus keeps its own caches
 corpus/**/__pycache__/
+
+# void-agent and void-athanor live here but are their own repositories, with their own remotes and licences.
+void-agent/
+void-athanor/
+
+corpus/tools/trace-log.txt
+corpus/tools/temp_feedback_log.jsonl
